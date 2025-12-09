@@ -1,0 +1,22 @@
+ABDownloadManager-portable
+Agent FullAccess AntiGravity
+Cambiar ubicacion
+Chrome-portable
+Civer Conexion
+JDownloader2 - portable
+Office 2024 - Portable
+PDFelement11 - Portable
+UiPath Studio -  portable.exe
+Uninstall Tool - Portable
+ABDownloadManager-portable.zip
+Antigravity.lnk
+Cambiar ubicacion.zip
+chrome - Shortcut.lnk
+JDownloader2 - Shortcut.lnk
+PDFelement - Shortcut.lnk
+portable.zip
+UninstallTool - Shortcut.lnk
+Visual Studio Code.lnk
+vps-2 - Matrix - Acceso al microfono.rdp
+vps-2 - Matrix - Pantalla Completa.rdp
+vps-2 - Matrix.rdp
