@@ -18,11 +18,12 @@ Loop Files, ImageFolder . "*.png"
     Targets.Push(A_LoopFileName)
 
 Tolerance := "*50" ; 0-255 (Variación de color permitida)
-global IsActive := false ; <--- POR DEFECTO APAGADO (Solicitud Usuario)
+global IsActive := true ; <--- ENCENDIDO POR DEFECTO (Solicitud Usuario)
 
 ; --- INICIO ---
-TraySetIcon "shell32.dll", 28 ; Icono de fantasma/advertencia inicial
-ToolTip "💤 OmniGod: DORMIDO (Presiona F8 para activar)", A_ScreenWidth/2, 10, 1
+TraySetIcon "shell32.dll", 1 ; Icono de ojo activo
+SoundPlay "*64" ; Ding!
+ToolTip "👁️ OmniGod: CAZANDO (Presiona F8 para pausar)", A_ScreenWidth/2, 10, 1
 SetTimer RemoveToolTip, -3000
 
 ; --- HOTKEY TOGGLE (F8) ---
@@ -32,11 +33,11 @@ F8::
     IsActive := !IsActive
     if (IsActive) {
         TraySetIcon "shell32.dll", 1 ; Icono activo
-        SoundBeep 1000, 200
+        SoundPlay "*64" ; Sonido Windows "Asterisk" (Ding!)
         ToolTip "👁️ OmniGod: CAZANDO", A_ScreenWidth/2, 10, 1
     } else {
         TraySetIcon "shell32.dll", 28
-        SoundBeep 500, 200
+        SoundPlay "*16" ; Sonido Windows "Critical Stop" (Bonk!)
         ToolTip "💤 OmniGod: PAUSADO", A_ScreenWidth/2, 10, 1
         SetTimer RemoveToolTip, -2000
     }
@@ -56,8 +57,30 @@ Loop {
 return
 
 WatchDog() {
+    ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
+    ; Este botón aparece cuando el agente termina. Hay que darle clic AUNQUE ya no haya cuadro rojo.
+    ; Aumentamos tolerancia a *100 para asegurar detección (azules variables)
+    if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
+         ToolTip "✨ FINALIZANDO TAREA: Accept All detectado", 10, 10, 1
+         MouseGetPos &OrigX, &OrigY
+         
+         ; Click Preciso
+         TargetX := FoundX + 30 ; Centro del botón ancho
+         TargetY := FoundY + 10
+         MouseMove TargetX, TargetY
+         Sleep 50
+         Click "Down"
+         Sleep 50
+         Click "Up"
+         Sleep 50
+         MouseMove OrigX, OrigY
+         
+         Sleep 500 ; Pausa para no spammear
+         return
+    }
+
     ; 1. CHEQUEO DE SEGURIDAD (¿USUARIO ESCRIBIENDO?)
-    ; Si vemos el botón de "Enviar" (flecha azul), significa que tú tienes el control. No tocamos nada.
+    ; Si vemos el botón de "Enviar" (flecha azul), significa que tú tienes el control.
     if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "send.png") {
         ToolTip "🛑 USUARIO AL MANDO (Pausado)", 10, 10, 1
         return
