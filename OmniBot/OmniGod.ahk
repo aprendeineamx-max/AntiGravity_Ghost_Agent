@@ -159,22 +159,32 @@ WatchDog() {
     }
 
     ; --- ESTRATEGIA DE SCROLL (Vertical Scan) ---
-    ; Si llegamos aquí, es que NO encontramos ningún objetivo en la pantalla actual.
-    ; Intentamos scrollear para revelar botones ocultos.
+    ; Si hemos llegado aqui, no hay botones visibles.
+    ; Usamos la posicion del boton "Stop" (working.png) como ancla para saber donde esta el chat.
     
-    ; 1. Asegurar foco en el centro (Chat)
-    MouseMove A_ScreenWidth/2, A_ScreenHeight/2
-    
-    ; 2. Scroll Abajo (Buscando nuevos mensajes)
-    ToolTip "⏬ BUSCANDO (Scroll Abajo)...", 10, 10, 1
-    Click "WheelDown"
-    Sleep 100
-    Click "WheelDown"
-    Sleep 100
-    
-    ; 3. Scroll Arriba (Ocasional, por si nos pasamos)
-    ; (Solo lo haremos si el mouse está muy abajo o lógica random para "sacudir")
-    ; Por ahora, priorizamos ABAJO que es donde sale lo nuevo.
+    if ImageSearch(&AnchorX, &AnchorY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png") {
+        ; Mover el mouse 300 pixeles ARRIBA del boton de Stop.
+        ; Esto coloca el cursor justo en medio del historial del chat.
+        CenterX := AnchorX + 15
+        CenterY := AnchorY - 300
+        MouseMove CenterX, CenterY
+        
+        ToolTip "📜 SCROLL ACTIVO (Centrado en Chat)", 10, 10, 1
+        
+        ; Scroll Agresivo hacia ABAJO (Prioridad)
+        Loop 5 {
+            Click "WheelDown"
+            Sleep 50
+        }
+        
+        ; Pequeño rebote hacia ARRIBA para "sacudir" y revelar botones pegados al borde
+        Click "WheelUp" 
+        Sleep 100
+        
+    } else {
+        ; Fallback si por alguna razon extraña perdimos el ancla
+        ToolTip "⚠️ PERDIDO: No encuentro el chat para scrollear", 10, 10, 1
+    }
 }
 
 RemoveToolTip() {
