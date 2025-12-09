@@ -52,8 +52,8 @@ namespace OmniSystem {
                                  bool match = false;
                                  if (name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
                                  else if (name.IndexOf("Allow", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
-                                 else if (name.IndexOf("Setup", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
-                                 else if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
+                                 // else if (name.IndexOf("Setup", StringComparison.OrdinalIgnoreCase) >= 0) match = true;  <-- Desactivado por seguridad
+                                 // else if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0) match = true; <-- CULPABLE DE CLICS EN IDE
                                  // Specific precise matches for tricky buttons
                                  else if (name.Contains("Accept all")) match = true;
                                  else if (name.Contains("AcceptAlt")) match = true; 

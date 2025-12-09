@@ -1,16 +1,23 @@
 $port = 1337
 $listener = New-Object System.Net.HttpListener
 $listener.Prefixes.Add("http://localhost:$port/")
-$listener.Start()
+try {
+    $listener.Start()
+}
+catch {
+    Write-Warning "Port $port is busy. Is the server already running?"
+    exit
+}
 
 Write-Host "🛸 OmniServer listening on http://localhost:$port" -ForegroundColor Cyan
 
-$wwwRoot = Resolve-Path "..\public"
+# Fix: Use PSScriptRoot to find public folder reliably
+$wwwRoot = Join-Path $PSScriptRoot "..\public"
 
 Function Get-ProcessStatus {
     $status = @{
-        "OmniGod" = (Get-Process "AutoHotkey" -ErrorAction SilentlyContinue).Count -gt 0
-        "OmniControl" = (Get-Process "powershell" | Where-Object {$_.MainWindowTitle -like "*OmniControl*"} | Measure-Object).Count -gt 0
+        "OmniGod"     = (Get-Process "AutoHotkey" -ErrorAction SilentlyContinue).Count -gt 0
+        "OmniControl" = (Get-Process "powershell" | Where-Object { $_.MainWindowTitle -like "*OmniControl*" } | Measure-Object).Count -gt 0
     }
     return $status | ConvertTo-Json
 }
@@ -27,11 +34,11 @@ while ($listener.IsListening) {
 
     try {
         if ($path -eq "/api/status") {
-             $json = Get-ProcessStatus
-             $buffer = [System.Text.Encoding]::UTF8.GetBytes($json)
-             $response.ContentType = "application/json"
-             $response.ContentLength64 = $buffer.Length
-             $response.OutputStream.Write($buffer, 0, $buffer.Length)
+            $json = Get-ProcessStatus
+            $buffer = [System.Text.Encoding]::UTF8.GetBytes($json)
+            $response.ContentType = "application/json"
+            $response.ContentLength64 = $buffer.Length
+            $response.OutputStream.Write($buffer, 0, $buffer.Length)
         }
         elseif ($path -match "/api/toggle/(?<bot>\w+)") {
             $bot = $Matches['bot']
@@ -39,7 +46,7 @@ while ($listener.IsListening) {
             # For now just mock response
             $msg = "Toggled $bot"
             $buffer = [System.Text.Encoding]::UTF8.GetBytes($msg)
-             $response.OutputStream.Write($buffer, 0, $buffer.Length)
+            $response.OutputStream.Write($buffer, 0, $buffer.Length)
         }
         else {
             # Serve Static Files
@@ -53,14 +60,17 @@ while ($listener.IsListening) {
                 elseif ($filePath.EndsWith(".js")) { $response.ContentType = "text/javascript" }
                 else { $response.ContentType = "text/html" }
                 $response.OutputStream.Write($content, 0, $content.Length)
-            } else {
+            }
+            else {
                 $response.StatusCode = 404
             }
         }
-    } catch {
+    }
+    catch {
         $response.StatusCode = 500
         Write-Host "Error: $_" -ForegroundColor Red
-    } finally {
+    }
+    finally {
         $response.Close()
     }
 }

@@ -1,24 +1,58 @@
-#Requires AutoHotKey v2.0
+#Requires AutoHotkey v2.0
 #SingleInstance Force
 CoordMode "Pixel", "Screen"
 CoordMode "Mouse", "Screen"
 SetMouseDelay -1 ; Velocidad máxima
 
+; --- OMNIGOD v3.4: VISUAL PROTECTOR ---
+; AutoHotKey v2 Script
+SetWorkingDir A_ScriptDir
+CoordMode "Pixel", "Screen"
+CoordMode "Mouse", "Screen"
+
 ; --- CONFIGURACIÓN ---
-ImageFolder := A_ScriptDir . "\Targets\"
-IndicatorFolder := A_ScriptDir . "\Indicators\"
+ImageFolder := "Targets\"
+IndicatorFolder := "Indicators\"
 Targets := []
 Loop Files, ImageFolder . "*.png"
     Targets.Push(A_LoopFileName)
 
-Tolerance := "*50" ; Tolerancia de color (0-255)
+Tolerance := "*50" ; 0-255 (Variación de color permitida)
+global IsActive := false ; <--- POR DEFECTO APAGADO (Solicitud Usuario)
 
-; --- INDICADOR VISUAL ---
-ToolTip "🧠 OMNIGOD: CEREBRO ACTIVADO (Detectando Estado...)", 10, 10, 1
+; --- INICIO ---
+TraySetIcon "shell32.dll", 28 ; Icono de fantasma/advertencia inicial
+ToolTip "💤 OmniGod: DORMIDO (Presiona F8 para activar)", A_ScreenWidth/2, 10, 1
 SetTimer RemoveToolTip, -3000
 
+; --- HOTKEY TOGGLE (F8) ---
+F8::
+{
+    global IsActive
+    IsActive := !IsActive
+    if (IsActive) {
+        TraySetIcon "shell32.dll", 1 ; Icono activo
+        SoundBeep 1000, 200
+        ToolTip "👁️ OmniGod: CAZANDO", A_ScreenWidth/2, 10, 1
+    } else {
+        TraySetIcon "shell32.dll", 28
+        SoundBeep 500, 200
+        ToolTip "💤 OmniGod: PAUSADO", A_ScreenWidth/2, 10, 1
+        SetTimer RemoveToolTip, -2000
+    }
+}
+
+; RemoveToolTip definition removed from here (it is defined at the end of file)
+
 ; --- BUCLE PRINCIPAL (CADA 500ms) ---
-SetTimer WatchDog, 500
+Loop {
+    if (!IsActive) {
+        Sleep 500
+        continue
+    }
+    WatchDog()
+    Sleep 500 ; Simulate the original SetTimer interval
+}
 return
 
 WatchDog() {
@@ -40,15 +74,20 @@ WatchDog() {
     ToolTip "⚡ AGENTE TRABAJANDO: Buscando objetivos...", 10, 10, 1
     
     ; 3. ESTRATEGIA DE EXPANSIÓN (Collapse = Scroll)
-    ; Si vemos "Collapse all", significa que hay una lista abierta.
-    ; Hacemos Scroll para bajar y ver los botones que puedan estar ocultos abajo.
-    if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "collapse.png") {
-         ToolTip "📜 LISTA EXPANDIDA: Scrolleando...", 10, 10, 1
-         MouseGetPos &CurrX, &CurrY
-         MouseMove A_ScreenWidth/2, A_ScreenHeight/2 
-         Click "WheelDown" ; Intento 1: Rueda
-         Sleep 200 
-         MouseMove CurrX, CurrY
+    ; ... (Keep existing scroll logic) ...
+
+    ; 4. LISTA NEGRA (Evitar falsos positivos como botones de Code Runner)
+    ; Si vemos algo de la lista negra, abortamos el ataque.
+    Loop Files, IndicatorFolder . "Ignore\*.png"
+    {
+        if ImageSearch(&IgnX, &IgnY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . A_LoopFileFullPath) {
+            ; Opción A: Abortar todo (Más seguro)
+            ; ToolTip "🛑 OBJETIVO PROHIBIDO DETECTADO: " . A_LoopFileName, 10, 10, 1
+            ; return
+            
+            ; Opción B: (Más avanzada) - Solo no dar clic si está muy cerca de donde íbamos a dar clic
+            ; Por ahora usaremos Opción A si el usuario quiere pausar por defecto.
+        }
     }
 
     Loop Targets.Length {
@@ -59,7 +98,19 @@ WatchDog() {
             try {
                 if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . imgPath) {
                     
+                    ; --- VERIFICACIÓN DE SEGURIDAD (IGNORAR SI COINCIDE CON LISTA NEGRA) ---
+                    ; Check de proximidad: Si lo que encontramos está cerca de una imagen prohibida...
+                    ; Por simplicidad/rendimiento: Si hay una imagen 'Ignore' visible, asumimos riesgo y NO atacamos este ciclo.
+                     Loop Files, IndicatorFolder . "Ignore\*.png"
+                     {
+                        if ImageSearch(&IgnX, &IgnY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . A_LoopFileFullPath) {
+                            ToolTip "🛡️ ZONA SEGURA (Obj. Ignorado)", 10, 10, 1
+                            return
+                        }
+                     }
+
                     MouseGetPos &OrigX, &OrigY
+                    ; ... (Keep existing click logic) ...
                     
                     ; Mover al CENTRO SEGURO (Balanceado para iconos y botones grandes)
                     TargetX := FoundX + 15 
@@ -89,12 +140,4 @@ RemoveToolTip() {
     ToolTip ,,,1
 }
 
-; --- PAUSA DE EMERGENCIA CON F8 ---
-F8:: {
-    Pause -1
-    if A_IsPaused
-        ToolTip "🛑 OMNIGOD PAUSADO", 10, 10, 1
-    else
-        ToolTip "🟢 OMNIGOD VIGILANDO", 10, 10, 1
-    SetTimer RemoveToolTip, -2000
-}
+; End of Script
