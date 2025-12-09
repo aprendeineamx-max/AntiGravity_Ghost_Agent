@@ -1,3 +1,4 @@
+
 # 🕵️‍♂️ Especificación del Agente: GHOST-01
 
 **Nombre en Clave**: `AntiGravity_Ghost`  

@@ -34,8 +34,17 @@ WatchDog() {
                     ; Guardar posición actual del mouse
                     MouseGetPos &OrigX, &OrigY
                     
-                    ; Clicar en el centro de la imagen encontrada
-                    Click FoundX + 10, FoundY + 5
+                    ; Mover al centro de la imagen encontrada (ajuste de offset)
+                    TargetX := FoundX + 20 ; Ajustado más al centro
+                    TargetY := FoundY + 10
+                    MouseMove TargetX, TargetY
+                    
+                    ; --- CLIC ROBUSTO (Para Electron Apps) ---
+                    Sleep 50
+                    Click "Down"
+                    Sleep 50
+                    Click "Up"
+                    Sleep 50
                     
                     ; Regresar mouse instantáneamente
                     MouseMove OrigX, OrigY
@@ -52,8 +61,9 @@ WatchDog() {
     ; 2. ESTRATEGIA TECLADO (SOLO SI ESTAMOS EN ANTIGRAVITY)
     try {
         if WinActive("AntiGravity") {
-            ; Enviar Alt+Enter suavemente si no se está escribiendo
-            if (A_TimeIdlePhysical > 1000) {
+            ; Enviar Alt+Enter suavemente SOLO si hay inactividad real (5 segundos)
+            ; Esto evita que se envíe mientras el usuario escribe
+            if (A_TimeIdlePhysical > 5000) {
                 SendInput "!{Enter}"
             }
         }
