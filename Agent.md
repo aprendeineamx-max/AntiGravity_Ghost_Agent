@@ -1,49 +1,69 @@
-# 🕵️‍♂️ Agent Specification: GHOST-01
+# 🕵️‍♂️ Especificación del Agente: GHOST-01
 
-**Code Name**: `AntiGravity_Ghost`  
-**Status**: `Active / Resident`  
-**Classification**: `UiAutomation / Stealth`  
-**Operative Environment**: `VS Code Electron Render Process`
-
----
-
-## 🎯 Primary Directive
-Eliminate user friction by autonomously authorizing recognized security and confirmation prompts with zero latency (< 50ms detection-to-action time).
-
-## 🧠 Cognitive Architecture (Logic)
-
-The agent operates on a reactive `MutationObserver` loop, scanning the DOM for specific molecular signatures (HTML structures) that match known obstruction patterns.
-
-### 👁️ Visual Cortex (Detection)
-*   **Scan Frequency**: Real-time (Event-driven).
-*   **Target Identifiers**:
-    *   `.monaco-button`
-    *   `.action-item`
-    *   `.dialog-buttons`
-*   **Linguistic Triggers**:
-    *   `"Accept"`
-    *   `"Autorizar"`
-    *   `"Allow"`
-    *   `"Confirm"`
-    *   `"Alt+Enter"`
-
-### ⚡ Reflex System (Action)
-upon `TargetAcquisition`:
-1.  **Validate**: Ensure element is visible and interactive.
-2.  **Execute**: Dispatch synthesized `click` event.
-3.  **Log**: Emit 👻 signature to console.
-4.  **Resume**: Return to dormant monitoring.
+**Nombre en Clave**: `AntiGravity_Ghost`  
+**Estado**: `Activo / Residente`  
+**Clasificación**: `Automatización UI / Sigilo`  
+**Entorno Operativo**: `Proceso de Renderizado Electron VS Code`
 
 ---
 
-## 🛡️ Operational Parameters
+## 🎯 Directiva Principal
+Eliminar la fricción del usuario autorizando autónomamente solicitudes de seguridad y confirmación reconocidas con latencia cero (< 50ms tiempo detección-a-acción), permitiendo un flujo de trabajo ininterrumpido.
 
-*   **Stealth Mode**: ENABLED. No visual overlay, no sound, no focus theft.
-*   **Resource Usage**: Negligible (O(1) lookup on mutation batches).
-*   **Failsafe**: Exception swallowing to prevent process destabilization.
+## 🧠 Arquitectura Cognitiva (Lógica)
 
-## 📜 Deployment History
-*   **v1.0**: Initial injection. Basic button matching.
+El agente opera en un bucle reactivo de `MutationObserver`, escaneando el DOM en busca de firmas moleculares específicas (estructuras HTML) que coincidan con patrones de obstrucción conocidos.
+
+### 👁️ Corteza Visual (Detección)
+*   **Frecuencia de Escaneo**: Tiempo Real (Impulsado por Eventos del DOM).
+*   **Identificadores de Objetivo (Clases CSS)**:
+    *   `.monaco-button` (Botones estándar de VS Code)
+    *   `.action-item` (Items de barra de acciones)
+    *   `.dialog-buttons` (Botones dentro de diálogos modales)
+    *   `.quick-input-list-entry` (Entradas en menús rápidos)
+*   **Activadores Lingüísticos (Triggers)**:
+    *   `"Accept"` / `"Aceptar"`
+    *   `"Autorizar"` / `"Authorize"`
+    *   `"Allow"` / `"Permitir"`
+    *   `"Confirm"` / `"Confirmar"`
+    *   `"Alt+Enter"` (Atajo de teclado común para acciones rápidas)
+
+### ⚡ Sistema Reflejo (Acción)
+Al momento de la `Adquisición de Objetivo`:
+1.  **Validación**: Asegurar que el elemento es visible, interactivo y no está deshabilitado.
+2.  **Ejecución**: Despachar evento `click()` sintetizado directamente al nodo.
+3.  **Registro**: Emitir firma 👻 a la consola para auditoría forense.
+4.  **Reanudación**: Retorno inmediato a monitoreo pasivo.
 
 ---
-> *"I am the click in the dark. I am the yes to your prompt. Work uninterrupted."*
+
+## ⚙️ Especificaciones Técnicas
+
+### Optimización de Rendimiento
+*   **Observación Asíncrona**: Utiliza `MutationObserver` en lugar de polling (intervalos), garantizando 0% de uso de CPU cuando no hay cambios en la UI.
+*   **Scope Quirúrgico**: Vigila `document.body` con filtros precisos para ignorar mutaciones irrelevantes (atributos, data-nodos).
+*   **Encapsulamiento**: Ejecución dentro de una IIFE (Immediately Invoked Function Expression) para evitar contaminación del espacio de nombres global `window`.
+
+### Manejo de Errores
+*   **Swallowing de Excepciones**: Cualquier error durante el intento de clic es capturado silenciosamente para prevenir interrupciones en el hilo principal de renderizado de VS Code.
+*   **Validación de Nodos**: Verificación estricta de `nodeType` para evitar operaciones en nodos de texto o comentarios.
+
+---
+
+## �️ Protocolos de Seguridad y Límites
+
+El Agente Fantasma está diseñado para ser **permisivo pero seguro**.
+
+*   **🚫 Zona de Exclusión**: No interactuará con botones destructivos explícitos (ej. "Delete", "Remove", "Destroy") a menos que se añadan explícitamente a su matriz de objetivos.
+*   **🔒 Confirmación Humana**: Para acciones críticas no mapeadas, el agente permanecerá inactivo, delegando la decisión al operador humano.
+
+---
+
+## 🔮 Hoja de Ruta (Futuras Expansiones)
+
+*   **v1.1 - Reconocimiento de Patrones OCR**: Implementación ligera de lectura de texto en imágenes/canvas (si fuera necesario para captchas simples).
+*   **v1.2 - Lista Blanca Dinámica**: Archivo de configuración `json` externo para añadir triggers sin modificar el código fuente.
+*   **v1.5 - Modo "Hunter"**: Búsqueda proactiva de ventanas emergentes ocultas o minimizadas (shadow DOM traversal).
+
+---
+> *"Soy el clic en la oscuridad. El 'sí' a tu pregunta. Trabaja sin interrupciones."*
