@@ -46,8 +46,8 @@ WatchDog() {
          ToolTip "📜 LISTA EXPANDIDA: Scrolleando...", 10, 10, 1
          MouseGetPos &CurrX, &CurrY
          MouseMove A_ScreenWidth/2, A_ScreenHeight/2 
-         Click "WheelDown"
-         Sleep 200 ; Pequeña pausa para que el scroll termine
+         Click "WheelDown" ; Intento 1: Rueda
+         Sleep 200 
          MouseMove CurrX, CurrY
     }
 
@@ -61,9 +61,9 @@ WatchDog() {
                     
                     MouseGetPos &OrigX, &OrigY
                     
-                    ; Mover al CENTRO PROFUNDO de la imagen (evitar bordes)
-                    TargetX := FoundX + 30 
-                    TargetY := FoundY + 15
+                    ; Mover al CENTRO SEGURO (Balanceado para iconos y botones grandes)
+                    TargetX := FoundX + 15 
+                    TargetY := FoundY + 10
                     MouseMove TargetX, TargetY
                     
                     ; --- CLIC ROBUSTO ---
