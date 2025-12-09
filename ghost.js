@@ -16,7 +16,7 @@
             '.modal-body .monaco-button',
             'button' // Fallback for generic buttons
         ],
-        keywords: ['accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si']
+        keywords: ['accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si', 'setup', 'configurar', 'trust', 'connect']
     };
 
     console.log(`${AGENT_NAME}: Initialized. Waiting via MutationObserver...`);
