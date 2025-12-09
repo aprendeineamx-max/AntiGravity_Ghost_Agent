@@ -45,13 +45,15 @@ Este no es un simple script. Es una tríada de sistemas operando en paralelo par
 *   **Misión**: Escanea la ventana activa en busca de elementos de Accessibility Tree.
 *   **Objetivos**: Popups nativos de Windows, cuadros de diálogo de sistema y ventanas que el DOM no ve.
 
-### 3. Project OmniGod (Capa Visual) 👁️
+### 3. Project OmniGod v2.0 (Capa Visual Inteligente) 👁️
 *   **Tecnología**: AutoHotKey v2 (Computer Vision).
 *   **Misión**: Escaneo de píxeles en pantalla (Image Search).
-*   **Objetivos**: Cualquier cosa que veas. Si puedes hacerle screenshot, OmniGod puede hacerle clic.
-*   **Inteligencia**:
-    *   Modo "Heavy Click" (Down-Wait-Up) para apps Electron.
-    *   Protección de escritura (Detecta inactividad antes de enviar comandos de teclado).
+*   **Inteligencia ("Smart Brain")**:
+    *   🛑 **Semáforo de Contexto**: Detecta si estás escribiendo (icono "Enviar" o Chat Vacío) y se pausa automáticamente. Solo actúa cuando ve el indicador de "Agente Trabajando" (Cuadrado Rojo).
+    *   📜 **Scroll Táctico**: Si detecta una lista expandida ("Collapse all"), hace scroll automático para cazar botones ocultos.
+    *   🎯 **Puntería Zen**: Ajuste de coordenadas al centro exacto del botón para evitar clics fallidos en bordes.
+*   **Objetivos**: Cualquier cosa en la carpeta `Targets`.
+
 
 ---
 
@@ -65,14 +67,16 @@ if (A_TimeIdlePhysical > 5000) { ... } ; 5000ms = 5 Segundos
 ```
 
 ### Añadir Nuevos Objetivos
-No necesitas tocar código. Solo agrega imágenes `.png` a `OmniBot/Targets/`. El sistema las carga dinámicamente al iniciarse.
+No necesitas tocar código.
+*   **Para Objetivos (Cosas a destruir)**: Agrega imágenes `.png` a `OmniBot/Targets/`.
+*   **Para Indicadores (Señales de Estado)**: Agrega imágenes `.png` a `OmniBot/Indicators/` (ej. botón de stop, icono de enviar).
 
 ---
 
 ## ❓ Solución de Problemas (Troubleshooting)
 
-**P: El bot dice "CAZADO" pero no hace clic.**
-R: El modo "Heavy Click" está activado por defecto en la V3.3. Asegúrate de que tu imagen `.png` no incluya mucho fondo (que sea solo el botón) para que el centro calculado sea correcto.
+**P: El bot hace clic en el botón de Stop o Cancelar.**
+R: ¡Cuidado! Esas imágenes deben ir en la carpeta `Indicators`, NO en `Targets`. Si están en Targets, el bot las atacará.
 
 **P: VS Code me pide "Reload" a veces.**
 R: Ghost Agent requiere inyectarse. Si VS Code se actualiza, es posible que debas reinstalar la extensión "Custom CSS and JS Loader" y re-aplicar.

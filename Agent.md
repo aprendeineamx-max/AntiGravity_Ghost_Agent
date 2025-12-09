@@ -62,6 +62,14 @@ El Agente Fantasma está diseñado para ser **permisivo pero seguro**.
 
 ## 🔮 Hoja de Ruta (Futuras Expansiones)
 
+### C. Protocolo Visual 2.0 (OmniGod)
+*   **Motor**: AutoHotKey v2 + GDI+ (Pixel Search).
+*   **Lógica de "Semáforo" (Context Awareness)**:
+    1.  **Check Negativo**: ¿Existe `Indicators/send.png` o `Indicators/inactive.png`? -> **PAUSA** (Usuario escribiendo).
+    2.  **Check Positivo**: ¿Existe `Indicators/working.png`? -> **ACTIVA** (Agente generando).
+    3.  **Acción**: Si ACTIVO -> Escanear carpeta `Targets/`.
+*   **Mecánica de Scroll**: Al detectar `Indicators/collapse.png`, envía `WheelDown` para revelar elementos ocultos en listas expandidas.
+*   **Precisión**: Offset dinámico (+30px, +15px) y algoritmo "Heavy Click" (Hold 50ms) para penetrar capas de Electron.
 *   **v1.1 - Reconocimiento de Patrones OCR**: Implementación ligera de lectura de texto en imágenes/canvas (si fuera necesario para captchas simples).
 *   **v1.2 - Lista Blanca Dinámica**: Archivo de configuración `json` externo para añadir triggers sin modificar el código fuente.
 *   **v1.5 - Modo "Hunter"**: Búsqueda proactiva de ventanas emergentes ocultas o minimizadas (shadow DOM traversal).
