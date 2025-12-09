@@ -19,14 +19,16 @@
             '[aria-label="Allow Once"]',
             '[aria-label="Accept all"]',
             '[title="Accept all"]',
-            '.chat-input-control .monaco-button', // Chat Input specific
+            '.chat-input-control .monaco-button',
+            '[role="button"]', // Generic catch-all (strictly text filtered)
             'button'
         ],
         keywords: [
             'accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si', // Standard
             'setup', 'configurar', 'trust', 'connect', // Browser
             'allow once', 'always allow', 'allow always', // Dropdowns
-            'accept all' // Specific Aggressive Match
+            'accept all', // Specific
+            'acceptalt', 'run command' // AI Chat specific
         ]
     };
 
