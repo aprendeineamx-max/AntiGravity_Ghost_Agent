@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AntiGravity | Console</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-panel">
+        <header>
+            <div class="logo">
+                <h1>⚛️ AntiGravity</h1>
+                <span class="badge">SYSTEM ONLINE</span>
+            </div>
+            <div class="clock" id="clock">00:00:00</div>
+        </header>
+
+        <div class="grid">
+            <!-- GHOST AGENT -->
+            <div class="card" id="card-ghost">
+                <div class="card-header">
+                    <h2>👻 Ghost Agent</h2>
+                    <div class="status-dot green"></div>
+                </div>
+                <p class="subtitle">VS Code Internal DOM Interceptor</p>
+                <div class="controls">
+                    <button class="btn info" onclick="toggle('ghost')">RELOAD</button>
+                    <div class="toggle-switch">
+                        <input type="checkbox" checked id="sw-ghost">
+                        <label for="sw-ghost"></label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OMNIGOD -->
+            <div class="card" id="card-omnigod">
+                <div class="card-header">
+                    <h2>👁️ OmniGod</h2>
+                    <div class="status-dot red" id="status-omnigod"></div>
+                </div>
+                <p class="subtitle">Computer Vision & AI Context</p>
+                <div class="metrics">
+                    <span>Targeting: <b id="val-targets">12</b></span>
+                    <span>Brain: <b>Active</b></span>
+                </div>
+                <div class="controls">
+                    <button class="btn danger" onclick="toggle('omnigod')">RESTART</button>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="sw-omnigod" onchange="toggleAgent('omnigod')">
+                        <label for="sw-omnigod"></label>
+                    </div>
+                </div>
+            </div>
+
+             <!-- OMNICONTROL -->
+             <div class="card" id="card-control">
+                <div class="card-header">
+                    <h2>🛡️ OmniControl</h2>
+                    <div class="status-dot orange" id="status-control"></div>
+                </div>
+                <p class="subtitle">OS Level HUD & Accessibility</p>
+                <div class="controls">
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="sw-control">
+                        <label for="sw-control"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- LOG TERMINAL -->
+        <div class="terminal">
+            <div class="terminal-header">
+                <span>📟 OMNI_LOG_STREAM</span>
+                <span class="clear-btn">CLEAR</span>
+            </div>
+            <div class="terminal-body" id="log-body">
+                <div class="line"><span class="time">[19:42:01]</span> <span class="sys">SYSTEM</span> Dashboard init...</div>
+                <div class="line"><span class="time">[19:42:02]</span> <span class="warn">GHOST</span>  Connecting to Virtual Socket...</div>
+                <div class="line"><span class="time">[19:42:05]</span> <span class="success">GOD</span>    Found "Buttons" in targets.</div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
