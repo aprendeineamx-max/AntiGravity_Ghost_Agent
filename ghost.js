@@ -14,9 +14,20 @@
             '.quick-input-widget .quick-input-list-entry',
             '.notification-toast .monaco-button',
             '.modal-body .monaco-button',
-            'button' // Fallback for generic buttons
+            '.chat-notification-widget .monaco-button', // Specific for Chat
+            '[aria-label="Allow Always"]',
+            '[aria-label="Allow Once"]',
+            '[aria-label="Accept all"]',
+            '[title="Accept all"]',
+            '.chat-input-control .monaco-button', // Chat Input specific
+            'button'
         ],
-        keywords: ['accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si', 'setup', 'configurar', 'trust', 'connect']
+        keywords: [
+            'accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si', // Standard
+            'setup', 'configurar', 'trust', 'connect', // Browser
+            'allow once', 'always allow', 'allow always', // Dropdowns
+            'accept all' // Specific Aggressive Match
+        ]
     };
 
     console.log(`${AGENT_NAME}: Initialized. Waiting via MutationObserver...`);
