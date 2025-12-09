@@ -157,6 +157,24 @@ WatchDog() {
             }
         }
     }
+
+    ; --- ESTRATEGIA DE SCROLL (Vertical Scan) ---
+    ; Si llegamos aquí, es que NO encontramos ningún objetivo en la pantalla actual.
+    ; Intentamos scrollear para revelar botones ocultos.
+    
+    ; 1. Asegurar foco en el centro (Chat)
+    MouseMove A_ScreenWidth/2, A_ScreenHeight/2
+    
+    ; 2. Scroll Abajo (Buscando nuevos mensajes)
+    ToolTip "⏬ BUSCANDO (Scroll Abajo)...", 10, 10, 1
+    Click "WheelDown"
+    Sleep 100
+    Click "WheelDown"
+    Sleep 100
+    
+    ; 3. Scroll Arriba (Ocasional, por si nos pasamos)
+    ; (Solo lo haremos si el mouse está muy abajo o lógica random para "sacudir")
+    ; Por ahora, priorizamos ABAJO que es donde sale lo nuevo.
 }
 
 RemoveToolTip() {
