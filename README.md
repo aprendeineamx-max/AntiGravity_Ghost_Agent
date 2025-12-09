@@ -65,8 +65,11 @@ Para verificar que el agente está activo:
 ## 🧩 Estructura del Proyecto
 
 *   `ghost.js`: **Payload Principal**. Contiene la lógica del `MutationObserver` y la ejecución de clics.
+*   `tools/OmniControl_HUD.ps1`: **Vigilante Externo**. Script PowerShell para situaciones donde VS Code pierde el foco.
 *   `injection_settings.json`: Fragmento de configuración de referencia.
 *   `README.md`: Esta documentación.
+*   `Agent.md`: Especificación técnica del agente.
+*   `Integration_Report.md`: Detalles de la fusión con sistemas externos.
 
 ## ⚠️ Exención de Responsabilidad
 
