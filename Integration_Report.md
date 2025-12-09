@@ -1,56 +1,39 @@
-# 📡 Reporte de Integración: OmniControl V2 (Hybrid Engine) + Ghost Agent
+# 📡 Reporte de Integración: OmniControl V3.2 (Universal Soldier)
 
 **Fecha**: 2025-12-09  
-**Estado**: SISTEMA HÍBRIDO DEPLEGADO  
-**Versión**: 2.0 (Double Helix)
+**Arquitectura**: Deep Scan + Fuzzy Logic  
+**Versión**: 3.2
 
 ---
 
-## 1. Análisis de Arquitectura Híbrida
+## 🚀 Novedades: "The Universal Soldier"
 
-Hemos evolucionado desde una simple inyección de teclas a un **Motor de Decisión Híbrido** que opera en paralelo.
+Esta actualización marca el cambio de una herramienta pasiva a un **Cazador Activo**.
 
-### A. Vector Interno (Ghost Agent - `ghost.js`)
-*   **Rol**: Cirujano Silencioso.
-*   **Mecanismo**: Inyección DOM JavaScript.
-*   **Objetivo**: Botones internos de la UI de VS Code (`.monaco-button`, `.action-item`).
-*   **Estado**: **ACTIVO RESIDENTE**. No requiere intervención.
+### 1. Estrategia de Búsqueda y Destrucción (`ScanAndDestroy`)
+A diferencia de la V2 que buscaba botones exactos ("Accept All"), la V3.2 implementa:
+*   **Búsqueda Profunda (Deep Scan)**: Recorre todo el árbol visual de la ventana objetivo, no solo la superficie.
+*   **Lógica Difusa (Fuzzy Match)**: Utiliza `IndexOf(..., StringComparison.OrdinalIgnoreCase)` para encontrar CUALQUIER botón que contenga la palabra "Accept". 
+    *   *Ejemplos detectados*: "Accept All", "Please Accept", "Accept Changes", "Auto-Accept".
 
-### B. Vector Externo (OmniControl HUD V2 - `.ps1`)
-*   **Rol**: Supervisor de Sistema (Overwatch).
-*   **Mecanismo Híbrido Actualizado**:
-    1.  **Capa Táctica (Teclado)**: Envía `Alt+Enter` para aceptar sugerencias de código o diálogos rápidos.
-    2.  **Capa Profunda (UI Automation)**: Utiliza `System.Windows.Automation` para inspeccionar el árbol visual de la ventana activa, encontrar botones llamados "Accept all" o "Accept" y pulsarlos programáticamente (`InvokePattern`) sin necesitar el cursor del mouse.
-*   **Ventaja V2**: Ya no es "ciego". Ahora puede "ver" los botones nativos que el navegador no expone al script JS.
+### 2. Auto-Lock de Ventana en Segundo Plano
+*   El sistema ahora **cachea** la ventana "AntiGravity" una vez encontrada.
+*   Aunque minimices o cambies de foco, OmniControl sigue "sosteniendo" el enlace a la ventana y puede pulsar botones en ella mientras trabajas en otra cosa (Background Execution).
 
----
+### 3. Inyección Agresiva
+*   Si la ventana tiene el foco, el script **siempre** dispara `Alt+Enter` como medida preventiva, cubriendo los milisegundos que el escáner UI tarda en procesar el árbol visual.
 
-## 2. Flujo de Trabajo (Workflow)
-
-1.  **Situación Normal**: El desarrollador trabaja.
-2.  **Evento**: Aparece una ventana de "Pending Permission" en VS Code.
-3.  **Respuesta T0 (0-50ms)**: `ghost.js` intenta interceptarla desde dentro.
-    *   *Si tiene éxito*: El diálogo desaparece. Fin.
-4.  **Respuesta T1 (1000ms)**: Si `ghost.js` falla (ej. ventana nativa del OS) o VS Code está en primer plano pero con un diálogo de sistema bloqueante:
-    *   **OmniControl** detecta el título "AntiGravity".
-    *   **OmniControl** lanza un `UIAutomation Scan`.
-    *   **OmniControl** detecta el botón "Accept" en el árbol de accesibilidad.
-    *   **OmniControl** ejecuta `Click()`.
-    *   *Backup*: Si no hay botón, envía `Alt+Enter`.
+### 4. Métricas
+*   **Hit Counter**: UI mejorada con contador visual de amenazas neutralizadas.
+*   **Scan Rate Variable**: Acelera a 500ms cuando busca, descansa a 1500ms tras un éxito para ahorrar CPU.
 
 ---
 
-## 3. Hoja de Ruta (Roadmap Realista)
+## ⚠️ Protocolos de Seguridad Actualizados
 
-| Etapa | Meta | Descripción | Estatus |
-| :--- | :--- | :--- | :--- |
-| **Fase 1** | **Hybrid Core** | Implementar inyección DOM + Automation API para cobertura 100%. | **✅ COMPLETADO** |
-| **Fase 2** | **Neural Filter** | Integrar lista blanca inteligente basada en el contenido del texto (OCR ligero) para no aceptar "Delete Database". | **Q1 2026** |
-| **Fase 3** | **Headless Service** | Convertir OmniControl en un servicio de Windows (`.exe` compilado) que arranque con el sistema, eliminando la ventana HUD. | **Q2 2026** |
-| **Fase 4** | **Sentience** | Que OmniControl reinicie automáticamente VS Code si detecta que se ha colgado (Monitor de Procesos). | **Q3 2026** |
+Debido a la naturaleza agresiva de la V3.2:
+1.  **Safety Typing**: Se mantiene estricto. Si tocas una tecla, el agente se congela instantáneamente.
+2.  **Scope Limit**: Aunque escanea en profundidad, sigue limitado a ventanas que contengan "AntiGravity" en el título (o lo que configures en la variable `$TargetTitle`).
 
----
-
-## 4. Conclusión Técnica
-
-La actualización a **V2.0** transforma a OmniControl de una herramienta de "macro" a una herramienta de **Accesibilidad Automatizada**. Al combinar esto con el `ghost.js`, hemos creado un ecosistema de auto-autorización prácticamente infalible.
+## Conclusión
+OmniControl V3.2 es autónomo. Ya no espera a que le presentes el problema; lo busca en la estructura de la ventana y lo elimina.
