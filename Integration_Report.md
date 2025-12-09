@@ -1,59 +1,56 @@
-# 📡 Reporte de Integración: OmniControl + Ghost Agent
+# 📡 Reporte de Integración: OmniControl V2 (Hybrid Engine) + Ghost Agent
 
 **Fecha**: 2025-12-09  
-**Asunto**: Fusión de Sistemas y Roadmap Técnico
+**Estado**: SISTEMA HÍBRIDO DEPLEGADO  
+**Versión**: 2.0 (Double Helix)
 
 ---
 
-## 1. Análisis de Convergencia
-Hemos identificado dos vectores de automatización complementarios en el ecosistema AntiGravity:
+## 1. Análisis de Arquitectura Híbrida
 
-### A. Vector Interno (Ghost Agent)
-*   **Tecnología**: JavaScript / DOM MutationObserver.
-*   **Ámbito**: Dentro de VS Code (Renderer).
-*   **Fortaleza**: Precisión quirúrgica, silencioso, opera en segundo plano (si la ventana no está minimizada agresivamente).
-*   **Debilidad**: Ciego a ventanas fuera del DOM de VS Code (ej. alertas nativas del OS, diálogos de confirmación de administrador).
+Hemos evolucionado desde una simple inyección de teclas a un **Motor de Decisión Híbrido** que opera en paralelo.
 
-### B. Vector Externo (OmniControl HUD)
-*   **Tecnología**: PowerShell / Win32 API / SendKeys.
-*   **Ámbito**: Sistema Operativo (Global Windows).
-*   **Fortaleza**: Fuerza bruta universa, capaz de cerrar ventanas nativas y actuar como "Capa de Seguridad" final.
-*   **Debilidad**: Requiere foco (Foreground), menos elegante, riesgo de interferencia si el usuario escribe.
+### A. Vector Interno (Ghost Agent - `ghost.js`)
+*   **Rol**: Cirujano Silencioso.
+*   **Mecanismo**: Inyección DOM JavaScript.
+*   **Objetivo**: Botones internos de la UI de VS Code (`.monaco-button`, `.action-item`).
+*   **Estado**: **ACTIVO RESIDENTE**. No requiere intervención.
 
----
-
-## 2. Estrategia de Fusión: "The Double Helix"
-
-La solución propuesta no es elegir uno, sino utilizar ambos en tándem para una **cobertura del 100%**.
-
-*   **Capa 1 (Fantasma)**: El `ghost.js` maneja el 90% de las interacciones diarias dentro del editor. Es la primera línea de defensa.
-*   **Capa 2 (OmniOverwatch)**: `OmniControl_HUD.ps1` corre flotando en un monitor secundario o en la esquina. Monitoriza "Fugas" que el Ghost Agent no pudo capturar (ej. crashes, ventanas de error de sistema, o cuando VS Code roba el foco inesperadamente).
-
-### Implementación Realizada (v2.0)
-Se ha remasterizado `OmniControl` para incluir:
-1.  **Multi-Targeting**: Ahora acepta una lista de objetivos, no solo "AntiGravity".
-2.  **Visual Logger**: Historial de eventos en tiempo real para verificar qué sistema actuó.
-3.  **Safety Typing**: Detecta si el usuario está escribiendo para NO disparar teclas y arruinar el trabajo.
+### B. Vector Externo (OmniControl HUD V2 - `.ps1`)
+*   **Rol**: Supervisor de Sistema (Overwatch).
+*   **Mecanismo Híbrido Actualizado**:
+    1.  **Capa Táctica (Teclado)**: Envía `Alt+Enter` para aceptar sugerencias de código o diálogos rápidos.
+    2.  **Capa Profunda (UI Automation)**: Utiliza `System.Windows.Automation` para inspeccionar el árbol visual de la ventana activa, encontrar botones llamados "Accept all" o "Accept" y pulsarlos programáticamente (`InvokePattern`) sin necesitar el cursor del mouse.
+*   **Ventaja V2**: Ya no es "ciego". Ahora puede "ver" los botones nativos que el navegador no expone al script JS.
 
 ---
 
-## 3. Roadmap Funcional (Futuro)
+## 2. Flujo de Trabajo (Workflow)
 
-### Fase 1: Consolidación (Actual)
-*   [x] Inyección de Ghost Agent (JS).
-*   [x] Despliegue de OmniControl v2.0 (PS1).
-
-### Fase 2: Intercomunicación (Q1 2026)
-*   **File-System Bridge**: Que `ghost.js` escriba en un archivo `heartbeat.log` y que `OmniControl` lo lea. Si `ghost.js` deja de reportar, OmniControl reinicia VS Code automáticamente (Self-Healing).
-
-### Fase 3: AI Vision (Q2 2026)
-*   Reemplazar la búsqueda de texto por **Computer Vision** (screenshot análisis) en OmniControl.
-*   Capacidad de detectar ventanas "sin título" basándose en la forma de los botones.
-
-### Fase 4: Modo Servicio (Q3 2026)
-*   Convertir OmniControl en un Servicio de Windows silencioso (sin GUI) que solo notifica vía Toast Notification cuando actúa.
+1.  **Situación Normal**: El desarrollador trabaja.
+2.  **Evento**: Aparece una ventana de "Pending Permission" en VS Code.
+3.  **Respuesta T0 (0-50ms)**: `ghost.js` intenta interceptarla desde dentro.
+    *   *Si tiene éxito*: El diálogo desaparece. Fin.
+4.  **Respuesta T1 (1000ms)**: Si `ghost.js` falla (ej. ventana nativa del OS) o VS Code está en primer plano pero con un diálogo de sistema bloqueante:
+    *   **OmniControl** detecta el título "AntiGravity".
+    *   **OmniControl** lanza un `UIAutomation Scan`.
+    *   **OmniControl** detecta el botón "Accept" en el árbol de accesibilidad.
+    *   **OmniControl** ejecuta `Click()`.
+    *   *Backup*: Si no hay botón, envía `Alt+Enter`.
 
 ---
 
-## 🏁 Conclusión
-La combinación de **Ghost Agent** (In-Process) y **OmniControl** (Out-Process) crea un entorno blindado. El código remasterizado ya está en `tools/OmniControl_HUD.ps1`.
+## 3. Hoja de Ruta (Roadmap Realista)
+
+| Etapa | Meta | Descripción | Estatus |
+| :--- | :--- | :--- | :--- |
+| **Fase 1** | **Hybrid Core** | Implementar inyección DOM + Automation API para cobertura 100%. | **✅ COMPLETADO** |
+| **Fase 2** | **Neural Filter** | Integrar lista blanca inteligente basada en el contenido del texto (OCR ligero) para no aceptar "Delete Database". | **Q1 2026** |
+| **Fase 3** | **Headless Service** | Convertir OmniControl en un servicio de Windows (`.exe` compilado) que arranque con el sistema, eliminando la ventana HUD. | **Q2 2026** |
+| **Fase 4** | **Sentience** | Que OmniControl reinicie automáticamente VS Code si detecta que se ha colgado (Monitor de Procesos). | **Q3 2026** |
+
+---
+
+## 4. Conclusión Técnica
+
+La actualización a **V2.0** transforma a OmniControl de una herramienta de "macro" a una herramienta de **Accesibilidad Automatizada**. Al combinar esto con el `ghost.js`, hemos creado un ecosistema de auto-autorización prácticamente infalible.
