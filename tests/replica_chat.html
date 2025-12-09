@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AntiGravity Chat Replica</title>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: #ccc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .chat-widget {
+            background: #252526;
+            border: 1px solid #454545;
+            border-radius: 5px;
+            padding: 15px;
+            width: 400px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .chat-header {
+            color: #cccccc;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+        }
+
+        /* EXACT VS CODE STYLES */
+        .monaco-button {
+            border: 1px solid transparent;
+            border-radius: 2px;
+            cursor: pointer;
+            padding: 4px 12px;
+            font-size: 12px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .btn-primary {
+            background-color: #007acc;
+        }
+
+        /* Blue Setup Button */
+        .btn-secondary {
+            background-color: #3c3c3c;
+        }
+
+        /* Grey Deny Button */
+
+        .clicked-state {
+            background-color: #28a745 !important;
+            /* Green Success */
+            content: "✅ AUTO-CLICKED";
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chat-widget">
+        <div class="chat-header">
+            Antigravity would like to use the browser.
+        </div>
+
+        <div class="button-row">
+            <!-- TARGET: This should be clicked -->
+            <button class="monaco-button btn-primary" id="targetBtn">Setup</button>
+            <button class="monaco-button btn-secondary">Deny</button>
+        </div>
+
+        <div id="log" style="margin-top:20px; color: #888; font-size: 10px; font-family: monospace;">
+            Waiting for Ghost Agent...
+        </div>
+    </div>
+
+    <!-- SCRIPT INJECTION (Normally handling by Plugin, here manual) -->
+    <script src="../ghost.js"></script>
+
+    <script>
+        // Visual Feedback Logic
+        const btn = document.getElementById('targetBtn');
+        const log = document.getElementById('log');
+
+        // Override click to show visual feedback
+        const originalClick = btn.click;
+        btn.onclick = function () {
+            btn.innerText = "✅ CLICKED";
+            btn.className += " clicked-state";
+            log.innerText = "LOG: Ghost Agent detected 'Setup' and fired click event.";
+            log.style.color = "#00ff00";
+        }
+    </script>
+</body>
+
+</html>

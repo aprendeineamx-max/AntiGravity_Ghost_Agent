@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Agent: CHAOS MODE</title>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: #fff;
+            font-family: sans-serif;
+            padding: 50px;
+        }
+
+        .log-box {
+            background: #000;
+            color: #0f0;
+            padding: 10px;
+            height: 200px;
+            overflow-y: auto;
+            font-family: monospace;
+            border: 1px solid #333;
+            margin-top: 20px;
+        }
+
+        /* VS Code Styles */
+        .monaco-button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .notification-toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #252526;
+            padding: 15px;
+            border-left: 4px solid #007acc;
+            width: 300px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-body {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #252526;
+            padding: 30px;
+            border: 1px solid #444;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            text-align: center;
+        }
+
+        .success {
+            background: #28a745 !important;
+            transition: 0.2s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🔥 CHAOS TEST: Dynamic Injection</h1>
+    <p>Spawning threats in: <span id="timer">...</span></p>
+
+    <div class="log-box" id="logger">
+        <div>System Initialized.</div>
+    </div>
+
+    <!-- Container for dynamic elements -->
+    <div id="battlefield"></div>
+
+    <script>
+        const log = (msg) => {
+            const l = document.getElementById('logger');
+            const d = document.createElement('div');
+            d.innerText = `[${new Date().toLocaleTimeString()}] ${msg}`;
+            l.appendChild(d);
+            l.scrollTop = l.scrollHeight;
+        };
+
+        const spawn = (html) => {
+            const div = document.createElement('div');
+            div.innerHTML = html;
+            document.getElementById('battlefield').appendChild(div);
+            // Add click listener for verification
+            const btn = div.querySelector('button');
+            if (btn) {
+                btn.onclick = () => {
+                    btn.innerText = "✅ CLICKED";
+                    btn.classList.add('success');
+                    log("THREAT NEUTRALIZED: " + btn.innerText);
+                    setTimeout(() => div.remove(), 1000); // Cleanup
+                };
+            }
+        };
+
+        const sequence = [
+            { t: 1000, name: 'Chat Setup', html: '<button class="monaco-button">Setup Browser</button>' },
+            { t: 3000, name: 'Toast Notification', html: '<div class="notification-toast">Allow external access? <button class="monaco-button">Allow</button></div>' },
+            { t: 5000, name: 'Critical Modal', html: '<div class="modal-body"><h2>Confirmation</h2><p>Accept risk?</p><button class="monaco-button">Accept all</button></div>' }
+        ];
+
+        sequence.forEach(evt => {
+            setTimeout(() => {
+                log("SPAWNING: " + evt.name);
+                spawn(evt.html);
+            }, evt.t);
+        });
+
+    </script>
+
+    <script src="../ghost.js"></script>
+</body>
+
+</html>

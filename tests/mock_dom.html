@@ -1,21 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Ghost Agent Test Bench</title>
     <style>
-        body { background: #1e1e1e; color: #ccc; font-family: sans-serif; padding: 20px; }
-        .section { margin-bottom: 20px; border: 1px solid #333; padding: 10px; }
-        
-        /* Simulating VS Code classes */
-        .monaco-button { 
-            background: #0e639c; color: white; border: none; padding: 8px 16px; cursor: pointer; display: inline-block; margin: 5px;
+        body {
+            background: #1e1e1e;
+            color: #ccc;
+            font-family: sans-serif;
+            padding: 20px;
         }
-        .dialog-buttons { display: flex; gap: 10px; }
-        
-        .log { background: #000; color: #0f0; padding: 10px; height: 150px; overflow-y: auto; font-family: monospace; }
+
+        .section {
+            margin-bottom: 20px;
+            border: 1px solid #333;
+            padding: 10px;
+        }
+
+        /* Simulating VS Code classes */
+        .monaco-button {
+            background: #0e639c;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            cursor: pointer;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .dialog-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .log {
+            background: #000;
+            color: #0f0;
+            padding: 10px;
+            height: 150px;
+            overflow-y: auto;
+            font-family: monospace;
+        }
     </style>
 </head>
+
 <body>
 
     <h1>👻 Ghost Agent Test Bench</h1>
@@ -47,11 +76,27 @@
         <div id="spawnArea"></div>
     </div>
 
+    <div class="section">
+        <h3>Test Case 4: Chat Blue Buttons (Screenshots)</h3>
+        <div style="background: #252526; padding: 10px; border-radius: 5px;">
+            <p>Antigravity would like to use the browser.</p>
+            <!-- Scenario: Setup | Deny -->
+            <button class="monaco-button" style="background: #007ACC; color: white;">Setup</button>
+            <button class="monaco-button" style="background: #333;">Deny</button>
+        </div>
+
+        <div style="background: #252526; padding: 10px; border-radius: 5px; margin-top: 10px;">
+            <p>Opening URL in Browser</p>
+            <!-- Scenario: Allow Once Split Button -->
+            <button class="monaco-button" style="background: #007ACC; color: white;">Allow Once</button>
+        </div>
+    </div>
+
     <script>
         // Redirect Console
         const logArea = document.getElementById('consoleLog');
         const originalLog = console.log;
-        console.log = function(msg) {
+        console.log = function (msg) {
             originalLog(msg);
             const div = document.createElement('div');
             div.textContent = '> ' + msg;
@@ -61,7 +106,7 @@
 
         // Click Handler for Mocks
         document.addEventListener('click', (e) => {
-            if(e.target.matches('.monaco-button, .monaco-text-button')) {
+            if (e.target.matches('.monaco-button, .monaco-text-button')) {
                 console.log(`[SYSTEM] Button clicked: ${e.target.innerText}`);
                 e.target.style.backgroundColor = 'green';
                 e.target.innerText += ' (CLICKED)';
@@ -80,4 +125,5 @@
     <script src="../ghost.js"></script>
 
 </body>
+
 </html>
