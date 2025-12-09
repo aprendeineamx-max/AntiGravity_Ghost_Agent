@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ghost Agent Test Bench</title>
+    <style>
+        body { background: #1e1e1e; color: #ccc; font-family: sans-serif; padding: 20px; }
+        .section { margin-bottom: 20px; border: 1px solid #333; padding: 10px; }
+        
+        /* Simulating VS Code classes */
+        .monaco-button { 
+            background: #0e639c; color: white; border: none; padding: 8px 16px; cursor: pointer; display: inline-block; margin: 5px;
+        }
+        .dialog-buttons { display: flex; gap: 10px; }
+        
+        .log { background: #000; color: #0f0; padding: 10px; height: 150px; overflow-y: auto; font-family: monospace; }
+    </style>
+</head>
+<body>
+
+    <h1>👻 Ghost Agent Test Bench</h1>
+    <p>This page simulates VS Code elements. The agent should auto-click valid buttons.</p>
+
+    <div class="log" id="consoleLog">
+        <div>> Console Output redirected here...</div>
+    </div>
+
+    <div class="section">
+        <h3>Test Case 1: Standard Confirm Button</h3>
+        <!-- Should be clicked -->
+        <button class="monaco-button">Accept All</button>
+    </div>
+
+    <div class="section">
+        <h3>Test Case 2: Hidden/Nested</h3>
+        <div class="dialog-buttons">
+            <!-- Should be clicked -->
+            <div class="monaco-text-button" role="button" tabindex="0">Confirmar</div>
+            <!-- Should NOT be clicked -->
+            <div class="monaco-text-button" role="button">Cancel</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Test Case 3: Dynamic Injection</h3>
+        <button onclick="injectButton()">Spawn 'Allow' Button</button>
+        <div id="spawnArea"></div>
+    </div>
+
+    <script>
+        // Redirect Console
+        const logArea = document.getElementById('consoleLog');
+        const originalLog = console.log;
+        console.log = function(msg) {
+            originalLog(msg);
+            const div = document.createElement('div');
+            div.textContent = '> ' + msg;
+            logArea.appendChild(div);
+            logArea.scrollTop = logArea.scrollHeight;
+        };
+
+        // Click Handler for Mocks
+        document.addEventListener('click', (e) => {
+            if(e.target.matches('.monaco-button, .monaco-text-button')) {
+                console.log(`[SYSTEM] Button clicked: ${e.target.innerText}`);
+                e.target.style.backgroundColor = 'green';
+                e.target.innerText += ' (CLICKED)';
+            }
+        });
+
+        function injectButton() {
+            const btn = document.createElement('button');
+            btn.className = 'monaco-button';
+            btn.innerText = 'Allow Extension'; // Trigger word
+            document.getElementById('spawnArea').appendChild(btn);
+        }
+    </script>
+
+    <!-- INJECT GHOST AGENT -->
+    <script src="../ghost.js"></script>
+
+</body>
+</html>

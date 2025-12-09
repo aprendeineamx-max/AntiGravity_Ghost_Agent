@@ -1,82 +1,105 @@
 (function () {
     'use strict';
 
-    console.log('👻 Ghost Agent: Initialized and watching for prompts...');
+    const AGENT_NAME = '👻 Ghost Agent';
+    const ATTR_HANDLED = 'data-ghost-handled';
 
-    const observerConfig = {
-        childList: true,
-        subtree: true
+    // Config: Performance & Targeting
+    const CONFIG = {
+        debounceMs: 200,
+        selectors: [
+            '.monaco-button',
+            '.action-item',
+            '.dialog-buttons .monaco-text-button',
+            '.quick-input-widget .quick-input-list-entry',
+            '.notification-toast .monaco-button',
+            '.modal-body .monaco-button',
+            'button' // Fallback for generic buttons
+        ],
+        keywords: ['accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si']
     };
 
-    // Target keywords for button text or tooltips
-    const TARGET_KEYWORDS = ['accept', 'autorizar', 'allow', 'confirm', 'alt+enter'];
+    console.log(`${AGENT_NAME}: Initialized. Waiting via MutationObserver...`);
 
-    // CSS selectors for potential buttons/actions in VS Code / Electron
-    const BUTTON_SELECTORS = [
-        '.monaco-button',
-        '.action-item',
-        '.dialog-buttons .monaco-text-button',
-        '.quick-input-widget .quick-input-list-entry', // Sometimes prompts appear in quick input
-        '.notification-toast .monaco-button',
-        '.modal-body .monaco-button'
-    ];
+    /**
+     * Predicate: Should we click this element?
+     * @param {HTMLElement} element 
+     */
+    const shouldClick = (element) => {
+        // 1. Sanity Check
+        if (!element || element.hasAttribute(ATTR_HANDLED) || element.disabled) return false;
 
-    const isMatch = (text) => {
-        if (!text) return false;
-        const lower = text.toLowerCase();
-        return TARGET_KEYWORDS.some(keyword => lower.includes(keyword));
+        // 2. Visibility Check (Basic)
+        if (element.offsetParent === null) return false;
+
+        // 3. Content Match
+        const text = (element.innerText || element.textContent || '').trim().toLowerCase();
+        const title = (element.getAttribute('title') || element.getAttribute('aria-label') || '').toLowerCase();
+
+        return CONFIG.keywords.some(kw => text.includes(kw) || title.includes(kw));
     };
 
+    /**
+     * Action: Click and Mark
+     * @param {HTMLElement} element 
+     */
+    const performClick = (element) => {
+        try {
+            // Mark immediately to prevent double-clicks
+            element.setAttribute(ATTR_HANDLED, 'true');
+
+            // Visual Debug (Optional: Highlight before click)
+            element.style.outline = '2px solid #00FF00';
+
+            // Execution
+            element.click();
+
+            console.log(`${AGENT_NAME}: Auto-authorized -> "${element.innerText || 'Action'}"`);
+        } catch (err) {
+            console.error(`${AGENT_NAME}: Action Failed`, err);
+        }
+    };
+
+    /**
+     * Observer Logic
+     */
     const handleMutations = (mutationsList) => {
         for (const mutation of mutationsList) {
-            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
-                mutation.addedNodes.forEach((node) => {
-                    // Start valid check: must be an Element node
-                    if (node.nodeType !== Node.ELEMENT_NODE) return;
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach(node => {
+                    if (node.nodeType === Node.ELEMENT_NODE) {
+                        // A. Check the node itself
+                        if (CONFIG.selectors.some(s => node.matches(s)) && shouldClick(node)) {
+                            performClick(node);
+                        }
 
-                    // 1. Check if the node itself is a target button
-                    if (BUTTON_SELECTORS.some(selector => node.matches && node.matches(selector))) {
-                        checkAndClick(node);
+                        // B. Check children (if it's a container)
+                        const query = CONFIG.selectors.join(',');
+                        const children = node.querySelectorAll(query);
+                        children.forEach(child => {
+                            if (shouldClick(child)) performClick(child);
+                        });
                     }
-
-                    // 2. Query within the node for target buttons
-                    // We iterate selectors to find any contained buttons
-                    const foundButtons = node.querySelectorAll(BUTTON_SELECTORS.join(', '));
-                    foundButtons.forEach(btn => checkAndClick(btn));
                 });
             }
         }
     };
 
-    const checkAndClick = (element) => {
-        // Check visible text
-        const textContent = element.textContent || element.innerText || '';
-        // Check title or aria-label for accessibility/tooltips
-        const title = element.getAttribute('title') || element.getAttribute('aria-label') || '';
+    // Initialize Observer
+    const observer = new MutationObserver(handleMutations);
 
-        if (isMatch(textContent) || isMatch(title)) {
-            try {
-                // Determine if it's currently visible/clickable (basic check)
-                if (element.offsetParent !== null && !element.disabled) {
-                    element.click();
-                    console.log(`👻 Ghost Agent: Auto-authorized "${textContent.trim() || 'Action'}"`);
-                }
-            } catch (err) {
-                console.error('👻 Ghost Agent: Failed to click', err);
-            }
+    // Wait for Body
+    const init = () => {
+        if (document.body) {
+            observer.observe(document.body, {
+                childList: true,
+                subtree: true
+            });
+        } else {
+            setTimeout(init, 100);
         }
     };
 
-    const observer = new MutationObserver(handleMutations);
-
-    // Start observing the document body
-    // We wait for body if it doesn't exist yet (for very early injection)
-    if (document.body) {
-        observer.observe(document.body, observerConfig);
-    } else {
-        document.addEventListener('DOMContentLoaded', () => {
-            observer.observe(document.body, observerConfig);
-        });
-    }
+    init();
 
 })();

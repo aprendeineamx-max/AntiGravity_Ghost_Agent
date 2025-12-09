@@ -1,64 +1,71 @@
-# --- OMNICONTROL V2.0: AUTO-AUTHORIZER ---
-# Autor: Gemini | Fecha: 09/12/2025
-# Nivel: UI Automation (Backend Click) + Keyboard Injection
+# --- OMNICONTROL V2.1: REFACTORED HYBRID ---
+# Status: Production Ready | Logic: Modularized
 
-# 1. CARGAR LIBRERÍAS DE AUTOMATIZACIÓN (El cerebro que "ve" los botones)
+# --- 0. BOOTSTRAP LIBRARIES ---
 try {
     Add-Type -AssemblyName UIAutomationClient
     Add-Type -AssemblyName UIAutomationTypes
     Add-Type -AssemblyName PresentationFramework, System.Windows.Forms, System.Drawing
 }
 catch {
-    Write-Warning "Intentando cargar librerías WPF desde rutas estándar..."
-    $WPFPath = "C:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF"
-    Add-Type -Path "$WPFPath\UIAutomationClient.dll"
-    Add-Type -Path "$WPFPath\UIAutomationTypes.dll"
+    Write-Warning "System assemblies missing. UI Automation features may fail."
 }
 
-# 2. DEFINIR MOTOR HÍBRIDO (API + UI AUTOMATION)
-$Source = @"
+# --- 1. BACKEND ENGINE (C#) ---
+$BackendSource = @"
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Automation; 
+using System.Collections.Generic;
 
-namespace OmniSystem {
-    public class Backend {
+namespace OmniInternal {
+    public class Core {
         [DllImport("user32.dll")] public static extern IntPtr GetForegroundWindow();
         [DllImport("user32.dll")] public static extern int GetWindowText(IntPtr hWnd, StringBuilder text, int count);
         [DllImport("user32.dll")] public static extern short GetAsyncKeyState(int vKey);
 
-        // FUNCIÓN CLAVE: Busca el botón dentro de la ventana y lo pulsa
-        public static bool ClickAcceptButton(IntPtr hwnd) {
+        public static string GetActiveTitle() {
+            var hwnd = GetForegroundWindow();
+            var sb = new StringBuilder(256);
+            GetWindowText(hwnd, sb, 256);
+            return sb.ToString();
+        }
+
+        public static bool IsTyping() {
+            // Check A-Z and 0-9
+            for (int i = 65; i <= 90; i++) if (GetAsyncKeyState(i) < 0) return true;
+            for (int i = 48; i <= 57; i++) if (GetAsyncKeyState(i) < 0) return true;
+            return false;
+        }
+
+        public static bool TryClickAccept(IntPtr hwnd) {
+            if (hwnd == IntPtr.Zero) return false;
             try {
-                if (hwnd == IntPtr.Zero) return false;
-                
-                // Conectamos con la ventana
                 var root = AutomationElement.FromHandle(hwnd);
                 if (root == null) return false;
 
-                // Buscamos botones llamados "Accept all" o "Accept"
-                // Usamos una condición OR para cubrir ambos casos
-                var condNameAll = new PropertyCondition(AutomationElement.NameProperty, "Accept all");
-                var condNameOne = new PropertyCondition(AutomationElement.NameProperty, "Accept");
-                var condType = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button);
-                
-                var condFinal = new AndCondition(condType, new OrCondition(condNameAll, condNameOne));
+                // Define search conditions for "Accept" buttons
+                var conditions = new OrCondition(
+                    new PropertyCondition(AutomationElement.NameProperty, "Accept"),
+                    new PropertyCondition(AutomationElement.NameProperty, "Accept all"),
+                    new PropertyCondition(AutomationElement.NameProperty, "Allow"),
+                    new PropertyCondition(AutomationElement.NameProperty, "Yes"),
+                    new PropertyCondition(AutomationElement.NameProperty, "Confirmar")
+                );
 
-                // Escaneo rápido (FindFirst es más eficiente que buscar todos)
-                var element = root.FindFirst(TreeScope.Descendants, condFinal);
+                var buttonCond = new AndCondition(
+                    new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button),
+                    conditions
+                );
 
+                var element = root.FindFirst(TreeScope.Descendants, buttonCond);
                 if (element != null) {
-                    // Si encontramos el botón, ejecutamos su patrón 'Invoke' (Clic sin mouse)
-                    var invokePattern = element.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
-                    if (invokePattern != null) {
-                        invokePattern.Invoke();
-                        return true; // ¡Autorizado!
-                    }
+                    var invoke = element.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
+                    invoke?.Invoke();
+                    return true;
                 }
-            } catch (Exception) {
-                // Silencioso si falla la lectura del árbol (común en apps Electron)
-            }
+            } catch { /* Silent Fail */ }
             return false;
         }
     }
@@ -66,180 +73,148 @@ namespace OmniSystem {
 "@
 
 try {
-    if (-not ([System.Management.Automation.PSTypeName]'OmniSystem.Backend').Type) {
-        Add-Type -TypeDefinition $Source -Language CSharp -ReferencedAssemblies UIAutomationClient, UIAutomationTypes
+    if (-not ([System.Management.Automation.PSTypeName]'OmniInternal.Core').Type) {
+        Add-Type -TypeDefinition $BackendSource -Language CSharp -ReferencedAssemblies UIAutomationClient, UIAutomationTypes
     }
 }
-catch { Write-Warning "Backend ya cargado. Continuando..." }
+catch { Write-Warning "Backend load skipped (Type exists)." }
 
-# 3. INTERFAZ GRÁFICA (HUD)
+# --- 2. CONFIGURATION ---
+$Config = @{
+    TargetTitle = "AntiGravity"
+    ScanRate    = 1000 # ms
+}
+
+# --- 3. UI DEFINITION (XAML) ---
 [xml]$XAML = @"
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="OmniControl V2" Height="190" Width="350" 
+        Title="OmniControl HUD" Height="200" Width="320" 
         WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True"
-        Background="#1E1E1E" Topmost="True" BorderBrush="#007ACC" BorderThickness="1">
+        Background="#121212" Topmost="True" BorderBrush="#444" BorderThickness="1">
+    
     <Window.Resources>
         <Style TargetType="Button">
-            <Setter Property="Background" Value="#333333"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontWeight" Value="Bold"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
-                        <Border Background="{TemplateBinding Background}" CornerRadius="4">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="3">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-             <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Opacity" Value="0.8"/>
-                    <Setter Property="Cursor" Value="Hand"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
     </Window.Resources>
 
-    <Grid Margin="15">
+    <Grid Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/> 
-            <RowDefinition Height="*"/>    
-            <RowDefinition Height="Auto"/> 
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
+        <!-- Header -->
         <DockPanel Grid.Row="0" LastChildFill="False">
-            <TextBlock Text="👻 OmniControl V2.0" Foreground="#007ACC" FontWeight="Bold" FontSize="14" VerticalAlignment="Center"/>
-            <Button Name="btnClose" Content="✕" Width="30" Height="25" DockPanel.Dock="Right" Background="Transparent" Foreground="#888"/>
+            <TextBlock Text="COVERT OPS: OMNICONTROL" Foreground="#666" FontWeight="Bold" FontFamily="Consolas" VerticalAlignment="Center"/>
+            <Button Name="btnClose" Content="X" Width="20" Background="Transparent" Foreground="#888" DockPanel.Dock="Right" FontWeight="Bold"/>
         </DockPanel>
 
-        <Border Grid.Row="1" Margin="0,15,0,15" Background="#252526" CornerRadius="6" BorderBrush="#333" BorderThickness="1">
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock Name="lblStatus" Text="SISTEMA LISTO" Foreground="#CCCCCC" FontSize="13" FontWeight="Bold" HorizontalAlignment="Center"/>
-                <TextBlock Name="lblDetail" Text="Esperando AntiGravity..." Foreground="#555555" FontSize="10" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+        <!-- Status Screen -->
+        <Border Grid.Row="1" Background="#000" BorderBrush="#222" BorderThickness="1" Margin="0,5">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Name="lblState" Text="STANDBY" Foreground="#555" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                <TextBlock Name="lblMeta" Text="Waiting for target..." Foreground="#333" FontSize="10" HorizontalAlignment="Center" Margin="0,5,0,0"/>
             </StackPanel>
         </Border>
 
+        <!-- Action Bar -->
         <Grid Grid.Row="2">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Button Name="btnAction" Content="▶ ACTIVAR AUTORIZADOR" Height="40" Background="#2D8C3C" Margin="0,0,10,0"/>
-            <CheckBox Name="chkOnTop" Content="📌" IsChecked="True" Foreground="White" VerticalAlignment="Center" Grid.Column="1"/>
+            <Grid.ColumnDefinitions> <ColumnDefinition Width="*"/> <ColumnDefinition Width="30"/> </Grid.ColumnDefinitions>
+            <Button Name="btnToggle" Content="ENGAGE SYSTEM" Height="30" Background="#222" Foreground="#888" FontWeight="Bold"/>
+            <CheckBox Name="chkTop" IsChecked="True" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Content="📌" Foreground="#444"/>
         </Grid>
     </Grid>
 </Window>
 "@
 
-# 4. INICIALIZACIÓN
+# --- 4. CONTROLLER LOGIC ---
 $reader = (New-Object System.Xml.XmlNodeReader $XAML)
 $Window = [Windows.Markup.XamlReader]::Load($reader)
 
-$btnAction = $Window.FindName("btnAction")
-$btnClose = $Window.FindName("btnClose")
-$lblStatus = $Window.FindName("lblStatus")
-$lblDetail = $Window.FindName("lblDetail")
-$chkOnTop = $Window.FindName("chkOnTop")
-$wsh = New-Object -ComObject WScript.Shell
+# UI Bindings
+$UI = @{}
+"btnClose", "lblState", "lblMeta", "btnToggle", "chkTop" | ForEach-Object { $UI[$_] = $Window.FindName($_) }
 
-$IsRunning = $false
-$TargetTitle = "AntiGravity" 
-
-# 5. TIMER INTELIGENTE
-$Timer = New-Object System.Windows.Threading.DispatcherTimer
-$Timer.Interval = [TimeSpan]::FromMilliseconds(1200) # Frecuencia de escaneo
-
-function Check-Typing {
-    for ($i = 65; $i -le 90; $i++) { if ([OmniSystem.Backend]::GetAsyncKeyState($i) -lt 0) { return $true } } # A-Z
-    for ($i = 48; $i -le 57; $i++) { if ([OmniSystem.Backend]::GetAsyncKeyState($i) -lt 0) { return $true } } # 0-9
-    return $false
+$Runtime = @{
+    Active = $false
+    wsh    = New-Object -ComObject WScript.Shell
 }
 
+# Timer Loop
+$Timer = New-Object System.Windows.Threading.DispatcherTimer
+$Timer.Interval = [TimeSpan]::FromMilliseconds($Config.ScanRate)
+
 $Timer.Add_Tick({
-        if (-not $IsRunning) { return }
+        if (-not $Runtime.Active) { return }
 
-        # A. Obtener Ventana
-        $hwnd = [OmniSystem.Backend]::GetForegroundWindow()
-        $sb = New-Object System.Text.StringBuilder 256
-        [OmniSystem.Backend]::GetWindowText($hwnd, $sb, 256) | Out-Null
-        $ActiveTitle = $sb.ToString()
-
-        # B. Pausa si escribes
-        if (Check-Typing) {
-            $Script:IsRunning = $false
-            $Timer.Stop()
-            $btnAction.Content = "▶ REANUDAR"
-            $btnAction.Background = "#D19A66"
-            $lblStatus.Text = "⏸ PAUSA (Usuario escribiendo)"
-            $lblStatus.Foreground = "#D19A66"
+        # 1. State Check: Typing?
+        if ([OmniInternal.Core]::IsTyping()) {
+            $UI.lblState.Text = "PAUSED"
+            $UI.lblState.Foreground = [System.Windows.Media.Brushes]::Orange
+            $UI.lblMeta.Text = "User input detected"
             return
         }
 
-        # C. Lógica de Autorización
-        if ($ActiveTitle -match $TargetTitle) {
-        
-            $lblStatus.Text = "⚡ ESCANEANDO UI..."
-            $lblStatus.Foreground = "#00FF00"
-            $lblDetail.Text = "Ventana: Detectada"
+        # 2. Get Context
+        $hwnd = [OmniInternal.Core]::GetForegroundWindow()
+        $title = [OmniInternal.Core]::GetActiveTitle()
 
-            # 1. DISPARO TECLADO (Para sugerencias en línea)
-            $wsh.SendKeys("%~") 
+        # 3. Decision Matrix
+        if ($title -match $Config.TargetTitle) {
+            $UI.lblState.Text = "TARGET LOCKED"
+            $UI.lblState.Foreground = [System.Windows.Media.Brushes]::Green
         
-            # 2. DISPARO UI AUTOMATION (Para botón 'Accept all')
-            # Ejecutamos esto en un bloque try para no detener el script si falla el escaneo
-            $clicked = $false
-            try {
-                # Intentamos invocar el botón directamente via UI Automation
-                $clicked = [OmniSystem.Backend]::ClickAcceptButton($hwnd)
-            }
-            catch {}
-
+            # Action A: UI Automation
+            $clicked = [OmniInternal.Core]::TryClickAccept($hwnd)
+        
+            # Action B: Keyboard (Fallback) if needed
             if ($clicked) {
-                $lblStatus.Text = "✅ BOTÓN 'ACCEPT' PULSADO"
-                $lblDetail.Text = "Autorización Backend Exitosa"
-                # Si pulsamos botón, damos un respiro mayor
-                $Timer.Interval = [TimeSpan]::FromMilliseconds(2000)
+                $UI.lblMeta.Text = "Action: Button Clicked via API"
             }
             else {
-                $lblStatus.Text = "⚡ AUTORIZANDO (ALT+ENTER)"
-                $Timer.Interval = [TimeSpan]::FromMilliseconds(1500)
+                $Runtime.wsh.SendKeys("%~")
+                $UI.lblMeta.Text = "Action: Key Injection (Alt+Enter)"
             }
-
         }
         else {
-            $Timer.Interval = [TimeSpan]::FromMilliseconds(1000)
-            $lblStatus.Text = "👁‍🗨 BUSCANDO ANTIGRAVITY..."
-            $lblStatus.Foreground = "#007ACC"
-            $lblDetail.Text = "Foco actual: $ActiveTitle"
+            $UI.lblState.Text = "SCANNING"
+            $UI.lblState.Foreground = [System.Windows.Media.Brushes]::Cyan
+            $UI.lblMeta.Text = "Focus: $title"
         }
     })
 
-# 6. EVENTOS
-$btnAction.Add_Click({
-        if ($IsRunning) {
-            $Script:IsRunning = $false
-            $Timer.Stop()
-            $btnAction.Content = "▶ ACTIVAR AUTORIZADOR"
-            $btnAction.Background = "#2D8C3C"
-            $lblStatus.Text = "⛔ SISTEMA DETENIDO"
-            $lblStatus.Foreground = "#FF4444"
-        }
-        else {
-            $Script:IsRunning = $true
+# Events
+$UI.btnToggle.Add_Click({
+        $Runtime.Active = -not $Runtime.Active
+        if ($Runtime.Active) {
+            $UI.btnToggle.Content = "DISENGAGE"
+            $UI.btnToggle.Background = "#330000"
+            $UI.btnToggle.Foreground = "Red"
             $Timer.Start()
-            $btnAction.Content = "⏹ DETENER"
-            $btnAction.Background = "#C42B1C"
-            $lblStatus.Text = "🚀 INICIANDO..."
-            $lblStatus.Foreground = "#007ACC"
+        }
+        else {
+            $UI.btnToggle.Content = "ENGAGE SYSTEM"
+            $UI.btnToggle.Background = "#222"
+            $UI.btnToggle.Foreground = "#888"
+            $Timer.Stop()
+            $UI.lblState.Text = "STANDBY"
+            $UI.lblState.Foreground = "#555"
         }
     })
 
-$btnClose.Add_Click({ $Timer.Stop(); $Window.Close() })
-$chkOnTop.Add_Checked({ $Window.Topmost = $true })
-$chkOnTop.Add_Unchecked({ $Window.Topmost = $false })
+$UI.btnClose.Add_Click({ $Window.Close() })
+$UI.chkTop.Add_Checked({ $Window.Topmost = $true })
+$UI.chkTop.Add_Unchecked({ $Window.Topmost = $false })
 $Window.Add_MouseLeftButtonDown({ $this.DragMove() })
 
-Write-Host "Cargando OmniControl V2..." -ForegroundColor Cyan
 $Window.ShowDialog() | Out-Null
