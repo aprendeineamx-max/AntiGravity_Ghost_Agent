@@ -1,35 +1,73 @@
-# AntiGravity Ghost Agent 👻
+# 👻 AntiGravity Ghost Agent
 
-Este repositorio contiene un agente de automatización ("Ghost Agent") diseñado para auto-autorizar solicitudes de permisos en VS Code de manera inmediata y silenciosa.
+> **Resident Automation Agent for VS Code**  
+> *Una herramienta de automatización silenciosa y de alto rendimiento para el auto-aceptado de permisos.*
 
-## Contenido
-*   **ghost.js**: El script payload que vigila y hace clic automáticamente en los botones de "Accept", "Autorizar", "Allow", etc.
-*   **injection_settings.json**: Configuración lista para copiar.
+## 📋 Descripción General
 
-## Guía de Instalación Rápida
+**AntiGravity Ghost Agent** es un script inyectado en el proceso de renderizado de VS Code (Electron) diseñado para eliminar la fricción de las interacciones repetitivas. 
 
-Sigue estos pasos para inyectar el agente en tu VS Code:
+Utilizando un `MutationObserver` optimizado, el agente monitorea el DOM en tiempo real y detecta ventanas modales, notificaciones y diálogos de confirmación específicos (como solicitudes de permisos o confirmaciones de "Alt+Enter"). Al interceptar estos elementos, el agente los autoriza automáticamente en menos de **1 segundo**, sin robar el foco del teclado ni del mouse.
 
-1.  **Instalar Extensión**:
-    *   Busca e instala la extensión **"Custom CSS and JS Loader"** (ID: `be5invis.vscode-custom-css`) desde el Marketplace de VS Code.
+### 🚀 Características Principales
 
-2.  **Configurar Rutas**:
-    *   Abre el archivo `injection_settings.json` incluido en esta carpeta.
-    *   Copia el contenido.
-    *   Abre tus ajustes de usuario en VS Code (`Ctrl + ,` -> ver como JSON icon arriba a la derecha, o busca "settings.json").
-    *   Pega el contenido dentro de tu objeto de configuración.
-    *   **IMPORTANTE**: Verifica que la ruta en `"vscode_custom_css.imports"` coincida con la ubicación real de `ghost.js` en tu disco.
-        *   Ruta configurada: `file:///C:/AntiGravityExt/AntiGravity_Ghost_Agent/ghost.js`
+*   **⚡ Latencia Cero**: Reacción inmediata ante la aparición de diálogos.
+*   **🤫 Modo Silencioso**: No emite sonidos ni altera el foco de la ventana activa.
+*   **🛡️ Robustez**: Lógica encapsulada y manejo de errores para evitar fugas de memoria.
+*   **🔍 Detección Inteligente**: Filtrado insensible a mayúsculas/minúsculas para palabras clave como "Accept", "Autorizar", "Allow", "Confirm".
 
-3.  **Activar**:
-    *   Presiona `F1` o `Ctrl+Shift+P`.
-    *   Escribe y selecciona: **"Enable Custom CSS and JS"**.
-    *   VS Code pedirá reiniciar. Acepta.
+---
 
-4.  **Permisos de Admin (Si es necesario)**:
-    *   Si VS Code se queja de permisos o la extensión informa que está corrupta (es normal porque modificamos archivos core), simplemente haz clic en la rueda dentada de "Manage" en la notificación de "Code is corrupt" y elige "Don't Show Again".
-    *   Si el script no carga, intenta ejecutar VS Code como Administrador una vez para aplicar los cambios.
+## 🛠️ Instalación
 
-## Verificación
-Abre la consola de desarrollador (`Help` -> `Toggle Developer Tools`) y busca el mensaje:
-`👻 Ghost Agent: Initialized and watching for prompts...`
+Este agente requiere la inyección de código JavaScript personalizado en VS Code.
+
+### Prerrequisitos
+
+1.  **VS Code Extension**: Instala [Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css).
+
+### Pasos
+
+1.  **Ubicación del Archivo**:
+    Asegúrate de que este repositorio esté clonado en una ubicación estable.
+    *   Ruta actual del script: `C:\AntiGravityExt\AntiGravity_Ghost_Agent\ghost.js`
+
+2.  **Configurar VS Code**:
+    Abre tu archivo `settings.json` de usuario y agrega la siguiente configuración:
+
+    ```json
+    "vscode_custom_css.imports": [
+        "file:///C:/AntiGravityExt/AntiGravity_Ghost_Agent/ghost.js"
+    ],
+    "vscode_custom_css.policy": true
+    ```
+
+3.  **Activar el Agente**:
+    *   Abre la Paleta de Comandos (`Ctrl+Shift+P`).
+    *   Ejecuta: `> Enable Custom CSS and JS`.
+    *   Reinicia VS Code cuando se te solicite.
+
+    > **Nota**: Si recibes una advertencia de que "VS Code está corrupto", es normal debido a la modificación de archivos internos. Puedes ocultar la notificación permanentemente haciendo clic en el engranaje "Manage" -> "Don't Show Again".
+
+---
+
+## 🔍 Verificación
+
+Para verificar que el agente está activo:
+
+1.  Abre las Herramientas de Desarrollador en VS Code (`Help` -> `Toggle Developer Tools`).
+2.  Ve a la pestaña **Console**.
+3.  Deberías ver el mensaje de inicio:
+    > `👻 Ghost Agent: Initialized and watching for prompts...`
+
+---
+
+## 🧩 Estructura del Proyecto
+
+*   `ghost.js`: **Payload Principal**. Contiene la lógica del `MutationObserver` y la ejecución de clics.
+*   `injection_settings.json`: Fragmento de configuración de referencia.
+*   `README.md`: Esta documentación.
+
+## ⚠️ Exención de Responsabilidad
+
+Esta herramienta modifica el funcionamiento interno de VS Code. Úsala bajo tu propia responsabilidad. Diseñada para entornos de desarrollo controlados "AntiGravity".
