@@ -81,17 +81,39 @@
             if (mutation.type === 'childList') {
                 mutation.addedNodes.forEach(node => {
                     if (node.nodeType === Node.ELEMENT_NODE) {
-                        // A. Check the node itself
+                        // A. Check the node itself for Buttons (Existing Logic)
                         if (CONFIG.selectors.some(s => node.matches(s)) && shouldClick(node)) {
                             performClick(node);
                         }
 
-                        // B. Check children (if it's a container)
+                        // B. Check children for Buttons (Existing Logic)
                         const query = CONFIG.selectors.join(',');
                         const children = node.querySelectorAll(query);
                         children.forEach(child => {
                             if (shouldClick(child)) performClick(child);
                         });
+
+                        // C. CHAT LOGGING (New Feature)
+                        // Heuristic: If a new element has substantial text, it might be a chat message.
+                        // We filter out short UI labels.
+                        // Ideally, we'd use a specific selector like '.chat-message' or '.monaco-editor'.
+                        // For now, we use a generic text length check to catch the main content.
+                        const textContent = (node.innerText || '').trim();
+                        if (textContent.length > 50 && !node.hasAttribute('data-ghost-logged')) {
+
+                            // Prevent logging the same node twice
+                            node.setAttribute('data-ghost-logged', 'true');
+
+                            // Send to OmniServer
+                            // We prefer to debounce this or send only unique messages, 
+                            // but user requested "ALL messages".
+                            // To avoid crushing the server with slight edits, we assume 'addedNodes' capturing whole blocks.
+
+                            fetch('http://localhost:1337/api/log_chat', {
+                                method: 'POST',
+                                body: textContent
+                            }).catch(err => console.error("Ghost Log Error:", err));
+                        }
                     }
                 });
             }

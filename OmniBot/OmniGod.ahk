@@ -18,13 +18,16 @@ Loop Files, ImageFolder . "*.png"
     Targets.Push(A_LoopFileName)
 
 Tolerance := "*50" ; 0-255 (Variación de color permitida)
-global IsActive := true ; <--- ENCENDIDO POR DEFECTO (Solicitud Usuario)
+global IsActive := true 
+global HUDVisible := true
+LogFile := A_ScriptDir . "\OmniGod_Logs.txt"
 
 ; --- INICIO ---
-TraySetIcon "shell32.dll", 1 ; Icono de ojo activo
-SoundPlay "*64" ; Ding!
-ToolTip "👁️ OmniGod: CAZANDO (Presiona F8 para pausar)", A_ScreenWidth/2, 10, 1
-SetTimer RemoveToolTip, -3000
+TraySetIcon "shell32.dll", 1
+CreateHUD()
+UpdateHUD("ACTIVO", "CAZANDO (F8: Pausa | F9: HUD)", "c00FF00")
+SoundPlay "*64" 
+Log("SISTEMA INICIADO")
 
 ; --- HOTKEY TOGGLE (F8) ---
 F8::
@@ -32,18 +35,17 @@ F8::
     global IsActive
     IsActive := !IsActive
     if (IsActive) {
-        TraySetIcon "shell32.dll", 1 ; Icono activo
-        SoundPlay "*64" ; Sonido Windows "Asterisk" (Ding!)
-        ToolTip "👁️ OmniGod: CAZANDO", A_ScreenWidth/2, 10, 1
+        TraySetIcon "shell32.dll", 1 
+        SoundPlay "*64" 
+        UpdateHUD("ACTIVO", "CAZANDO (F8: Pausa | F9: HUD)", "c00FF00")
+        Log("Estado cambiado a: ACTIVO")
     } else {
         TraySetIcon "shell32.dll", 28
-        SoundPlay "*16" ; Sonido Windows "Critical Stop" (Bonk!)
-        ToolTip "💤 OmniGod: PAUSADO", A_ScreenWidth/2, 10, 1
-        SetTimer RemoveToolTip, -2000
+        SoundPlay "*16" 
+        UpdateHUD("PAUSADO", "Sistema Detenido", "cFF0000")
+        Log("Estado cambiado a: PAUSADO")
     }
 }
-
-; RemoveToolTip definition removed from here (it is defined at the end of file)
 
 ; --- BUCLE PRINCIPAL (CADA 500ms) ---
 Loop {
@@ -52,7 +54,7 @@ Loop {
         continue
     }
     WatchDog()
-    Sleep 500 ; Simulate the original SetTimer interval
+    Sleep 500 
 }
 return
 
@@ -115,6 +117,29 @@ WatchDog() {
             Loop Targets.Length {
                 tImg := Targets[A_Index]
                 if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . tImg) {
+                     
+                     ; --- VERIFICACIÓN DE SEGURIDAD (PROXIMIDAD) ---
+                     ; Solo ignoramos si la imagen prohibida está EN LA MISMA POSICIÓN que el objetivo encontrado.
+                     SafeToClick := true
+                     Loop Files, IndicatorFolder . "Ignore\*.png"
+                     {
+                        ; ROI (Region of Interest)
+                        x1 := FoundX - 10
+                        y1 := FoundY - 10
+                        x2 := FoundX + 50
+                        y2 := FoundY + 50
+                        
+                        if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
+                            SafeToClick := false
+                            break
+                        }
+                     }
+                     
+                     if (!SafeToClick) {
+                         UpdateHUD("IGNORADO", "Objetivo coincide con Lista Negra", "cFF0000")
+                         continue 
+                     }
+
                      MouseGetPos &OrigX, &OrigY
                      TargetX := FoundX + 15 
                      TargetY := FoundY + 10
@@ -125,12 +150,8 @@ WatchDog() {
                      Click "Up"
                      Sleep 50
                      MouseMove OrigX, OrigY
-                     ToolTip "✨ CAZADO (SUDDEN DEATH): " . tImg, 10, 10, 1
-                     Sleep 500 ; Breve pausa para no ametrallar si el PC es lento
-                     
-                     ; MEJORA MULTI-KILL:
-                     ; NO salimos del loop. Seguimos escaneando por si aparecen más botones (ej: Setup tras Allow).
-                     ; break ; Rompemos solo el loop interno de targets para reiniciar el scan completo
+                     UpdateHUD("CAZADO (SD)", tImg, "c00FFFF") ; Cyan
+                     Sleep 500 
                 }
             }
             Sleep 100
@@ -192,12 +213,27 @@ WatchDog() {
                     ; --- VERIFICACIÓN DE SEGURIDAD (IGNORAR SI COINCIDE CON LISTA NEGRA) ---
                     ; Check de proximidad: Si lo que encontramos está cerca de una imagen prohibida...
                     ; Por simplicidad/rendimiento: Si hay una imagen 'Ignore' visible, asumimos riesgo y NO atacamos este ciclo.
+                     ; --- VERIFICACIÓN DE SEGURIDAD (PROXIMIDAD) ---
+                     ; Solo ignoramos si la imagen prohibida está EN LA MISMA POSICIÓN que el objetivo encontrado.
+                     SafeToClick := true
                      Loop Files, IndicatorFolder . "Ignore\*.png"
                      {
-                        if ImageSearch(&IgnX, &IgnY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . A_LoopFileFullPath) {
-                            ToolTip "🛡️ ZONA SEGURA (Obj. Ignorado)", 10, 10, 1
-                            return
+                        ; Definir un área pequeña alrededor del objetivo encontrado (ROI)
+                        x1 := FoundX - 10
+                        y1 := FoundY - 10
+                        x2 := FoundX + 50 ; Asumiendo iconos pequeños/medianos
+                        y2 := FoundY + 50
+                        
+                        if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
+                            ; Si encontramos una imagen 'Ignore' JUSTO AQUÍ, es un falso positivo.
+                            SafeToClick := false
+                            break
                         }
+                     }
+                     
+                     if (!SafeToClick) {
+                         UpdateHUD("IGNORADO", "Objetivo en Zona Prohibida (Proximidad)", "cFF0000")
+                         continue 
                      }
 
                     MouseGetPos &OrigX, &OrigY
@@ -260,3 +296,53 @@ RemoveToolTip() {
 }
 
 ; End of Script
+
+; --- HUD SYSTEM ---
+CreateHUD() {
+    global MyGui, StatusHeader, StatusDetail
+    MyGui := Gui("+AlwaysOnTop +ToolWindow -Caption +E0x20") ; E0x20 = ClickThrough
+    MyGui.BackColor := "1e1e1e"
+    MyGui.SetFont("s10 w700", "Segoe UI")
+    StatusHeader := MyGui.Add("Text", "c00FF00 w300 Center", "INIT")
+    MyGui.SetFont("s8 w400", "Segoe UI")
+    StatusDetail := MyGui.Add("Text", "cWhite w300 Center", "Iniciando...")
+    
+    ; Posicionar arriba al centro
+    XPos := (A_ScreenWidth / 2) - 150
+    MyGui.Show("x" . XPos . " y0 NoActivate")
+    
+    ; Transparencia visual
+    WinSetTransparent(200, "ahk_id " . MyGui.Hwnd)
+}
+
+UpdateHUD(Title, Detail, ColorStr) {
+    global StatusHeader, StatusDetail, HUDVisible
+    if (HUDVisible) {
+        try {
+            StatusHeader.Text := Title
+            StatusHeader.Opt(ColorStr)
+            StatusDetail.Text := Detail
+        }
+    }
+}
+
+Log(Msg) {
+    global LogFile
+    Timestamp := FormatTime(, "yyyy-MM-dd HH:mm:ss")
+    try {
+        FileAppend "[" . Timestamp . "] " . Msg . "`n", LogFile
+    }
+}
+
+F9::
+{
+    global HUDVisible
+    HUDVisible := !HUDVisible
+    if HUDVisible {
+        MyGui.Show("NoActivate")
+        Log("HUD visible")
+    } else {
+        MyGui.Hide()
+        Log("HUD oculto")
+    }
+}

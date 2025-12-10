@@ -38,6 +38,17 @@ while ($listener.IsListening) {
     if ($path -ne "/api/status") {
         Write-Host "[$method] $path" -ForegroundColor DarkGray
     }
+    
+    # --- CORS HEADERS (Fix for Fetch Blocking) ---
+    $response.AddHeader("Access-Control-Allow-Origin", "*")
+    $response.AddHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+    $response.AddHeader("Access-Control-Allow-Headers", "Content-Type")
+    
+    if ($method -eq "OPTIONS") {
+        $response.StatusCode = 204
+        $response.Close()
+        continue
+    }
 
     try {
         if ($path -eq "/api/status") {
@@ -46,6 +57,25 @@ while ($listener.IsListening) {
             $response.ContentType = "application/json"
             $response.ContentLength64 = $buffer.Length
             $response.OutputStream.Write($buffer, 0, $buffer.Length)
+        }
+        elseif ($path -eq "/api/log_chat") {
+            if ($method -eq "POST") {
+                $reader = New-Object System.IO.StreamReader($request.InputStream, $request.ContentEncoding)
+                $body = $reader.ReadToEnd()
+                $reader.Close()
+
+                $logPath = Join-Path $PSScriptRoot "..\..\Antigravity_ChatLog.txt"
+                $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+                $separator = "_______________________________"
+                
+                $logEntry = "[$timestamp]`n$body`n$separator`n"
+                
+                Add-Content -Path $logPath -Value $logEntry -Encoding UTF8
+                
+                $msg = "Logged"
+                $buffer = [System.Text.Encoding]::UTF8.GetBytes($msg)
+                $response.OutputStream.Write($buffer, 0, $buffer.Length)
+            }
         }
         elseif ($path -match "/api/toggle/(?<bot>\w+)") {
             $bot = $Matches['bot']
@@ -56,7 +86,8 @@ while ($listener.IsListening) {
                 if ($ahkProc) {
                     $ahkProc | Stop-Process -Force
                     $msg = "[STOPPED] OmniGod"
-                } else {
+                }
+                else {
                     $scriptPath = Join-Path $PSScriptRoot "..\..\OmniBot\OmniGod.ahk"
                     Start-Process "C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe" -ArgumentList "`"$scriptPath`"" -WorkingDirectory (Split-Path $scriptPath)
                     if (!$?) { Start-Process $scriptPath } 
@@ -68,7 +99,8 @@ while ($listener.IsListening) {
                 if ($psProc) {
                     $psProc | Stop-Process -Force
                     $msg = "[STOPPED] OmniControl"
-                } else {
+                }
+                else {
                     $scriptPath = Join-Path $PSScriptRoot "..\..\tools\OmniControl_HUD.ps1"
                     Start-Process "powershell.exe" -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
                     $msg = "[STARTED] OmniControl"
