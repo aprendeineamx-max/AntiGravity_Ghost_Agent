@@ -144,11 +144,11 @@ WatchDog() {
                      TargetX := FoundX + 15 
                      TargetY := FoundY + 10
                      MouseMove TargetX, TargetY
-                     Sleep 50
+                     Sleep 10
                      Click "Down"
-                     Sleep 50
+                     Sleep 10
                      Click "Up"
-                     Sleep 50
+                     Sleep 10
                      MouseMove OrigX, OrigY
                      UpdateHUD("CAZADO (SD)", tImg, "c00FFFF") ; Cyan
                      Sleep 500 
