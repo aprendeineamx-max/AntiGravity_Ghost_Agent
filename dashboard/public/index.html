@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="glass-panel">
         <header>
@@ -28,7 +30,7 @@
                 <div class="controls">
                     <button class="btn info" onclick="toggle('ghost')">RELOAD</button>
                     <div class="toggle-switch">
-                        <input type="checkbox" checked id="sw-ghost">
+                        <input type="checkbox" checked id="sw-ghost" onchange="toggleAgent('ghost')">
                         <label for="sw-ghost"></label>
                     </div>
                 </div>
@@ -54,8 +56,8 @@
                 </div>
             </div>
 
-             <!-- OMNICONTROL -->
-             <div class="card" id="card-control">
+            <!-- OMNICONTROL -->
+            <div class="card" id="card-control">
                 <div class="card-header">
                     <h2>🛡️ OmniControl</h2>
                     <div class="status-dot orange" id="status-control"></div>
@@ -63,7 +65,7 @@
                 <p class="subtitle">OS Level HUD & Accessibility</p>
                 <div class="controls">
                     <div class="toggle-switch">
-                        <input type="checkbox" id="sw-control">
+                        <input type="checkbox" id="sw-control" onchange="toggleAgent('omnicontrol')">
                         <label for="sw-control"></label>
                     </div>
                 </div>
@@ -77,12 +79,16 @@
                 <span class="clear-btn">CLEAR</span>
             </div>
             <div class="terminal-body" id="log-body">
-                <div class="line"><span class="time">[19:42:01]</span> <span class="sys">SYSTEM</span> Dashboard init...</div>
-                <div class="line"><span class="time">[19:42:02]</span> <span class="warn">GHOST</span>  Connecting to Virtual Socket...</div>
-                <div class="line"><span class="time">[19:42:05]</span> <span class="success">GOD</span>    Found "Buttons" in targets.</div>
+                <div class="line"><span class="time">[19:42:01]</span> <span class="sys">SYSTEM</span> Dashboard init...
+                </div>
+                <div class="line"><span class="time">[19:42:02]</span> <span class="warn">GHOST</span> Connecting to
+                    Virtual Socket...</div>
+                <div class="line"><span class="time">[19:42:05]</span> <span class="success">GOD</span> Found "Buttons"
+                    in targets.</div>
             </div>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
+
 </html>
