@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OmniGod Calibration Chamber</title>
+    <style>
+        body {
+            background: #1e1e1e;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00bcd4;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .target-box {
+            border: 2px dashed #444;
+            padding: 30px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .target-box:hover {
+            border-color: #00bcd4;
+        }
+
+        /* Simulation of the Red Square to Trigger OmniGod */
+        .simulator {
+            margin-top: 50px;
+            padding: 20px;
+            background: #252526;
+            border-radius: 5px;
+        }
+
+        .red-square {
+            width: 20px;
+            height: 20px;
+            background-color: #f00;
+            /* Standard Red */
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .instructions {
+            color: #888;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🎯 OmniGod Calibration Chamber</h1>
+    <p class="instructions">
+        1. Ensure OmniGod is ACTIVE (Eye Icon).<br>
+        2. Verify the RED SQUARE below is visible (activates the bot).<br>
+        3. OmniGod should attempt to CLICK the images below.<br>
+        NOTE: Real images are loaded from the server path.
+    </p>
+
+    <!-- Trigger -->
+    <div class="simulator">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <div class="red-square"></div>
+            <span>SIMULATING ACTIVE WORK (working.png trigger)</span>
+        </div>
+    </div>
+
+    <!-- Targets -->
+    <div class="grid">
+        <div class="target-box">
+            <h3>Allow Once</h3>
+            <img src="/Calibration/allow_once.png" alt="Allow Once Target">
+        </div>
+        <div class="target-box">
+            <h3>Setup</h3>
+            <img src="/Calibration/setup.png" alt="Setup Target">
+        </div>
+        <div class="target-box">
+            <h3>Accept All</h3>
+            <img src="/Calibration/accept.png" alt="Accept All Target">
+        </div>
+    </div>
+
+</body>
+
+</html>

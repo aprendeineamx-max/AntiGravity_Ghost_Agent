@@ -79,32 +79,44 @@ WatchDog() {
          return
     }
 
-    ; 1. CHEQUEO DE SEGURIDAD (¿USUARIO ESCRIBIENDO?)
-    ; Si vemos el botón de "Enviar" (flecha azul), significa que tú tienes el control.
-    if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "send.png") {
-        ToolTip "🛑 USUARIO AL MANDO (Pausado)", 10, 10, 1
-        return
-    }
-
-    static WasWorking := false
-
-    ; 2. CHEQUEO DE ACTIVIDAD (¿AGENTE TRABAJANDO?)
-    ; Solo actuamos si vemos el botón de "Stop" (cuadrado rojo).
-    IsWorking := ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png")
+    ; --- 1. CHEQUEO DE ACTIVIDAD (PRIORIDAD ALTA) ---
+    ; Verificamos si el agente está trabajando ANTES de verificar seguridad.
+    ; Esto previene que el botón "Send" bloquee la lógica de finalización (Muerte Súbita).
     
+    static WasWorking := false
+    IsWorking := ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png")
+
     if (IsWorking) {
         WasWorking := true
-        ToolTip "⚡ AGENTE TRABAJANDO: Buscando objetivos...", 10, 10, 1
-    } else {
-        ; --- MODALIDAD MUERTE SUBITA: JUSTO TERMINÓ EL TRABAJO ---
-        ; Si justo acabamos de terminar (WasWorking=true) pero ya no hay trabajo (IsWorking=false),
-        ; es el momento CRÍTICO donde aparece el botón "Accept All". Lo buscamos con desesperación.
-        if (WasWorking) {
-            ToolTip "🔥 FINALIZANDO: Buscando Accept All desesperadamente...", 10, 10, 1
-            Loop 20 { ; Intentar durante 2 segundos (20 * 100ms)
-                if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
+        ToolTip "⚡ AGENTE TRABAJANDO: Sending Alt+Enter...", 10, 10, 1
+        
+        ; "Target Lock": Asegurar que enviamos las teclas a la ventana correcta (AntiGravity)
+        try {
+            MouseGetPos ,, &WinID 
+            if WinExist("ahk_id " . WinID) {
+                WinActivate
+                Sleep 10
+                Send "!{Enter}"
+            }
+        }
+        return ; SI ESTAMOS TRABAJANDO, SALIMOS AQUI. No chequeamos seguridad (el usuario puede querer interrumpir, pero el alt+enter domina)
+    } 
+    
+    ; --- 2. MODALIDAD MUERTE SUBITA (TRANSICIÓN CRÍTICA) ---
+    ; Si WasWorking era true y ahora IsWorking es false, acabamos de terminar.
+    ; Esta fase tiene prioridad sobre el botón "Send".
+    if (WasWorking) {
+        ToolTip "🔥 FINALIZANDO: Scan Agresivo (10s) de TODOS los Objetivos...", 10, 10, 1
+        
+        ; LISTA DE OBJETIVOS: Usamos la lista global cargada de la carpeta Targets.
+        ; El usuario solicitó que se ataque a TODOS los botones azules en esa carpeta.
+        
+        Loop 100 { ; 100 iteraciones * 100ms = 10 Segundos de Furia
+            Loop Targets.Length {
+                tImg := Targets[A_Index]
+                if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . tImg) {
                      MouseGetPos &OrigX, &OrigY
-                     TargetX := FoundX + 30
+                     TargetX := FoundX + 15 
                      TargetY := FoundY + 10
                      MouseMove TargetX, TargetY
                      Sleep 50
@@ -113,18 +125,44 @@ WatchDog() {
                      Click "Up"
                      Sleep 50
                      MouseMove OrigX, OrigY
-                     ToolTip "✨ CAZADO EN MUERTE SÚBITA", 10, 10, 1
-                     Sleep 500
-                     break
+                     ToolTip "✨ CAZADO (SUDDEN DEATH): " . tImg, 10, 10, 1
+                     Sleep 500 ; Breve pausa para no ametrallar si el PC es lento
+                     
+                     ; MEJORA MULTI-KILL:
+                     ; NO salimos del loop. Seguimos escaneando por si aparecen más botones (ej: Setup tras Allow).
+                     ; break ; Rompemos solo el loop interno de targets para reiniciar el scan completo
                 }
-                Sleep 100
             }
-            WasWorking := false ; Ya revisamos, volvemos a reposo
+            Sleep 100
         }
-
-        ToolTip "💤 AGENTE INACTIVO (Esperando...)", 10, 10, 1
+        WasWorking := false
         return 
     }
+
+    ; --- 3. CHEQUEO DE SEGURIDAD (¿USUARIO ESCRIBIENDO?) ---
+    ; Ahora sí, si no estamos trabajando ni finalizando, respetamos al usuario.
+    if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "send.png") {
+        ToolTip "🛑 USUARIO AL MANDO (Pausado)", 10, 10, 1
+        return
+    }
+
+    ; --- 4. IDLE / SCAN NORMAL ---
+    ToolTip "💤 AGENTE INACTIVO (Esperando...)", 10, 10, 1
+    
+    ; Solo si estamos realmente ociosos (sin cuadrado rojo, sin user typing)
+    ; ejecutamos lista negra o scroll si fuera necesario, pero por ahora solo retornamos
+    ; o dejamos pasar al scroll logic si se desea.
+    ; ... (Scroll Logic is below) ...
+    
+    ; Si queremos mantener el Scroll Logic activo en IDLE, borramos el return de arriba.
+    ; Pero el usuario pidio que SOLO busque objetivos si scroll.
+    ; Vamos a dejar pasar al bloque de Targets si no hay Return.
+    
+    ; IMPORTANTE: El bloque original tenía Targets check y Scroll al final.
+    ; Si retornamos aquí, el bot nunca busca targets en modo IDLE (normal).
+    ; Quitamos el return para permitir que busque targets "sueltos" si los hay.
+    ; Pero el tooltip dice "Esperando...". Mejor cambiamos el tooltip abajo.
+    
     
     ; 3. ESTRATEGIA DE EXPANSIÓN (Collapse = Scroll)
     ; ... (Keep existing scroll logic) ...
