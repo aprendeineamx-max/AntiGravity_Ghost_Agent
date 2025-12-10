@@ -86,15 +86,45 @@ WatchDog() {
         return
     }
 
+    static WasWorking := false
+
     ; 2. CHEQUEO DE ACTIVIDAD (¿AGENTE TRABAJANDO?)
-    ; Solo actuamos si vemos el botón de "Stop" (cuadrado rojo), que indica trabajo en progreso.
-    if !ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png") {
+    ; Solo actuamos si vemos el botón de "Stop" (cuadrado rojo).
+    IsWorking := ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png")
+    
+    if (IsWorking) {
+        WasWorking := true
+        ToolTip "⚡ AGENTE TRABAJANDO: Buscando objetivos...", 10, 10, 1
+    } else {
+        ; --- MODALIDAD MUERTE SUBITA: JUSTO TERMINÓ EL TRABAJO ---
+        ; Si justo acabamos de terminar (WasWorking=true) pero ya no hay trabajo (IsWorking=false),
+        ; es el momento CRÍTICO donde aparece el botón "Accept All". Lo buscamos con desesperación.
+        if (WasWorking) {
+            ToolTip "🔥 FINALIZANDO: Buscando Accept All desesperadamente...", 10, 10, 1
+            Loop 20 { ; Intentar durante 2 segundos (20 * 100ms)
+                if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
+                     MouseGetPos &OrigX, &OrigY
+                     TargetX := FoundX + 30
+                     TargetY := FoundY + 10
+                     MouseMove TargetX, TargetY
+                     Sleep 50
+                     Click "Down"
+                     Sleep 50
+                     Click "Up"
+                     Sleep 50
+                     MouseMove OrigX, OrigY
+                     ToolTip "✨ CAZADO EN MUERTE SÚBITA", 10, 10, 1
+                     Sleep 500
+                     break
+                }
+                Sleep 100
+            }
+            WasWorking := false ; Ya revisamos, volvemos a reposo
+        }
+
         ToolTip "💤 AGENTE INACTIVO (Esperando...)", 10, 10, 1
         return 
     }
-
-    ; --- MODO CAZA (SOLO SI EL AGENTE ESTÁ TRABAJANDO) ---
-    ToolTip "⚡ AGENTE TRABAJANDO: Buscando objetivos...", 10, 10, 1
     
     ; 3. ESTRATEGIA DE EXPANSIÓN (Collapse = Scroll)
     ; ... (Keep existing scroll logic) ...
