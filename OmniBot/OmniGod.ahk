@@ -21,6 +21,18 @@ Tolerance := "*50" ; 0-255 (Variación de color permitida)
 global IsActive := true 
 global HUDVisible := true
 LogFile := A_ScriptDir . "\OmniGod_Logs.txt"
+ConfigFile := A_ScriptDir . "\OmniGod_Config.ini"
+
+; Initialize Calibrated zone
+global ChatRelX := 0, ChatRelY := 0, ChatRelW := 0, ChatRelH := 0
+try {
+    ChatRelX := IniRead(ConfigFile, "ChatZone", "RelX", "0")
+    ChatRelY := IniRead(ConfigFile, "ChatZone", "RelY", "0")
+    ChatRelW := IniRead(ConfigFile, "ChatZone", "RelW", "0")
+    ChatRelH := IniRead(ConfigFile, "ChatZone", "RelH", "0")
+    if (ChatRelW > 0)
+        Log("CONFIG: Zona calibrada cargada. " . ChatRelW . "x" . ChatRelH)
+}
 
 ; --- INICIO ---
 TraySetIcon "shell32.dll", 1
@@ -113,11 +125,20 @@ WatchDog() {
     static Tick := 0
     static LastWX := 0, LastWY := 0, LastWW := 0, LastWH := 0
     static LastState := ""
+    static WasTyping := false ; Fix for Phase 2 Logic
     
+    ; 1. DETECTAR FOCO ACTUAL
+    try {
+        ActiveProcess := WinGetProcessName("A")
+    } catch {
+        ActiveProcess := "Unknown"
+    }
+    FriendlyName := GetFriendlyName(ActiveProcess)
+
     Tick := Mod(Tick + 1, 100)
     
     ; [LOG] Inicio de Ciclo
-    Log("CYCLE[" . Tick . "]: Iniciando WatchDog...")
+    Log("CYCLE[" . Tick . "]: Iniciando WatchDog... Focus=" . FriendlyName)
 
     ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
     WinID := 0
@@ -140,68 +161,121 @@ WatchDog() {
         Log("WIN: Ninguna ventana detectada.")
     }
 
-    if (WinID != 0) {
-        try {
-            ; Verificar si está minimizada (-1)
-            MinMax := WinGetMinMax("ahk_id " . WinID)
-            Log("WIN-STATE: MinMax Status = " . MinMax)
-            
-            if (MinMax == -1) {
-                HasWindow := false
-                Log("ESTADO: MODO NINJA (Ventana Minimizada detectada)")
-            } else {
+    if (WinID > 0) {
+       try {
+            ; Verificar si REALMENTE está activa o si estamos en otra ventana
+            if (ActiveProcess = "Code.exe" or ActiveProcess = "AntiGravity.exe" or ActiveProcess = "Antigravity.exe") {
                 WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
-                Log("RAW-COORDS: X=" . WX . " Y=" . WY . " W=" . WW . " H=" . WH)
-                
-                ; --- ZONA CIEGA EXTENDIDA (VS CODE SIDEBAR) ---
-                MarginLeft := 350 
-                
-                WX := WX + MarginLeft 
-                WY := WY + 50 
-                WW := WX + WW - MarginLeft - 20 
-                WH := WY + WH - 60 
-                
-                Log("SAFE-ZONE: [" . WX . "," . WY . "] -> [" . WW . "," . WH . "] (Margen aplicado: " . MarginLeft . ")")
-                
-                ; Validación de coordenadas
-                if (WW > WX and WH > WY) {
-                    HasWindow := true
-                } else {
+                MinMax := WinGetMinMax("ahk_id " . WinID)
+            
+                Log("WIN-STATE: MinMax Status = " . MinMax)
+            
+                if (MinMax == -1) { ; Minimized
                     HasWindow := false
-                    Log("WARNING: Coordenadas inválidas (Zona negativa o cero).")
+                    Log("SKIP: Ventana minimizada.")
+                } else {
+                    HasWindow := true
                 }
+            } else {
+                 Log("WIN: AntiGravity existe pero NO tiene foco. Foco actual: " . FriendlyName)
             }
-        } catch {
+       } catch as e {
+            Log("ERROR: Fallo al obtener geometría de ventana. " . e.Message)
             HasWindow := false
-            Log("ERROR: Excepción en WinGetPos/MinMax para ID: " . WinID)
-        }
+       }
     }
 
+    if (!HasWindow) {
+        UpdateHUD(FriendlyName, "MODO NINJA (Standby)", "cGray")
+        Log("HUD: Actualizado a MODO NINJA (" . FriendlyName . ")")
+        Log("SKIP: Sin ventana, saltando escaneo visual.")
+        return
+    }
+
+    ; --- 0.1 AJUSTE DE GEOMETRÍA FINAL ---
+    if (HasWindow) {
+        ; --- ZONA CIEGA EXTENDIDA (VS CODE SIDEBAR) ---
+        MarginLeft := 350 
+        
+        Log("RAW-COORDS: X=" . WX . " Y=" . WY . " W=" . WW . " H=" . WH)
+        
+        WX := WX + MarginLeft 
+        WY := WY + 50 
+        WW := WW - MarginLeft - 20 
+        WH := WH - 90 
+        
+        if (WW <= 0 or WH <= 0) {
+            Log("WARNING: Dimensiones de búsqueda inválidas tras márgenes (" . WX . "," . WY . "," . WW . "," . WH . "). Abortando.")
+            return
+        }
+        
+        Log("SAFE-ZONE: [" . WX . "," . WY . "] -> [" . (WX+WW) . "," . (WY+WH) . "] (Margen aplicado: " . MarginLeft . ")")
+    }
+                
+    
     ; Formatear string de coordenadas
     CoordStr := (HasWindow) ? " [" . WX . "," . WY . "] " . Tick : " [-,-] " . Tick
 
-    if (!HasWindow) {
-         UpdateHUD("MODO NINJA", "Solo Remoto " . CoordStr, "cGray")
-         Log("HUD: Actualizado a MODO NINJA")
+    ; --- DEFINICIÓN DE ZONA DE CHAT (CALIBRADA) ---
+    ; Prioridad: Configuración de Usuario > Heurística
+    global ChatRelX, ChatRelY, ChatRelW, ChatRelH
+    
+    if (ChatRelW > 0) {
+        ; Usar calibración guardada (Relativa a la ventana)
+        ScanX := WX + ChatRelX
+        ScanY := WY + ChatRelY
+        ScanW := ChatRelW
+        ScanH := ChatRelH
+        ; Log("ROI (Calibrado): " . ScanX . "," . ScanY . " " . ScanW . "x" . ScanH)
+    } else {
+        ; Fallback: FASE 1 (Hardcoded Safe Margins)
+        ScanX := WX + 60
+        ScanY := WY + 100
+        ScanW := WW - 60
+        ScanH := WH - 100
+        ; Log("ROI (Auto): " . ScanX . "," . ScanY . " " . ScanW . "x" . ScanH)
     }
 
-    ; --- SMART TYPING DETECTION (NO BLOQUEANTE) ---
+    ; --- SMART TYPING DETECTION (FASE 2: HEURÍSTICA + VISUAL + AUDITIVA) ---
     UserTyping := false
-    if (HasWindow) {
-        Log("SEARCH: Buscando 'send.png' para detectar usuario...")
-        if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png") {
+    
+    ; 1. Heurística Instantánea (Cursor Check)
+    MouseGetPos(&MX, &MY)
+    if (MX >= ScanX && MX <= (ScanX + ScanW) && MY >= ScanY && MY <= (ScanY + ScanH)) {
+        if (A_Cursor == "IBeam") {
             UserTyping := true
-            Log("DETECTADO: Usuario escribiendo (send.png en " . FoundX . "," . FoundY . "). Alt+Enter será SUPRIMIDO.")
-            UpdateHUD("ESCRIBIENDO", "Clics: ON | Enter: OFF " . Tick, "cOrange")
-        } else {
-            Log("SEARCH: 'send.png' no encontrado. Usuario libre.")
+            ; Log("HEURISTICA: IBeam.")
         }
+    }
+
+    ; 2. Chequeo Visual (Respaldo)
+    if (!UserTyping && HasWindow) {
+        if ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, Tolerance . " " . IndicatorFolder . "send.png") {
+            UserTyping := true
+        }
+    }
+    
+    ; 3. Feedback Sensorial (Cambio de Estado)
+    if (UserTyping != WasTyping) {
+        if (UserTyping) {
+            ; Usuario toma el control
+            SoundBeep 1000, 50 
+            UpdateHUD("ESCRIBIENDO (" . FriendlyName . ")", "Control Manual Activado " . Tick, "cOrange")
+        } else {
+            ; Usuario libera el control
+            SoundBeep 600, 50
+        }
+        WasTyping := UserTyping
+    }
+    
+    if (UserTyping) {
+        ; Si está escribiendo, saltamos lógica de trabajo
     }
 
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
     if (HasWindow) {
         Log("SEARCH: Buscando 'AcceptAll_Priority.png'...")
-        if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*60 " . ImageFolder . "AcceptAll_Priority.png") {
+        if ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, "*60 " . ImageFolder . "AcceptAll_Priority.png") {
              TargetX := FoundX + 30 
              TargetY := FoundY + 10
              
@@ -217,7 +291,7 @@ WatchDog() {
                 Log("Z-CHECK: MouseOver=" . WinName . " vs Target=" . TargetName)
              
                 if (WinName == TargetName) {
-                    UpdateHUD("PRIORIDAD", "Finalizando" . CoordStr, "c00FF00")
+                    UpdateHUD("PRIORIDAD (" . FriendlyName . ")", "Finalizando" . CoordStr, "c00FF00")
                     Log("ACCION: Clic CONFIRMADO en AcceptAll_Priority en " . TargetX . "," . TargetY)
                     Click "Down"
                     Sleep 10
@@ -241,7 +315,7 @@ WatchDog() {
     
     if (HasWindow) {
         Log("SEARCH: Buscando 'working.png' (Estado Activo)...")
-        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*15 " . IndicatorFolder . "working.png")
+        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, "*100 " . IndicatorFolder . "working.png")
         if (IsWorkingVisual) {
              Log("DETECTADO: 'working.png' encontrado en " . FoundX . "," . FoundY)
         }
@@ -275,7 +349,7 @@ WatchDog() {
         Log("ESTADO: TRABAJANDO (" . Source . ")")
         
         if (!UserTyping) {
-            UpdateHUD("TRABAJANDO", Source . " " . CoordStr, ColorStatus)
+            UpdateHUD("TRABAJANDO (" . FriendlyName . ")", Source . " " . CoordStr, ColorStatus)
             try {
                  if (WinID != 0) {
                     Log("ACTION: Enviando Alt+Enter...")
@@ -284,10 +358,12 @@ WatchDog() {
                 }
             }
         } else {
-             UpdateHUD("ESCRIBIENDO", "Enter Bloqueado (Working) " . Tick, "cOrange")
-             Log("ACTION: Alt+Enter SUPRIMIDO por Modo Escritura.")
+             Log("SKIP: Activo pero Usuario escribiendo. Clics permitidos, Enter bloqueado.")
+             UpdateHUD("ESCRIBIENDO (" . FriendlyName . ")", "Enter Bloqueado (Working) " . Tick, "cOrange")
         }
     } 
+
+ 
     
     ; --- 2. MODALIDAD MUERTE SUBITA ---
     if (WasWorking and HasWindow) {
@@ -298,7 +374,7 @@ WatchDog() {
                 return
             }
             Tick := Mod(Tick + 1, 100) 
-            UpdateHUD("CAZANDO (SD)", "Limpieza Rápida " . Tick, "cOrange")
+            UpdateHUD("CAZANDO (" . FriendlyName . ")", "Limpieza Rápida " . Tick, "cOrange")
             Loop Targets.Length {
                 if (!IsActive) {
                      return
@@ -306,18 +382,23 @@ WatchDog() {
                 tImg := Targets[A_Index]
                 ; (Rest of the loop code remains the same, just adding the check)
                 Log("SEARCH (SD): Buscando " . tImg)
-                if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*30 " . ImageFolder . tImg) {
+                if ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, "*30 " . ImageFolder . tImg) {
                      SafeToClick := true
                      Loop Files, IndicatorFolder . "Ignore\*.png"
                      {
-                        x1 := FoundX - 10
-                        y1 := FoundY - 10
+                        x1 := Max(0, FoundX - 10)
+                        y1 := Max(0, FoundY - 10)
                         x2 := FoundX + 50 
                         y2 := FoundY + 50
-                        if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
-                            SafeToClick := false
-                            Log("IGNORED: " . tImg . " at " . FoundX . " (Blacklist match: " . A_LoopFileName . ")")
-                            break
+                        
+                        try {
+                            if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
+                                SafeToClick := false
+                                Log("IGNORED: " . tImg . " at " . FoundX . " (Blacklist match: " . A_LoopFileName . ")")
+                                break
+                            }
+                        } catch {
+                            ; Ignorar errores de handle inválido si la zona es extraña
                         }
                      }
                      if (!SafeToClick) {
@@ -339,7 +420,7 @@ WatchDog() {
                              Sleep 10
                              Click "Up"
                              Log("ACCION (SD): Clic CONFIRMADO en " . tImg . " at " . TargetX . "," . TargetY)
-                             UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
+                             UpdateHUD("CAZADO (" . FriendlyName . ")", "[OBJETIVO ELIMINADO]", "c00FFFF")
                              Sleep 500 
                          } else {
                              Log("WARNING (SD): Clic bloqueado por ventana " . WinName)
@@ -359,7 +440,7 @@ WatchDog() {
     ; --- 4. IDLE / SCAN NORMAL ---
     if (HasWindow) {
         if (!UserTyping) {
-            UpdateHUD("👁️ BUSCANDO...", "Zona Conf.: " . WX . "," . WY . " | " . WW . "," . WH . " [" . Tick . "]", "cGray")
+            UpdateHUD("CAZANDO (" . FriendlyName . ")", "Zona: " . WX . "," . WY . " [" . Tick . "]", "cGray")
         }
         
         Log("SCAN: Iniciando escaneo de objetivos...")
@@ -375,18 +456,23 @@ WatchDog() {
             Log("SEARCH: Verificando " . imgName)
             if FileExist(imgPath) {
                 try {
-                    if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . imgPath) {
+                    if ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, Tolerance . " " . imgPath) {
                          SafeToClick := true
                          Loop Files, IndicatorFolder . "Ignore\*.png"
                          {
-                            x1 := FoundX - 10
-                            y1 := FoundY - 10
+                            x1 := Max(0, FoundX - 10)
+                            y1 := Max(0, FoundY - 10)
                             x2 := FoundX + 50 
                             y2 := FoundY + 50
-                            if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
-                                SafeToClick := false
-                                Log("IGNORED: " . imgName . " por proximidad a " . A_LoopFileName)
-                                break
+                            
+                            try {
+                                if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
+                                    SafeToClick := false
+                                    Log("IGNORED: " . imgName . " por proximidad a " . A_LoopFileName)
+                                    break
+                                }
+                            } catch {
+                                ; Ignorar fallos de handle
                             }
                          }
                          if (!SafeToClick) {
@@ -414,7 +500,7 @@ WatchDog() {
                                 Sleep 10
                                 Click "Up"
                                 Log("ACCION: Clic CONFIRMADO en " . imgName . " at " . TargetX . "," . TargetY)
-                                UpdateHUD("👁️ CAZADO", "[OBJETIVO ELIMINADO]", "c00FFFF") 
+                                UpdateHUD("CAZADO (" . FriendlyName . ")", "[OBJETIVO ELIMINADO]", "c00FFFF") 
                                 MouseMove OrigX, OrigY
                                 SetTimer RemoveToolTip, -1000
                                 return 
@@ -490,5 +576,124 @@ F9::
     } else {
         MyGui.Hide()
         Log("HUD oculto")
+    }
+}
+
+GetFriendlyName(procName) {
+    if (procName == "AntiGravity.exe")
+        return "AntiGravity"
+    if (procName == "explorer.exe")
+        return "Escritorio/Explorer"
+    if (procName == "chrome.exe")
+        return "Google Chrome"
+    if (procName == "Code.exe")
+        return "VS Code"
+    if (procName == "notepad.exe")
+        return "Bloc de Notas"
+    if (procName == "powershell.exe")
+        return "PowerShell / Terminal"
+    return procName ; Default fallback
+}
+
+; --- DEBUG TOOLS ---
+F7::
+{
+    Log("DEBUG: Iniciando Diagnóstico Visual COMPLETO (F7)...")
+    Msg := "=== REPORTE DE DIAGNÓSTICO VISUAL ===`n`n"
+    
+    ; 1. Scan Indicators
+    Msg .= "--- INDICADORES ---`n"
+    Loop Files, IndicatorFolder . "*.png"
+    {
+        IsFound := ImageSearch(&FX, &FY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . A_LoopFileFullPath)
+        Status := IsFound ? "✅ ENCONTRADO (" . FX . "," . FY . ")" : "❌ NO ENCONTRADO"
+        Msg .= A_LoopFileName . ": " . Status . "`n"
+    }
+
+    ; 2. Scan Targets
+    Msg .= "`n--- OBJETIVOS (TARGETS) ---`n"
+    Loop Files, ImageFolder . "*.png"
+    {
+        IsFound := ImageSearch(&TX, &TY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . A_LoopFileFullPath)
+        Status := IsFound ? "✅ ENCONTRADO (" . TX . "," . TY . ")" : "❌ NO ENCONTRADO"
+        Msg .= A_LoopFileName . ": " . Status . "`n"
+    }
+    
+    ; Guardar reporte en log también
+    Log("DEBUG REPORT:`n" . Msg)
+    
+    ; Mostrar en pantalla
+    MsgBox Msg, "OmniGod Visual Scanner", "Iconi"
+}
+
+; --- CALIBRATION WIZARD (F10) ---
+F10::
+{
+    global ChatRelX, ChatRelY, ChatRelW, ChatRelH
+    
+    WinID := WinExist("A")
+    if (!WinID) {
+        MsgBox "¡Abre AntiGravity primero y asegúrate de que esté activo!", "Error", "Icon!"
+        return
+    }
+    
+    WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
+    
+    MsgBox "MODO CALIBRACIÓN`n`n1. Pon el mouse en la esquina SUPERIOR IZQUIERDA del cuadro de chat.`n2. Presiona ENTER (Click OK) lo más rápido posible o usa ESPACIO.", "Paso 1", "Icon?"
+    MouseGetPos &X1, &Y1
+    SoundBeep 750, 100
+    
+    MsgBox "Paso 2`n`n1. Pon el mouse en la esquina INFERIOR DERECHA del cuadro de chat.`n2. Presiona ENTER/ESPACIO.", "Paso 2", "Icon?"
+    MouseGetPos &X2, &Y2
+    SoundBeep 750, 100
+    
+    if (X2 <= X1 or Y2 <= Y1) {
+        MsgBox "Coordenadas inválidas. Intenta de nuevo (Izquierda-Arriba -> Derecha-Abajo).", "Error"
+        return
+    }
+    
+    ; Calcular coordenadas relativas a la ventana
+    ChatRelX := X1 - WX
+    ChatRelY := Y1 - WY
+    ChatRelW := X2 - X1
+    ChatRelH := Y2 - Y1
+    
+    ; Guardar
+    try {
+        IniWrite(ChatRelX, ConfigFile, "ChatZone", "RelX")
+        IniWrite(ChatRelY, ConfigFile, "ChatZone", "RelY")
+        IniWrite(ChatRelW, ConfigFile, "ChatZone", "RelW")
+        IniWrite(ChatRelH, ConfigFile, "ChatZone", "RelH")
+        
+        MsgBox "¡CALIBRACIÓN GUARDADA!`n`nZona: " . ChatRelW . "x" . ChatRelH . "`nOffset: " . ChatRelX . "," . ChatRelY . "`n`nEl bot ahora usará EXCLUSIVAMENTE esta zona.", "Éxito", "Iconi"
+        Log("CALIBRATION: Nueva zona guardada. " . ChatRelW . "x" . ChatRelH)
+    } catch as err {
+        MsgBox "Error al guardar config: " . err.Message
+    }
+}
+
+; --- PHASE 3: NEURAL VISION (F11) ---
+F11::
+{
+    Log("VISION: Iniciando Neural Scan (Python/PS Bridge)...")
+    UpdateHUD("VISION", "Analizando...", "c00FFFF")
+    
+    VisionScript := A_ScriptDir . "\..\tools\OmniVision.ps1"
+    OutputFile := A_ScriptDir . "\..\vision_result.json"
+    
+    ; Ejecutar PS1 oculto
+    RunWait("powershell -NoProfile -ExecutionPolicy Bypass -File `"" . VisionScript . "`" > `"" . OutputFile . "`"", , "Hide")
+    
+    try {
+        if FileExist(OutputFile) {
+            JSON := FileRead(OutputFile)
+            Log("VISION RESULT: " . JSON)
+            MsgBox "Neural Vision Result:`n" . JSON, "OmniGod Eyes", "Iconi"
+            UpdateHUD("VISION", "Datos Recibidos", "green")
+        } else {
+            Log("VISION ERROR: No output file")
+        }
+    } catch as err {
+        Log("VISION ERROR: " . err.Message)
     }
 }
