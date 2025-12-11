@@ -283,27 +283,34 @@ WatchDog() {
                        LastScanW := ScanW
                        LastScanH := ScanH
                        break
+                   }
+                }
+            } catch {
+                ; Error handling
+            }
         }
     }
     
     ; --- EXPORTAR ZONA EN VIVO (PARA OMNICONTROL) ---
-    ; Escribir solo si hubo cambios para evitar escritura excesiva en disco
-    static CachedScanX := 0, CachedScanY := 0, CachedScanW := 0, CachedScanH := 0
+    ; Escribir si hubo cambios O si es la primera vez (CachedScanX == -1)
+    ; GLOBAL SCOPE: Runs every time WatchDog loops, ensuring INI creation.
+    static CachedScanX := -1, CachedScanY := -1, CachedScanW := -1, CachedScanH := -1
     
     if (ScanX != CachedScanX || ScanY != CachedScanY || ScanW != CachedScanW || ScanH != CachedScanH) {
         try {
-            IniWrite(ScanX, "OmniGod_Live.ini", "LiveZone", "GlobalX")
-            IniWrite(ScanY, "OmniGod_Live.ini", "LiveZone", "GlobalY")
-            IniWrite(ScanW, "OmniGod_Live.ini", "LiveZone", "GlobalW")
-            IniWrite(ScanH, "OmniGod_Live.ini", "LiveZone", "GlobalH")
+            ; Forzamos path absoluto para evitar confusiones
+            LiveIni := A_ScriptDir . "\OmniGod_Live.ini"
+            IniWrite(ScanX, LiveIni, "LiveZone", "GlobalX")
+            IniWrite(ScanY, LiveIni, "LiveZone", "GlobalY")
+            IniWrite(ScanW, LiveIni, "LiveZone", "GlobalW")
+            IniWrite(ScanH, LiveIni, "LiveZone", "GlobalH")
             
             CachedScanX := ScanX
             CachedScanY := ScanY
             CachedScanW := ScanW
             CachedScanH := ScanH
-            ; Log("LIVE-ZONE: Updated -> " . ScanX . "," . ScanY . " [" . ScanW . "x" . ScanH . "]")
         } catch {
-             ; Ignorar errores de escritura (ej. archivo bloqueado)
+             ; Ignorar errores de archivo en uso
         }
     }
 
