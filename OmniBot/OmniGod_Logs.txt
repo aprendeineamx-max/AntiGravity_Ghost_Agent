@@ -1,1 +1,1526 @@
 [2025-12-11 01:08:29] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:10:50] SISTEMA INICIADO
+[2025-12-11 01:10:50] CYCLE[1]: Iniciando WatchDog...
+[2025-12-11 01:10:50] WIN: Encontrada 'AntiGravity' ID: 1573882
+[2025-12-11 01:10:50] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:10:50] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:10:50] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:10:50] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:10:52] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:10:52] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:10:52] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:10:52] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:10:53] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:10:53] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:10:54] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:10:54] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:10:55] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:10:55] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:10:56] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:10:56] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:10:57] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:10:57] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:10:58] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:10:58] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:10:59] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:10:59] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:11:00] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:11:00] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:11:00] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:11:00] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:11:01] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:11:01] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:11:02] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:11:02] CYCLE[2]: Iniciando WatchDog...
+[2025-12-11 01:11:02] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:11:02] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:11:02] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:11:02] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:11:02] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:11:03] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:11:03] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:11:04] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:11:04] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:11:05] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:11:05] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:11:05] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:11:05] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:11:06] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:11:06] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:11:07] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:11:07] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:11:08] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:11:08] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:11:09] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:11:09] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:11:10] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:11:10] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:11:11] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:11:11] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:11:11] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:11:11] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:11:11] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:11:11] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:11:12] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:11:12] CYCLE[3]: Iniciando WatchDog...
+[2025-12-11 01:11:12] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:11:12] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:11:12] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:11:12] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:11:12] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:11:13] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:11:13] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:11:14] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:11:14] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:11:15] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:11:15] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:11:15] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:11:15] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:11:17] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:11:17] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:11:17] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:11:17] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:11:18] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:11:18] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:11:20] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:11:20] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:11:22] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:11:22] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:11:23] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:11:23] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:11:23] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:11:23] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:11:23] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:11:23] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:11:24] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:11:24] CYCLE[4]: Iniciando WatchDog...
+[2025-12-11 01:11:24] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:11:24] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:11:24] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:11:25] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:11:25] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:11:25] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:11:25] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:11:26] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:11:26] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:11:27] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:11:27] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:11:27] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:11:27] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:11:29] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:11:29] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:11:29] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:11:29] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:11:30] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:11:30] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:11:31] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:11:31] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:11:32] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:11:32] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:11:33] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:11:33] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:11:33] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:11:33] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:11:34] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:11:34] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:11:35] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:11:35] CYCLE[5]: Iniciando WatchDog...
+[2025-12-11 01:11:35] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:11:35] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:11:35] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:11:35] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:11:35] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:11:36] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:11:36] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:11:37] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:11:37] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:11:37] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:11:37] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:11:38] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:11:38] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:11:39] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:11:39] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:11:40] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:11:40] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:11:41] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:11:41] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:11:42] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:11:42] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:11:43] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:11:43] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:11:44] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:11:44] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:11:44] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:11:44] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:11:44] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:11:44] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:11:45] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:11:46] CYCLE[6]: Iniciando WatchDog...
+[2025-12-11 01:11:46] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:11:46] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:11:46] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:11:46] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:11:46] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:11:47] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:11:47] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:11:48] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:11:48] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:11:48] DETECTADO: 'working.png' encontrado en 1321,655
+[2025-12-11 01:11:48] ESTADO: TRABAJANDO (VISUAL)
+[2025-12-11 01:11:48] ACTION: Enviando Alt+Enter...
+[2025-12-11 01:11:48] ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA
+[2025-12-11 01:11:48] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:11:49] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:11:50] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:11:51] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:11:53] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:11:54] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:11:56] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:11:56] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:11:56] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:11:57] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:11:57] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:11:58] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:11:59] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:00] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:01] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:03] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:04] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:04] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:04] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:12:05] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:05] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:06] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:08] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:08] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:10] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:11] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:12] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:12] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:12] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:12:13] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:13] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:14] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:16] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:16] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:18] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:20] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:21] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:22] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:22] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:12:23] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:23] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:24] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:26] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:26] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:28] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:12:29] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:30] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:31] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:32] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:32] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:33] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:33] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:35] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:36] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:37] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:38] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:39] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:40] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:40] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:12:40] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:41] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:41] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:43] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:43] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:45] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:46] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:47] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:48] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:48] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:12:48] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:49] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:49] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:51] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:51] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:52] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:12:53] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:12:54] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:12:55] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:12:55] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:12:55] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:12:55] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:12:56] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:12:57] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:12:58] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:12:59] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:00] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:01] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:01] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:01] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:01] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:02] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:02] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:04] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:04] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:05] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:07] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:07] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:08] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:08] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:08] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:09] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:09] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:11] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:11] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:12] Estado cambiado a: PAUSADO
+[2025-12-11 01:13:12] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:13] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:14] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:15] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:15] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:15] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:15] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:16] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:18] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:18] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:20] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:21] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:23] Estado cambiado a: ACTIVO
+[2025-12-11 01:13:23] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:23] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:23] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:23] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:24] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:24] Estado cambiado a: PAUSADO
+[2025-12-11 01:13:24] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:26] Estado cambiado a: ACTIVO
+[2025-12-11 01:13:26] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:27] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:28] Estado cambiado a: PAUSADO
+[2025-12-11 01:13:28] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:30] Estado cambiado a: ACTIVO
+[2025-12-11 01:13:30] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:31] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:31] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:31] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:32] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:33] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:33] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:36] Estado cambiado a: PAUSADO
+[2025-12-11 01:13:36] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:36] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:38] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:40] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:41] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:41] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:41] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:42] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:42] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:43] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:44] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:45] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:46] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:47] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:48] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:48] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:48] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:49] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:49] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:49] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:51] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:51] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:52] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:13:53] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:13:54] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:13:54] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:13:54] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:13:55] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:13:55] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:13:56] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:13:57] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:13:57] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:13:59] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:14:00] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:14:00] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:14:01] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:14:01] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:14:01] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:14:01] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:14:02] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:14:03] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:14:04] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:14:05] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:14:07] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:14:08] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:14:08] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:14:08] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:14:09] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:14:09] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:14:10] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:14:12] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:14:13] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:14:14] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:14:16] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:14:17] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:14:17] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:14:17] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:14:18] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:14:18] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:14:19] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:14:21] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:14:21] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:14:22] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:14:24] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:14:25] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:14:25] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:14:25] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:14:25] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:14:26] ESTADO: MUERTE SÚBITA FINALIZADA
+[2025-12-11 01:15:19] Estado cambiado a: ACTIVO
+[2025-12-11 01:15:19] CYCLE[27]: Iniciando WatchDog...
+[2025-12-11 01:15:19] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:15:19] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:15:19] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:15:19] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:15:19] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:15:20] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:15:20] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:15:21] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:15:21] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:15:21] DETECTADO: 'working.png' encontrado en 1321,655
+[2025-12-11 01:15:21] ESTADO: TRABAJANDO (VISUAL)
+[2025-12-11 01:15:21] ACTION: Enviando Alt+Enter...
+[2025-12-11 01:15:22] ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA
+[2025-12-11 01:15:22] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:15:22] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:15:24] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:15:24] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:15:26] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:15:27] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:15:28] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:15:28] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:15:29] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:15:29] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:15:29] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:15:30] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:15:30] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:15:31] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:15:32] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:15:33] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:15:34] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:15:35] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:15:35] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:15:35] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:15:35] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:15:36] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:15:36] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:15:38] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:15:38] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:15:39] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:15:41] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:15:41] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:15:42] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:15:42] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:15:42] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:15:43] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:15:43] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:15:45] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:15:45] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:15:46] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:15:47] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:15:48] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:15:48] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:15:48] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:15:49] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:15:49] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:15:50] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:15:51] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:15:52] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:15:53] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:15:54] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:15:55] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:15:55] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:15:55] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:15:56] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:15:56] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:15:57] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:15:58] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:15:58] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:15:59] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:01] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:01] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:02] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:02] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:02] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:02] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:03] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:04] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:05] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:06] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:07] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:08] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:08] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:08] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:09] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:09] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:10] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:11] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:11] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:13] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:14] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:15] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:15] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:15] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:15] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:16] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:16] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:17] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:18] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:19] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:20] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:21] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:21] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:21] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:21] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:22] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:23] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:24] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:25] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:26] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:28] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:29] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:29] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:29] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:29] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:30] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:31] Estado cambiado a: PAUSADO
+[2025-12-11 01:16:31] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:32] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:33] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:34] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:37] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:38] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:38] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:38] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:39] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:40] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:41] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:43] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:43] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:45] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:46] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:47] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:48] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:48] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:48] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:49] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:49] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:51] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:52] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:16:53] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:16:54] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:16:55] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:16:55] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:16:55] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:16:56] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:16:56] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:16:57] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:16:58] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:16:58] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:00] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:01] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:02] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:02] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:02] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:03] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:03] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:17:04] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:17:05] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:17:06] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:07] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:08] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:09] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:10] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:10] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:10] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:11] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:17:11] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:17:13] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:17:14] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:15] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:16] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:17] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:17] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:17] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:18] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:18] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:17:19] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:17:20] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:17:21] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:22] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:23] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:24] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:24] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:24] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:25] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:25] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:17:26] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:17:27] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:17:28] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:29] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:30] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:30] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:31] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:31] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:31] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:32] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:17:32] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:17:33] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:17:34] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:35] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:36] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:37] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:37] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:37] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:37] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:38] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:17:38] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:17:40] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:17:40] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:17:41] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:17:42] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:17:43] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:17:43] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:17:43] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:17:44] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:17:44] ESTADO: MUERTE SÚBITA FINALIZADA
+[2025-12-11 01:18:08] SISTEMA INICIADO
+[2025-12-11 01:18:08] CYCLE[1]: Iniciando WatchDog...
+[2025-12-11 01:18:08] WIN: Encontrada 'AntiGravity' ID: 1573882
+[2025-12-11 01:18:08] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:18:08] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:18:08] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:18:08] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:18:10] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:18:10] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:18:10] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:18:10] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:18:11] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:18:11] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:18:12] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:18:12] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:18:13] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:18:13] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:18:13] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:18:13] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:18:14] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:18:14] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:18:15] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:18:15] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:18:16] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:18:16] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:18:17] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:18:17] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:18:17] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:18:17] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:18:18] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:18:18] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:18:18] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:18:19] CYCLE[2]: Iniciando WatchDog...
+[2025-12-11 01:18:19] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:18:19] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:18:19] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:18:19] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:18:19] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:18:20] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:18:20] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:18:20] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:18:20] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:18:21] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:18:21] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:18:21] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:18:21] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:18:23] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:18:23] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:18:23] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:18:23] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:18:24] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:18:24] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:18:25] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:18:25] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:18:26] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:18:26] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:18:27] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:18:27] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:18:27] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:18:27] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:18:27] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:18:27] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:18:28] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:18:28] CYCLE[3]: Iniciando WatchDog...
+[2025-12-11 01:18:28] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:18:28] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:18:28] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:18:28] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:18:28] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:18:29] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:18:29] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:18:30] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:18:30] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:18:30] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:18:30] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:18:31] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:18:31] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:18:32] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:18:32] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:18:33] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:18:33] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:18:34] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:18:34] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:18:35] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:18:35] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:18:35] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:18:35] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:18:36] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:18:36] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:18:36] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:18:36] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:18:37] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:18:37] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:18:37] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:18:38] CYCLE[4]: Iniciando WatchDog...
+[2025-12-11 01:18:38] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:18:38] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:18:38] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:18:38] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:18:38] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:18:39] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:18:39] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:18:39] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:18:39] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:18:40] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:18:40] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:18:41] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:18:41] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:18:42] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:18:42] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:18:42] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:18:42] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:18:43] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:18:43] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:18:44] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:18:44] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:18:45] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:18:45] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:18:46] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:18:46] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:18:46] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:18:46] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:18:46] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:18:46] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:18:47] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:18:47] CYCLE[5]: Iniciando WatchDog...
+[2025-12-11 01:18:47] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:18:47] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:18:47] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:18:47] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:18:47] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:18:48] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:18:48] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:18:49] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:18:49] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:18:49] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:18:49] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:18:50] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:18:50] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:18:51] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:18:51] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:18:52] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:18:52] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:18:53] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:18:53] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:18:54] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:18:54] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:18:54] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:18:54] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:18:55] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:18:55] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:18:55] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:18:55] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:18:56] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:18:56] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:18:56] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:18:57] CYCLE[6]: Iniciando WatchDog...
+[2025-12-11 01:18:57] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:18:57] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:18:57] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:18:57] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:18:57] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:18:58] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:18:58] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:18:58] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:18:58] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:18:59] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:18:59] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:18:59] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:18:59] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:01] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:19:01] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:01] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:19:01] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:03] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:19:03] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:05] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:19:05] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:19:06] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:19:06] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:19:07] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:19:07] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:19:07] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:19:07] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:07] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:19:07] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:19:08] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:19:08] CYCLE[7]: Iniciando WatchDog...
+[2025-12-11 01:19:08] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:19:08] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:19:08] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:19:08] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:19:08] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:19:09] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:19:09] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:19:10] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:19:10] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:19:10] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:19:10] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:19:11] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:19:11] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:12] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:19:12] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:12] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:19:12] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:13] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:19:13] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:14] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:19:14] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:19:15] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:19:15] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:19:16] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:19:16] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:19:16] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:19:16] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:16] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:19:16] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:19:17] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:19:17] CYCLE[8]: Iniciando WatchDog...
+[2025-12-11 01:19:17] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:19:17] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:19:17] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:19:17] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:19:17] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:19:18] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:19:18] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:19:19] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:19:19] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:19:20] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:19:20] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:19:20] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:19:20] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:21] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:19:21] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:22] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:19:22] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:23] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:19:23] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:24] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:19:24] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:19:25] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:19:25] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:19:26] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:19:26] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:19:26] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:19:26] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:27] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:19:27] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:19:28] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:19:28] CYCLE[9]: Iniciando WatchDog...
+[2025-12-11 01:19:28] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:19:28] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:19:28] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:19:28] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:19:28] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:19:29] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:19:29] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:19:30] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:19:30] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:19:31] DETECTADO: 'working.png' encontrado en 1321,655
+[2025-12-11 01:19:31] ESTADO: TRABAJANDO (VISUAL)
+[2025-12-11 01:19:31] ACTION: Enviando Alt+Enter...
+[2025-12-11 01:19:31] ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA
+[2025-12-11 01:19:31] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:19:31] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:33] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:34] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:35] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:36] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:19:37] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:19:37] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:19:37] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:38] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:19:38] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:19:39] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:40] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:41] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:42] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:43] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:19:44] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:19:44] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:19:44] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:44] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:19:45] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:19:46] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:47] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:47] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:49] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:50] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:19:51] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:19:51] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:19:51] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:52] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:19:52] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:19:52] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:19:54] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:19:54] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:19:55] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:19:56] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:19:57] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:19:58] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:19:58] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:19:58] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:19:59] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:19:59] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:01] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:01] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:03] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:04] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:05] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:05] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:05] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:06] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:06] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:06] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:08] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:08] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:10] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:11] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:12] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:12] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:12] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:13] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:13] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:14] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:15] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:16] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:17] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:18] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:19] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:19] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:19] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:20] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:20] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:21] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:22] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:22] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:23] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:25] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:26] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:26] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:26] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:27] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:27] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:28] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:29] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:29] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:31] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:32] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:33] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:33] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:33] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:33] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:34] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:34] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:36] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:36] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:37] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:38] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:39] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:40] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:40] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:40] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:40] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:41] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:42] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:42] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:43] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:44] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:45] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:45] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:45] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:46] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:46] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:47] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:48] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:48] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:49] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:50] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:51] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:51] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:20:51] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:52] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:20:52] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:20:53] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:20:54] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:20:54] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:20:56] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:20:57] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:20:58] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:20:58] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:20:59] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:00] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:00] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:02] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:03] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:04] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:21:05] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:06] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:07] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:08] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:08] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:08] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:09] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:09] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:11] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:11] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:13] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:21:14] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:15] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:15] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:16] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:16] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:16] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:17] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:17] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:19] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:19] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:21] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:22] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:23] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:23] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:23] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:23] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:24] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:24] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:26] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:26] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:28] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:29] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:30] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:31] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:31] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:31] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:31] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:32] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:34] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:34] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:35] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:36] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:37] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:38] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:38] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:38] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:38] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:39] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:40] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:41] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:42] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:44] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:45] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:45] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:45] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:46] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:46] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:47] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:49] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:49] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:21:50] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:21:51] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:21:52] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:21:52] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:21:52] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:21:53] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:21:53] ESTADO: MUERTE SÚBITA FINALIZADA
+[2025-12-11 01:21:54] CYCLE[30]: Iniciando WatchDog...
+[2025-12-11 01:21:54] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:21:54] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:21:54] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:21:54] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:21:54] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:21:55] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:21:55] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:21:55] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:21:55] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:21:56] DETECTADO: 'working.png' encontrado en 1321,655
+[2025-12-11 01:21:56] ESTADO: TRABAJANDO (VISUAL)
+[2025-12-11 01:21:56] ACTION: Enviando Alt+Enter...
+[2025-12-11 01:21:56] ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA
+[2025-12-11 01:21:56] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:21:57] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:21:59] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:21:59] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:01] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:02] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:03] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:03] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:03] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:03] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:04] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:05] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:06] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:07] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:08] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:08] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:09] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:09] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:10] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:10] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:10] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:11] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:12] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:12] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:14] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:14] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:15] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:15] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:15] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:16] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:16] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:17] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:18] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:19] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:20] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:21] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:22] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:22] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:22] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:23] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:23] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:24] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:25] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:26] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:27] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:29] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:30] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:30] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:30] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:31] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:31] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:32] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:34] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:34] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:35] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:22:36] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:37] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:38] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:39] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:39] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:39] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:39] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:40] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:41] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:42] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:43] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:22:43] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:45] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:47] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:47] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:47] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:48] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:49] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:49] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:22:51] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:22:51] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:22:53] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:22:55] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:22:56] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:22:57] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:22:57] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:22:57] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:22:57] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:22:58] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:00] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:01] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:02] ACCION (SD): Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 01:23:03] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:04] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:05] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:06] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:06] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:06] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:07] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:07] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:09] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:10] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:11] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:13] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:14] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:15] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:15] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:15] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:16] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:17] ACCION (SD): Clic CONFIRMADO en AcceptAll_Priority.png at 1286,605
+[2025-12-11 01:23:17] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:19] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:20] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:21] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:23] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:24] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:24] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:25] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:25] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:25] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:26] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:26] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:27] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:27] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:27] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:28] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:28] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:28] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:29] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:29] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:29] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:30] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:30] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:30] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:31] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:31] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:31] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:32] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:34] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:34] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:35] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:36] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:23:36] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:23:36] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:23:36] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:37] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:23:37] ESTADO: MUERTE SÚBITA FINALIZADA
+[2025-12-11 01:23:38] CYCLE[51]: Iniciando WatchDog...
+[2025-12-11 01:23:38] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:23:38] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:23:38] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:23:38] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:23:38] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:23:39] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:23:39] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:23:39] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:23:39] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:23:40] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:23:40] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:23:40] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:23:40] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:42] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:23:42] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:42] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:23:42] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:43] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:23:43] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:44] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:23:44] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:23:44] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:23:44] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:23:45] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:23:45] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:23:45] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:23:45] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:46] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:23:46] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:23:46] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:23:47] CYCLE[52]: Iniciando WatchDog...
+[2025-12-11 01:23:47] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:23:47] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:23:47] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:23:47] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:23:47] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:23:48] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:23:48] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:23:48] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:23:48] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:23:48] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 01:23:48] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 01:23:49] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 01:23:49] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:23:51] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 01:23:51] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:23:51] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 01:23:51] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:23:52] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 01:23:52] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:23:53] RESULT: Cuadrito Azul - Accept Alt + Enter.PNG no encontrado.
+[2025-12-11 01:23:53] SEARCH: Verificando Expand all.PNG
+[2025-12-11 01:23:54] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 01:23:54] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 01:23:55] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 01:23:55] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 01:23:55] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 01:23:55] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:23:55] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 01:23:55] SEARCH: Verificando scroll_down.png
+[2025-12-11 01:23:56] RESULT: scroll_down.png no encontrado.
+[2025-12-11 01:23:56] CYCLE[53]: Iniciando WatchDog...
+[2025-12-11 01:23:56] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:23:56] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:23:56] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:23:56] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:23:56] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:23:57] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:23:57] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:23:58] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:23:58] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:23:58] DETECTADO: 'working.png' encontrado en 1321,655
+[2025-12-11 01:23:58] ESTADO: TRABAJANDO (VISUAL)
+[2025-12-11 01:23:58] ACTION: Enviando Alt+Enter...
+[2025-12-11 01:23:58] ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA
+[2025-12-11 01:23:58] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:23:59] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:00] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:01] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:02] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:03] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:03] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:04] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:04] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:04] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:04] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:05] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:06] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:07] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:08] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:09] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:09] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:10] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:10] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:10] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:11] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:11] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:13] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:13] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:14] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:15] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:16] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:17] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:17] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:17] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:17] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:18] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:19] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:20] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:21] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:22] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:22] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:23] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:23] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:23] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:23] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:24] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:25] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:26] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:27] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:28] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:29] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:29] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:29] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:29] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:29] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:30] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:32] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:32] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:33] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:34] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:35] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:35] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:35] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:36] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:36] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:37] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:38] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:39] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:40] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:41] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:42] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:43] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:43] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:43] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:43] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:44] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:46] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:46] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:47] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:48] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:49] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:49] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:49] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:50] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:50] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:51] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:52] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:52] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:24:54] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:24:55] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:24:56] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:24:56] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:24:56] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:24:56] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:24:57] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:24:57] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:24:59] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:24:59] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:00] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:25:01] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:25:02] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:25:02] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:25:02] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:25:03] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:25:03] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:04] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:25:05] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:25:05] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:07] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:25:08] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:25:09] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:25:09] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:25:09] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:25:09] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:25:10] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:10] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:25:12] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:25:12] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:13] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:25:15] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:25:15] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:25:16] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:25:16] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:25:16] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:25:16] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:17] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:25:19] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:25:19] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:21] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:25:22] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:25:23] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:25:24] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:25:24] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:25:24] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:25:25] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:25] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:25:27] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:25:27] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:29] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:25:30] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:25:31] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:25:31] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:25:31] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:25:32] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:25:32] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:32] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:25:34] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:25:34] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:36] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG
+[2025-12-11 01:25:37] SEARCH (SD): Buscando Expand all.PNG
+[2025-12-11 01:25:37] SEARCH (SD): Buscando haciaabajo.PNG
+[2025-12-11 01:25:38] SEARCH (SD): Buscando haciaabajo2.PNG
+[2025-12-11 01:25:38] SEARCH (SD): Buscando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 01:25:39] SEARCH (SD): Buscando scroll_down.png
+[2025-12-11 01:25:39] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:40] Estado cambiado a: PAUSADO (Sync Server)
+[2025-12-11 01:25:40] Estado cambiado a: ACTIVO (Sync Server)
+[2025-12-11 01:25:41] CYCLE[70]: Iniciando WatchDog...
+[2025-12-11 01:25:41] WIN: Encontrada 'AntiGravity' ID: 2234514
+[2025-12-11 01:25:41] WIN-STATE: MinMax Status = 1
+[2025-12-11 01:25:41] RAW-COORDS: X=-8 Y=-8 W=1382 H=736
+[2025-12-11 01:25:41] SAFE-ZONE: [342,42] -> [1354,718] (Margen aplicado: 350)
+[2025-12-11 01:25:41] SEARCH: Buscando 'send.png' para detectar usuario...
+[2025-12-11 01:25:42] SEARCH: 'send.png' no encontrado. Usuario libre.
+[2025-12-11 01:25:42] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 01:25:43] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 01:25:43] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 01:25:43] DETECTADO: 'working.png' encontrado en 1321,655
+[2025-12-11 01:25:43] ESTADO: TRABAJANDO (VISUAL)
+[2025-12-11 01:25:43] ACTION: Enviando Alt+Enter...
+[2025-12-11 01:25:43] ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA
+[2025-12-11 01:25:43] SEARCH (SD): Buscando AcceptAll_Priority.png
+[2025-12-11 01:25:44] SEARCH (SD): Buscando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 01:25:46] SEARCH (SD): Buscando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 01:25:46] SEARCH (SD): Buscando Cuadrito Azul - accept all.PNG
+[2025-12-11 01:25:47] SEARCH (SD): Buscando Cuadrito Azul - Accept Alt + Enter.PNG

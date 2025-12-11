@@ -14,12 +14,15 @@ Write-Host "🛸 OmniServer listening on http://localhost:$port" -ForegroundColo
 # Fix: Use PSScriptRoot to find public folder reliably
 $wwwRoot = Join-Path $PSScriptRoot "..\public"
 
-# Global state for Ghost Agent (Logic Flag)
+# Global state
 $global:GhostActive = $true
+$global:OmniGodPaused = $false
+$global:AgentWorking = $false
 
 Function Get-ProcessStatus {
+    $ahkRunning = (Get-Process "AutoHotkey*" -ErrorAction SilentlyContinue).Count -gt 0
     $status = @{
-        "OmniGod"     = (Get-Process "AutoHotkey*" -ErrorAction SilentlyContinue).Count -gt 0
+        "OmniGod"     = $ahkRunning -and (-not $global:OmniGodPaused)
         "OmniControl" = (Get-Process "powershell" | Where-Object { $_.MainWindowTitle -like "*OmniControl*" } | Measure-Object).Count -gt 0
         "Ghost"       = $global:GhostActive
     }
@@ -27,7 +30,6 @@ Function Get-ProcessStatus {
 }
 
 while ($listener.IsListening) {
-    # ... (Keep existing loop setup) ...
     $context = $listener.GetContext()
     $request = $context.Request
     $response = $context.Response
@@ -99,21 +101,51 @@ while ($listener.IsListening) {
                 $response.OutputStream.Write($buffer, 0, $buffer.Length)
             }
         }
+        elseif ($path -eq "/api/toggle_ghost") {
+            if ($method -eq "POST") {
+                $reader = New-Object System.IO.StreamReader($request.InputStream, $request.ContentEncoding)
+                $body = $reader.ReadToEnd()
+                $reader.Close()
+                
+                try {
+                    $data = $body | ConvertFrom-Json
+                    # F8 sends Active: True/False
+                    # If F8 says Active (True), then Paused is False.
+                    # If F8 says Inactive (False), then Paused is True.
+                    $global:OmniGodPaused = -not $data.active
+                    
+                    $statusStr = if (-not $global:OmniGodPaused) { "ACTIVE" } else { "PAUSED" }
+                    Write-Host "🔄 OmniGod Status Sync (F8): $statusStr" -ForegroundColor Yellow
+                }
+                catch { 
+                    Write-Warning "Invalid JSON in toggle request" 
+                }
+                
+                $msg = "OK"
+                $buffer = [System.Text.Encoding]::UTF8.GetBytes($msg)
+                $response.OutputStream.Write($buffer, 0, $buffer.Length)
+            }
+        }
         elseif ($path -match "/api/toggle/(?<bot>\w+)") {
             $bot = $Matches['bot']
             $msg = "No Action"
 
             if ($bot -eq "omnigod") {
-                $ahkProc = Get-Process "AutoHotkey*" -ErrorAction SilentlyContinue
-                if ($ahkProc) {
-                    $ahkProc | Stop-Process -Force
-                    $msg = "[STOPPED] OmniGod"
+                # UI Button Logic: Toggle Pause State instead of Killing Process
+                $global:OmniGodPaused = -not $global:OmniGodPaused
+                
+                if ($global:OmniGodPaused) { 
+                    $msg = "[PAUSED] OmniGod" 
                 }
-                else {
-                    $scriptPath = Join-Path $PSScriptRoot "..\..\OmniBot\OmniGod.ahk"
-                    Start-Process "C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe" -ArgumentList "`"$scriptPath`"" -WorkingDirectory (Split-Path $scriptPath)
-                    if (!$?) { Start-Process $scriptPath } 
-                    $msg = "[STARTED] OmniGod"
+                else { 
+                    $msg = "[RESUMED] OmniGod" 
+                    # Optional: Ensure process is running if it crashed?
+                    $ahkProc = Get-Process "AutoHotkey*" -ErrorAction SilentlyContinue
+                    if (-not $ahkProc) {
+                        $scriptPath = Join-Path $PSScriptRoot "..\..\OmniBot\OmniGod.ahk"
+                        Start-Process "C:\Program Files\AutoHotkey\v2\AutoHotkey64.exe" -ArgumentList "`"$scriptPath`"" -WorkingDirectory (Split-Path $scriptPath)
+                        $msg = "[STARTED] OmniGod"
+                    }
                 }
             }
             elseif ($bot -eq "omnicontrol") {
@@ -141,7 +173,7 @@ while ($listener.IsListening) {
             # Serve Static Files
             if ($path -eq "/") { $path = "/index.html" }
             $filePath = Join-Path $wwwRoot $path.TrimStart("/")
-            
+                
             if (Test-Path $filePath) {
                 $content = [System.IO.File]::ReadAllBytes($filePath)
                 $response.ContentLength64 = $content.Length
@@ -158,8 +190,9 @@ while ($listener.IsListening) {
     catch {
         $response.StatusCode = 500
         Write-Host "Error: $_" -ForegroundColor Red
+        $response.Close() # Ensure close on error
     }
     finally {
-        $response.Close()
+        try { $response.Close() } catch {}
     }
 }

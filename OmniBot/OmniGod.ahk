@@ -34,21 +34,40 @@ F8::
 {
     global IsActive
     IsActive := !IsActive
+    
+    ; Sync with Server
+    try {
+        statusJson := IsActive ? "true" : "false"
+        whr := ComObject("WinHttp.WinHttpRequest.5.1")
+        whr.Open("POST", "http://localhost:1337/api/toggle_ghost", true)
+        whr.SetRequestHeader("Content-Type", "application/json")
+        whr.Send('{"active": ' . statusJson . '}')
+    } catch {
+        Log("ERROR: Fallo al sincronizar F8 con OmniServer")
+    }
+
     if (IsActive) {
         TraySetIcon "shell32.dll", 1 
         SoundPlay "*64" 
         UpdateHUD("ACTIVO", "CAZANDO (F8: Pausa | F9: HUD)", "c00FF00")
-        Log("Estado cambiado a: ACTIVO")
+        Log("Estado cambiado a: ACTIVO (Sync Server)")
     } else {
         TraySetIcon "shell32.dll", 28
         SoundPlay "*16" 
         UpdateHUD("PAUSADO", "Sistema Detenido", "cFF0000")
-        Log("Estado cambiado a: PAUSADO")
+        Log("Estado cambiado a: PAUSADO (Sync Server)")
     }
 }
 
 ; --- BUCLE PRINCIPAL (CADA 500ms) ---
 Loop {
+    ; Sincronización Remota (Siempre, incluso pausado)
+    static SyncTick := 0
+    SyncTick := Mod(SyncTick + 1, 2) ; Cada ~1 segundo
+    if (SyncTick == 0) {
+        CheckRemoteStatus()
+    }
+
     if (!IsActive) {
         Sleep 500
         continue
@@ -57,6 +76,38 @@ Loop {
     Sleep 500 
 }
 return
+
+CheckRemoteStatus() {
+    global IsActive
+    try {
+        whr := ComObject("WinHttp.WinHttpRequest.5.1")
+        whr.Open("GET", "http://localhost:1337/api/status", true)
+        whr.Send()
+        if (whr.WaitForResponse(0.2)) {
+             resp := whr.ResponseText
+             ; Parsear respuesta JSON simple
+             if (InStr(resp, '"OmniGod":true')) {
+                 if (!IsActive) {
+                     IsActive := true
+                     UpdateHUD("ACTIVO", "Reanudado Remotamente", "c00FF00")
+                     Log("REMOTE: Reactivado por Servidor")
+                     TraySetIcon "shell32.dll", 1
+                     SoundPlay "*64"
+                 }
+             } else if (InStr(resp, '"OmniGod":false')) {
+                 if (IsActive) {
+                     IsActive := false
+                     UpdateHUD("PAUSADO", "Detenido Remotamente", "cFF0000")
+                     Log("REMOTE: Pausado por Servidor")
+                     TraySetIcon "shell32.dll", 28
+                     SoundPlay "*16"
+                 }
+             }
+        }
+    } catch {
+        ; Fallo silencioso si el servidor no responde
+    }
+}
 
 WatchDog() {
     static Tick := 0
@@ -242,10 +293,18 @@ WatchDog() {
     if (WasWorking and HasWindow) {
         Log("ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA")
         Loop 20 { 
+            if (!IsActive) {
+                Log("BREAK: Interrupción por Usuario (F8) durante Muerte Súbita")
+                return
+            }
             Tick := Mod(Tick + 1, 100) 
             UpdateHUD("CAZANDO (SD)", "Limpieza Rápida " . Tick, "cOrange")
             Loop Targets.Length {
+                if (!IsActive) {
+                     return
+                }
                 tImg := Targets[A_Index]
+                ; (Rest of the loop code remains the same, just adding the check)
                 Log("SEARCH (SD): Buscando " . tImg)
                 if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*30 " . ImageFolder . tImg) {
                      SafeToClick := true
@@ -306,6 +365,11 @@ WatchDog() {
         Log("SCAN: Iniciando escaneo de objetivos...")
 
         Loop Targets.Length {
+            if (!IsActive) {
+                Log("BREAK: Interrupción por Usuario (F8) durante Escaneo Normal")
+                return
+            }
+            
             imgName := Targets[A_Index]
             imgPath := ImageFolder . imgName
             Log("SEARCH: Verificando " . imgName)
