@@ -59,6 +59,9 @@ Loop {
 return
 
 WatchDog() {
+    static Tick := 0
+    Tick := Mod(Tick + 1, 100) ; 0-99 Heartbeat
+
     ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
     WinID := 0
     HasWindow := false
@@ -66,10 +69,10 @@ WatchDog() {
     
     SetTitleMatchMode 2
     
-    ; Búsqueda de Ventana: Priorizamos la APP real, evitamos Explorer/Carpetas
+    ; Búsqueda de Ventana
     if WinExist("AntiGravity ahk_exe Code.exe") {
         WinID := WinGetID("AntiGravity ahk_exe Code.exe")
-    } else if WinExist("AntiGravity") && !WinActive("ahk_class CabinetWClass") { ; Evitar Explorador de Archivos
+    } else if WinExist("AntiGravity") && !WinActive("ahk_class CabinetWClass") {
         WinID := WinGetID("AntiGravity")
     } else if WinExist("ahk_exe Code.exe") {
         WinID := WinGetID("ahk_exe Code.exe")
@@ -78,7 +81,7 @@ WatchDog() {
     if (WinID != 0) {
         try {
             WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
-            ; Ajuste de bordes (Client Area aproximada)
+            ; Ajuste de bordes
             WX := WX + 10
             WY := WY + 50 
             WW := WX + WW - 20 
@@ -89,23 +92,28 @@ WatchDog() {
         }
     }
 
-    if (!HasWindow) {
-        UpdateHUD("MODO NINJA", "Solo Remoto (Sin Ventana)", "cGray")
-    }
+    ; Formatear string de coordenadas + Heartbeat
+    CoordStr := (HasWindow) ? " [" . WX . "," . WY . "] " . Tick : " [-,-] " . Tick
 
-    ; Formatear string de coordenadas para visualizar el "Cerco"
-    CoordStr := (HasWindow) ? " [" . WX . "," . WY . "]" : ""
+    if (!HasWindow) {
+        UpdateHUD("MODO NINJA", "Solo Remoto " . CoordStr, "cGray")
+    }
 
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
     if (HasWindow) {
         if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
              TargetX := FoundX + 30 
              TargetY := FoundY + 10
+             
              MouseMove TargetX, TargetY
              Sleep 10 
-             MouseGetPos ,,, &WinUnderMouse
+             MouseGetPos ,, &WinUnderMouse
              
-             if (WinUnderMouse == WinID) {
+             ; Z-ORDER RELAXED: Check Process Name instead of ID
+             WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
+             TargetName := WinGetProcessName("ahk_id " . WinID)
+             
+             if (WinName == TargetName) {
                  UpdateHUD("PRIORIDAD", "Finalizando" . CoordStr, "c00FF00")
                  Click "Down"
                  Sleep 10
@@ -116,12 +124,107 @@ WatchDog() {
         }
     }
 
-    ; ... (rest of function) ...
+    ; --- 1. CHEQUEO DE ACTIVIDAD (HÍBRIDO) ---
+    static WasWorking := false
+    IsWorkingVisual := false
+    
+    if (HasWindow) {
+        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*10 " . IndicatorFolder . "working.png")
+    }
+    
+    ; B. Chequeo Remoto 
+    IsWorkingRemote := false
+    if (!IsWorkingVisual) {
+        try {
+           whr := ComObject("WinHttp.WinHttpRequest.5.1")
+           whr.Open("GET", "http://localhost:1337/api/status", true)
+           whr.Send()
+           if (whr.WaitForResponse(0.1)) { 
+               resp := whr.ResponseText
+               if InStr(resp, '"AgentWorking":true') {
+                   IsWorkingRemote := true
+               }
+           }
+        }
+    }
+
+    IsWorking := IsWorkingVisual or IsWorkingRemote
+
+    if (IsWorking) {
+        WasWorking := true
+        ColorStatus := IsWorkingRemote ? "c00FFFF" : "cFFFF00"
+        Source := IsWorkingRemote ? "GHOST LINK" : "VISUAL"
+        UpdateHUD("TRABAJANDO", Source . " " . CoordStr, ColorStatus)
+        
+        try {
+             if (WinID != 0) {
+                SetKeyDelay 10, 10
+                ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
+            } else {
+                 UpdateHUD("BUSCANDO", "Esperando ventana..." . CoordStr, "cRed")
+            }
+        }
+        return 
+    } 
+    
+    ; --- 2. MODALIDAD MUERTE SUBITA ---
+    if (WasWorking and HasWindow) {
+        Loop 20 { 
+            Tick := Mod(Tick + 1, 100) ; Heartbeat en sub-loop
+            UpdateHUD("CAZANDO (SD)", "Limpieza Rápida " . Tick, "cOrange")
+            Loop Targets.Length {
+                tImg := Targets[A_Index]
+                if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . tImg) {
+                     SafeToClick := true
+                     Loop Files, IndicatorFolder . "Ignore\*.png"
+                     {
+                        x1 := FoundX - 10
+                        y1 := FoundY - 10
+                        x2 := FoundX + 50 
+                        y2 := FoundY + 50
+                        if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
+                            SafeToClick := false
+                            break
+                        }
+                     }
+                     if (!SafeToClick) {
+                         continue
+                     }
+
+                     TargetX := FoundX + 15 
+                     TargetY := FoundY + 10
+                     MouseMove TargetX, TargetY
+                     Sleep 10
+                     MouseGetPos ,, &WinUnderMouse
+                     
+                     WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
+                     TargetName := WinGetProcessName("ahk_id " . WinID)
+                     
+                     if (WinName == TargetName) {
+                         Click "Down"
+                         Sleep 10
+                         Click "Up"
+                         UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
+                         Sleep 500 
+                     }
+                }
+            }
+            Sleep 100
+        }
+        WasWorking := false
+        return 
+    }
+
+    ; --- 3. CHEQUEO DE SEGURIDAD USER ---
+    if (HasWindow and ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png")) {
+        UpdateHUD("PAUSADO", "Usuario Escribiendo " . Tick, "cOrange")
+        return
+    }
 
     ; --- 4. IDLE / SCAN NORMAL ---
     if (HasWindow) {
-        ; MOSTRAR COORDENADAS EN TIEMPO REAL
-        UpdateHUD("👁️ BUSCANDO...", "Zona Segura: " . WX . "," . WY . " | " . WW . "," . WH, "cGray")
+        ; MOSTRAR COORDENADAS CON HEARTBEAT
+        UpdateHUD("👁️ BUSCANDO...", "Zona: " . WX . "," . WY . " | " . WW . "," . WH . " [" . Tick . "]", "cGray")
         
         Loop Targets.Length {
             ; ... (loop code) ...
@@ -152,11 +255,13 @@ WatchDog() {
                         TargetY := FoundY + 10
                         MouseMove TargetX, TargetY
                         
-                        ; Z-ORDER CHECK
                         Sleep 10
                         MouseGetPos ,,, &WinUnderMouse
                         
-                        if (WinUnderMouse == WinID) {
+                        WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
+                        TargetName := WinGetProcessName("ahk_id " . WinID)
+                         
+                        if (WinName == TargetName) {
                             Click "Down"
                             Sleep 10
                             Click "Up"
