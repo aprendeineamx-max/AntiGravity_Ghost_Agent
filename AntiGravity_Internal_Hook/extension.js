@@ -6,7 +6,7 @@ const path = require('path');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-    // 1. Immediate Proof of Life (File System) & Status Bar
+    // 1. Proof of Life & Status Bar
     try { fs.writeFileSync('C:\\AntiGravityExt\\HOOK_ALIVE.txt', `Active at ${new Date().toISOString()}`); } catch (e) { }
 
     const config = vscode.workspace.getConfiguration();
@@ -15,68 +15,63 @@ function activate(context) {
         "statusBar.foreground": "#ffffff"
     }, vscode.ConfigurationTarget.Global);
 
-    vscode.window.showInformationMessage('👻 ANTIGRAVITY HOOK: ONLINE & LISTENING', { modal: false });
+    vscode.window.showInformationMessage('👻 ANTIGRAVITY HOOK: AUTONOMOUS MODE', { modal: false });
 
-    // 2. The Bridge: Watch for Commands from OmniGod
+    // 2. State & Paths
     const cmdPath = 'C:\\AntiGravityExt\\GHOST_CMD.txt';
+    const statusPath = 'C:\\AntiGravityExt\\GHOST_STATUS.txt';
+    let typingTimer = null;
+    let isTyping = false;
 
-    // Ensure file exists
     if (!fs.existsSync(cmdPath)) { fs.writeFileSync(cmdPath, 'IDLE'); }
+    if (!fs.existsSync(statusPath)) { fs.writeFileSync(statusPath, 'IDLE'); }
 
-    console.log(`[Ghost] Watching ${cmdPath}`);
+    // 3. Smart Typing (Idle Detection)
+    vscode.workspace.onDidChangeTextDocument(e => {
+        if (typingTimer) clearTimeout(typingTimer);
+        isTyping = true;
+        try { fs.writeFileSync(statusPath, 'TYPING'); } catch (err) { }
 
-    // Watcher Logic
+        typingTimer = setTimeout(() => {
+            isTyping = false;
+            try { fs.writeFileSync(statusPath, 'IDLE'); } catch (err) { }
+        }, 1000);
+    });
+
+    // 4. LOOP: Auto-Authorize (The "Always On" Clicker)
+    // Runs constantly to accept agent actions (regardless of typing status)
+    setInterval(async () => {
+        try {
+            await vscode.commands.executeCommand('antigravity.agent.acceptAgentStep');
+        } catch (e) { }
+    }, 1000);
+
+    // 5. Logic: Smart Submit (The "Conditional" Sender)
     const watcher = fs.watch(cmdPath, async (eventType, filename) => {
         if (eventType === 'change') {
             try {
                 const cmd = fs.readFileSync(cmdPath, 'utf8').trim();
 
                 if (cmd === 'SUBMIT') {
-                    vscode.window.showInformationMessage('👻 GHOST COMMAND: SUBMIT RECV');
+                    // Only Submit if NOT typing (The "Pause" Logic)
+                    if (!isTyping) {
+                        vscode.window.showInformationMessage('👻 GHOST: SUBMITTING CHAT');
+                        await vscode.commands.executeCommand('workbench.action.chat.submit');
+                        console.log('[Ghost] Executed SUBMIT');
+                    } else {
+                        console.log('[Ghost] SUBMIT blocked (User Typing)');
+                    }
 
-                    // The Magic Internal Command
-                    await vscode.commands.executeCommand('antigravity.agent.acceptAgentStep');
-
-                    // Reset to avoid loops
+                    // Reset
                     fs.writeFileSync(cmdPath, 'IDLE');
-                    console.log('[Ghost] Executed SUBMIT and reset to IDLE');
                 }
-            } catch (err) {
-                console.error('[Ghost] Error reading command:', err);
-            }
+            } catch (err) { }
         }
     });
 
     context.subscriptions.push({ dispose: () => watcher.close() });
 
-    // 3. Smart Typing (Idle Detection)
-    const statusPath = 'C:\\AntiGravityExt\\GHOST_STATUS.txt';
-    let typingTimer = null;
-
-    if (!fs.existsSync(statusPath)) { fs.writeFileSync(statusPath, 'IDLE'); }
-
-    vscode.workspace.onDidChangeTextDocument(e => {
-        // Clear existing timer
-        if (typingTimer) clearTimeout(typingTimer);
-
-        // Immediate: User is typing
-        try {
-            // Only write if not already TYPING to save IO
-            // fs.writeFileSync(statusPath, 'TYPING'); // Too aggressive?
-            // Actually, let's keep it simple. Optimization later.
-            fs.writeFileSync(statusPath, 'TYPING');
-        } catch (err) { }
-
-        // Debounce: Set back to IDLE after 1s
-        typingTimer = setTimeout(() => {
-            try {
-                fs.writeFileSync(statusPath, 'IDLE');
-                // console.log('[Ghost] User is IDLE'); 
-            } catch (err) { }
-        }, 1000);
-    });
-
-    // 4. Discovery Phase (Background)
+    // 6. Discovery Phase (Background)
     setTimeout(async () => {
         try {
             const commands = await vscode.commands.getCommands(true);
@@ -86,7 +81,6 @@ function activate(context) {
 }
 
 function deactivate() {
-    // Ensure we don't leave it stuck on TYPING
     try { fs.writeFileSync('C:\\AntiGravityExt\\GHOST_STATUS.txt', 'IDLE'); } catch (e) { }
 }
 
