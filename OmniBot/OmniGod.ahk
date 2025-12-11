@@ -39,7 +39,7 @@ F8::
     try {
         statusJson := IsActive ? "true" : "false"
         whr := ComObject("WinHttp.WinHttpRequest.5.1")
-        whr.Open("POST", "http://localhost:1337/api/toggle_ghost", true)
+        whr.Open("POST", "http://localhost:1337/api/toggle_ghost", false) ; Sync=false guarantees delivery
         whr.SetRequestHeader("Content-Type", "application/json")
         whr.Send('{"active": ' . statusJson . '}')
     } catch {
@@ -60,9 +60,9 @@ F8::
 }
 
 ; --- BUCLE PRINCIPAL (CADA 500ms) ---
+SyncTick := 0
 Loop {
     ; Sincronización Remota (Siempre, incluso pausado)
-    static SyncTick := 0
     SyncTick := Mod(SyncTick + 1, 2) ; Cada ~1 segundo
     if (SyncTick == 0) {
         CheckRemoteStatus()
