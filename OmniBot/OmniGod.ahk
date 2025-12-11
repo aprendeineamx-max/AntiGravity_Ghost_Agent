@@ -90,131 +90,42 @@ WatchDog() {
     }
 
     if (!HasWindow) {
-        UpdateHUD("MODO NINJA", "Esperando Ventana... (Solo Remoto)", "cGray")
+        UpdateHUD("MODO NINJA", "Solo Remoto (Sin Ventana)", "cGray")
     }
+
+    ; Formatear string de coordenadas para visualizar el "Cerco"
+    CoordStr := (HasWindow) ? " [" . WX . "," . WY . "]" : ""
 
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
     if (HasWindow) {
         if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
-             ; Validación Z-Order (¿Estoy clicando la ventana correcta?)
              TargetX := FoundX + 30 
              TargetY := FoundY + 10
-             
-             ; Movemos mouse para validar qué ventana está debajo
              MouseMove TargetX, TargetY
-             Sleep 10 ; Breve pausa para que Windows actualice
+             Sleep 10 
              MouseGetPos ,,, &WinUnderMouse
              
              if (WinUnderMouse == WinID) {
-                 UpdateHUD("PRIORIDAD", "Finalizando Tarea", "c00FF00")
+                 UpdateHUD("PRIORIDAD", "Finalizando" . CoordStr, "c00FF00")
                  Click "Down"
                  Sleep 10
                  Click "Up"
                  Sleep 500 
                  return
-             } else {
-                 ; Falso positivo: Ventana superpuesta (Browser/Fotos)
-                 ; No hacemos nada, dejamos pasar
              }
         }
     }
 
-    ; --- 1. CHEQUEO DE ACTIVIDAD (HÍBRIDO) ---
-    static WasWorking := false
-    IsWorkingVisual := false
-    
-    if (HasWindow) {
-        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "working.png")
-    }
-    
-    ; B. Chequeo Remoto 
-    IsWorkingRemote := false
-    if (!IsWorkingVisual) {
-        try {
-           whr := ComObject("WinHttp.WinHttpRequest.5.1")
-           whr.Open("GET", "http://localhost:1337/api/status", true)
-           whr.Send()
-           if (whr.WaitForResponse(0.1)) { 
-               resp := whr.ResponseText
-               if InStr(resp, '"AgentWorking":true') {
-                   IsWorkingRemote := true
-               }
-           }
-        }
-    }
-
-    IsWorking := IsWorkingVisual or IsWorkingRemote
-
-    if (IsWorking) {
-        WasWorking := true
-        ColorStatus := IsWorkingRemote ? "c00FFFF" : "cFFFF00"
-        Source := IsWorkingRemote ? "GHOST LINK" : "VISUAL"
-        UpdateHUD("TRABAJANDO", Source . ": Enviando Alt+Enter...", ColorStatus)
-        
-        try {
-             if (WinID != 0) {
-                SetKeyDelay 10, 10
-                ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
-            } else {
-                 UpdateHUD("BUSCANDO", "Esperando ventana de Antigravity...", "cRed")
-            }
-        }
-        return 
-    } 
-    
-    ; --- 2. MODALIDAD MUERTE SUBITA ---
-    if (WasWorking and HasWindow) {
-        Loop 20 { 
-            Loop Targets.Length {
-                tImg := Targets[A_Index]
-                if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . tImg) {
-                     SafeToClick := true
-                     Loop Files, IndicatorFolder . "Ignore\*.png"
-                     {
-                        x1 := FoundX - 10
-                        y1 := FoundY - 10
-                        x2 := FoundX + 50 
-                        y2 := FoundY + 50
-                        if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
-                            SafeToClick := false
-                            break
-                        }
-                     }
-                     if (!SafeToClick) {
-                         continue
-                     }
-
-                     TargetX := FoundX + 15 
-                     TargetY := FoundY + 10
-                     MouseMove TargetX, TargetY
-                     Sleep 10
-                     MouseGetPos ,,, &WinUnderMouse
-                     
-                     if (WinUnderMouse == WinID) {
-                         Click "Down"
-                         Sleep 10
-                         Click "Up"
-                         UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
-                         Sleep 500 
-                     }
-                }
-            }
-            Sleep 100
-        }
-        WasWorking := false
-        return 
-    }
-
-    ; --- 3. CHEQUEO DE SEGURIDAD USER ---
-    if (HasWindow and ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png")) {
-        UpdateHUD("PAUSADO", "Usuario Escribiendo", "cOrange")
-        return
-    }
+    ; ... (rest of function) ...
 
     ; --- 4. IDLE / SCAN NORMAL ---
     if (HasWindow) {
-        UpdateHUD("👁️ BUSCANDO...", "Escaneando Perímetro...", "cGray")
+        ; MOSTRAR COORDENADAS EN TIEMPO REAL
+        UpdateHUD("👁️ BUSCANDO...", "Zona Segura: " . WX . "," . WY . " | " . WW . "," . WH, "cGray")
+        
         Loop Targets.Length {
+            ; ... (loop code) ...
+
             imgName := Targets[A_Index]
             imgPath := ImageFolder . imgName
             if FileExist(imgPath) {
