@@ -27,7 +27,9 @@ using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Automation;
-using System.Windows; 
+using System.Windows;
+using System.IO;
+using System.Windows.Forms; 
 
 namespace OmniSystem {
     public class Backend {
@@ -58,6 +60,13 @@ namespace OmniSystem {
             return idleTime > thresholdMs;
         }
 
+        public static void Log(string msg) {
+            try {
+                System.IO.File.AppendAllText(@"C:\AntiGravityExt\OmniControl_Debug.txt", 
+                    DateTime.Now.ToString("HH:mm:ss.fff") + " " + msg + Environment.NewLine);
+            } catch {}
+        }
+
         public static string ScanAndDestroy(string titlePart) {
             try {
                 // --- SMART TYPING CHECK ---
@@ -70,20 +79,26 @@ namespace OmniSystem {
                 var windows = root.FindAll(TreeScope.Children, winCond);
                 
                 foreach (AutomationElement win in windows) {
-                    if (win.Current.Name.Contains(titlePart)) {
+                    string winName = win.Current.Name;
+                    if (winName.Contains(titlePart)) {
+                         // Log found window
+                         // Log("Found Window: " + winName);
+
                          var btnCond = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button);
                          var buttons = win.FindAll(TreeScope.Descendants, btnCond);
                          
                          foreach (AutomationElement btn in buttons) {
                              string name = btn.Current.Name;
                              if (string.IsNullOrEmpty(name)) continue;
+                             
+                             // DEBUG: Log all buttons seen to understand what we are missing
+                             // Log("Seen Button: '" + name + "' Rect: " + btn.Current.BoundingRectangle);
 
                              bool isMatch = false;
-                             // Expanded Logic
                              if (name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
                              else if (name.IndexOf("Allow", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
                              else if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
-                             else if (name.Contains("Yes")) isMatch = true; // Simple Yes
+                             else if (name.Contains("Yes")) isMatch = true; 
                              
                              if (isMatch) {
                                  // --- ZONE FILTER ---
@@ -94,7 +109,8 @@ namespace OmniSystem {
                                      
                                      if (btnCX < ZoneX || btnCX > (ZoneX + ZoneW) || 
                                          btnCY < ZoneY || btnCY > (ZoneY + ZoneH)) {
-                                         // DEBUG: Return ignored to help user diagnose
+                                         
+                                         Log("IGNORED (Outside): '" + name + "' at " + btnRect + " Zone: " + ZoneX + "," + ZoneY + " " + ZoneW + "x" + ZoneH);
                                          return "IGNORED (Outside Zone): " + name; 
                                      }
                                  }
@@ -102,24 +118,25 @@ namespace OmniSystem {
                                  // ACTION
                                  var invoke = btn.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
                                  if (invoke != null) {
+                                     Log("CLICKING: " + name);
                                      invoke.Invoke();
                                      
-                                     // FORCE ALT+ENTER (As requested by User for Chat)
-                                     // Only if it's the specific "Run command" or "Accept" button
                                      if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0 ||
                                          name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) {
                                          try { 
+                                            Log("SENDING ALT+ENTER");
                                             System.Windows.Forms.SendKeys.SendWait("%{ENTER}"); 
                                          } catch {}
                                      }
-                                     
                                      return "CLICKED: " + name;
                                  }
                              }
                          }
                     }
                 }
-            } catch {}
+            } catch (Exception ex) {
+                Log("ERROR: " + ex.Message);
+            }
             return "Scanning...";
         }
     }
@@ -128,7 +145,7 @@ namespace OmniSystem {
 
 try {
     if (-not ([System.Management.Automation.PSTypeName]'OmniSystem.Backend').Type) {
-        Add-Type -TypeDefinition $Source -Language CSharp -ReferencedAssemblies UIAutomationClient, UIAutomationTypes, WindowsBase
+        Add-Type -TypeDefinition $Source -Language CSharp -ReferencedAssemblies UIAutomationClient, UIAutomationTypes, WindowsBase, PresentationCore, PresentationFramework, System.Windows.Forms
     }
 }
 catch { 
