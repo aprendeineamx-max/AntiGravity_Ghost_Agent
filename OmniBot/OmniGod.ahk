@@ -173,12 +173,19 @@ WatchDog() {
     WinID := 0
     WX := 0, WY := 0, WW := 0, WH := 0
     
-    if (ActiveProcess = "Code.exe" or ActiveProcess = "Antigravity.exe" or ActiveProcess = "AntiGravity.exe") {
+    ; --- STRICT FOCUS CHECK (INSTANT HIDE) ---
+    WinID := WinExist("A")
+    try {
+        ActiveProcess := WinGetProcessName("ahk_id " . WinID)
+    } catch {
+        ActiveProcess := ""
+    }
+    
+    ; Solo procesar si es VS Code o ventana objetivo Y está activa
+    if (ActiveProcess = "Code.exe" || ActiveProcess = "Antigravity.exe" || ActiveProcess = "AntiGravity.exe") {
         HasWindow := true
-        WinID := WinExist("A")
         WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
     } else {
-        UpdateHUD("ESPERANDO", "Buscando AntiGravity...", "cGray")
         GuiTop.Hide()
         GuiBot.Hide()
         GuiLeft.Hide()
@@ -189,27 +196,97 @@ WatchDog() {
     ; Formatear string de coordenadas
     CoordStr := (HasWindow) ? " [" . WX . "," . WY . "] " . Tick : " [-,-] " . Tick
 
-    ; --- DEFINICIÓN DE ZONA DE CHAT (CALIBRADA) ---
-    ; Prioridad: Configuración de Usuario > Heurística Simple
+    ; --- DEFINICIÓN DE ZONA DE CHAT (CALIBRADA / SMART) ---
     global ChatRelX, ChatRelY, ChatRelW, ChatRelH
     
-    ; Debug de variables globales para asegurar que F10 funciona
-    ; if (Tick == 0) Log("DEBUG: ChatRelW=" . ChatRelW)
-
+    ; Variables estáticas para MEMORIA DE ZONA (Estabilidad)
+    static LastScanX := 0, LastScanY := 0, LastScanW := 0, LastScanH := 0
+    
     if (ChatRelW > 0) {
-        ; Usar calibración guardada (Relativa a la ventana)
+        ; 1. MANUAL (F10) - Prioridad Absoluta
         ScanX := WX + ChatRelX
         ScanY := WY + ChatRelY
         ScanW := ChatRelW
         ScanH := ChatRelH
     } else {
-        ; Fallback: Heurística Inteligente (Asumir Sidebar izquierdo ~20%)
-        SidebarMargin := WW * 0.20 
+        ; 2. AUTOMÁTICO (F11/Dynamic) - Heurística + Anclaje Visual
         
-        ScanX := WX + SidebarMargin
-        ScanY := WY + 80 ; Saltar header
-        ScanW := WW - SidebarMargin - 25 ; Margen derecho pequeño
-        ScanH := WH - 90
+        ; Paso A: Estimación Base (Wide Net) para buscar anclas
+        BaseScanX := WX + (WW * 0.10)
+        BaseScanY := WY + 80
+        BaseScanW := WW - (WW * 0.10) - 20
+        BaseScanH := WH - 80
+        
+        ; Valores temporales de escaneo (por defecto usaremos la memoria si falla la detección)
+        ScanX := (LastScanX > 0) ? LastScanX : BaseScanX
+        ScanY := (LastScanY > 0) ? LastScanY : BaseScanY
+        ScanW := (LastScanW > 0) ? LastScanW : BaseScanW
+        ScanH := (LastScanH > 0) ? LastScanH : BaseScanH
+
+        ; Paso B: Refinamiento via "Real Data" (Send Button + Pixel Raycast)
+        AnchorFound := false
+        AnchorX := 0, AnchorY := 0
+        
+        ; Buscar ICONO ACTIVO (send.png) o INACTIVO (inactive_send.png)
+        ; Usamos BaseScan para buscar, no el Scan restringido anterior
+        if ImageSearch(&AX, &AY, BaseScanX, BaseScanY, BaseScanX+BaseScanW, BaseScanY+BaseScanH, "*50 " . IndicatorFolder . "send.png") {
+            AnchorFound := true
+            AnchorX := AX, AnchorY := AY
+        } else if ImageSearch(&AX, &AY, BaseScanX, BaseScanY, BaseScanX+BaseScanW, BaseScanY+BaseScanH, "*50 " . IndicatorFolder . "inactive_send.png") {
+            AnchorFound := true
+            AnchorX := AX, AnchorY := AY
+        }
+
+        if (AnchorFound) {
+            ; 1. ANCLAJE INFERIOR / DERECHO
+            RealBottom := AnchorY + 40
+            NewH := RealBottom - ScanY ; Usamos ScanY actual (que suele ser correcto top) o refinamos top? 
+            ; Por ahora asumimos Top estable.
+            
+            ; Recalcular Top si es necesario? (No, TopHeader suele ser fijo)
+            ; Actually, we should probably stick to the Heuristic Top unless we find a specific Top Anchor.
+
+            NewScanH := RealBottom - (WY + 95) ; Asumiendo TopHeader 95
+            if (NewScanH < 100) { 
+                 NewScanH := LastScanH ; Sanity Check
+            } else {
+                 ScanY := WY + 95 ; Force Top Lock if anchor found
+            }
+
+            RealRight := AnchorX + 50
+            if (RealRight < (WX + WW)) {
+                ; Solo ajustar si está dentro de lo razonable
+            }
+
+            ; 2. RAYCAST IZQUIERDO (Detectar borde del input)
+            ProbeX := AnchorX - 10
+            ProbeY := AnchorY + 10
+            
+            try {
+                RefColor := PixelGetColor(ProbeX, ProbeY)
+                Loop 60 {
+                   CurrentProbeX := ProbeX - (A_Index * 10)
+                   CurrentColor := PixelGetColor(CurrentProbeX, ProbeY)
+                   
+                   if (CurrentColor != RefColor) {
+                       ; Encontramos el borde
+                       RealLeft := CurrentProbeX
+                       NewWidth := (AnchorX + 50) - RealLeft
+                       
+                       ScanX := RealLeft - 5
+                       ScanW := NewWidth + 10
+                       ScanH := NewScanH ; Sync Height
+                       
+                       ; --- ACTUALIZAR MEMORIA ---
+                       LastScanX := ScanX
+                       LastScanY := ScanY
+                       LastScanW := ScanW
+                       LastScanH := ScanH
+                       break
+                   }
+                }
+            }
+        }
     }
 
     ; --- VISUAL OVERLAY UPDATE (HOLLOW BOX) ---
