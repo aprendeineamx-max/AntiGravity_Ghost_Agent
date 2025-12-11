@@ -61,7 +61,6 @@ namespace OmniSystem {
         public static string ScanAndDestroy(string titlePart) {
             try {
                 // --- SMART TYPING CHECK ---
-                // Si el usuario escribió hace menos de 2000ms, NO HACER NADA.
                 if (!IsUserIdle(2000)) {
                     return "PAUSED: TYPING..."; 
                 }
@@ -72,38 +71,49 @@ namespace OmniSystem {
                 
                 foreach (AutomationElement win in windows) {
                     if (win.Current.Name.Contains(titlePart)) {
-                        // FOUND WINDOW, SCAN FOR BUTTONS
                          var btnCond = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button);
                          var buttons = win.FindAll(TreeScope.Descendants, btnCond);
                          
                          foreach (AutomationElement btn in buttons) {
-                             // --- ZONE FILTER ---
-                             if (ZoneW > 0 && ZoneH > 0) {
-                                 Rect btnRect = btn.Current.BoundingRectangle;
-                                 double btnCX = btnRect.X + (btnRect.Width / 2);
-                                 double btnCY = btnRect.Y + (btnRect.Height / 2);
-                                 
-                                 if (btnCX < ZoneX || btnCX > (ZoneX + ZoneW) || 
-                                     btnCY < ZoneY || btnCY > (ZoneY + ZoneH)) {
-                                     continue; // IGNORE BUTTON OUTSIDE ZONE
-                                 }
-                             }
-
                              string name = btn.Current.Name;
-                             if (!string.IsNullOrEmpty(name)) {
-                                 bool match = false;
-                                 if (name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
-                                 else if (name.IndexOf("Allow", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
-                                 else if (name.Contains("Accept all")) match = true;
-                                 else if (name.Contains("AcceptAlt")) match = true; 
-                                 else if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0) match = true;
+                             if (string.IsNullOrEmpty(name)) continue;
 
-                                 if (match) {
-                                     var invoke = btn.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
-                                     if (invoke != null) {
-                                         invoke.Invoke();
-                                         return "CLICKED: " + name;
+                             bool isMatch = false;
+                             // Expanded Logic
+                             if (name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
+                             else if (name.IndexOf("Allow", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
+                             else if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
+                             else if (name.Contains("Yes")) isMatch = true; // Simple Yes
+                             
+                             if (isMatch) {
+                                 // --- ZONE FILTER ---
+                                 if (ZoneW > 0 && ZoneH > 0) {
+                                     Rect btnRect = btn.Current.BoundingRectangle;
+                                     double btnCX = btnRect.X + (btnRect.Width / 2);
+                                     double btnCY = btnRect.Y + (btnRect.Height / 2);
+                                     
+                                     if (btnCX < ZoneX || btnCX > (ZoneX + ZoneW) || 
+                                         btnCY < ZoneY || btnCY > (ZoneY + ZoneH)) {
+                                         // DEBUG: Return ignored to help user diagnose
+                                         return "IGNORED (Outside Zone): " + name; 
                                      }
+                                 }
+
+                                 // ACTION
+                                 var invoke = btn.GetCurrentPattern(InvokePattern.Pattern) as InvokePattern;
+                                 if (invoke != null) {
+                                     invoke.Invoke();
+                                     
+                                     // FORCE ALT+ENTER (As requested by User for Chat)
+                                     // Only if it's the specific "Run command" or "Accept" button
+                                     if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                                         name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) {
+                                         try { 
+                                            System.Windows.Forms.SendKeys.SendWait("%{ENTER}"); 
+                                         } catch {}
+                                     }
+                                     
+                                     return "CLICKED: " + name;
                                  }
                              }
                          }
