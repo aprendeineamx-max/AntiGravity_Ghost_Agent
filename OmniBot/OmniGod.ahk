@@ -34,6 +34,11 @@ try {
         Log("CONFIG: Zona calibrada cargada. " . ChatRelW . "x" . ChatRelH)
 }
 
+; --- OVERLAY GUI (VISUALIZER) ---
+global ZoneOverlay := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20")
+ZoneOverlay.BackColor := "00FFFF"
+WinSetTransparent(40, ZoneOverlay) ; 0-255 (40 = Very subtle glass)
+
 ; --- INICIO ---
 TraySetIcon "shell32.dll", 1
 CreateHUD()
@@ -46,6 +51,10 @@ F8::
 {
     global IsActive
     IsActive := !IsActive
+    
+    if (!IsActive) {
+        ZoneOverlay.Hide() ; Hide overlay immediately
+    }
     
     ; Sync with Server
     try {
@@ -234,6 +243,13 @@ WatchDog() {
         ScanW := WW - 60
         ScanH := WH - 100
         ; Log("ROI (Auto): " . ScanX . "," . ScanY . " " . ScanW . "x" . ScanH)
+    }
+
+    ; --- VISUAL OVERLAY UPDATE ---
+    if (IsActive && HUDVisible) {
+        ZoneOverlay.Show("x" . ScanX . " y" . ScanY . " w" . ScanW . " h" . ScanH . " NoActivate")
+    } else {
+        ZoneOverlay.Hide()
     }
 
     ; --- SMART TYPING DETECTION (FASE 2: HEURÍSTICA + VISUAL + AUDITIVA) ---
