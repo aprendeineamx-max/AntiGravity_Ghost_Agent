@@ -134,7 +134,8 @@ WatchDog() {
     static Tick := 0
     static LastWX := 0, LastWY := 0, LastWW := 0, LastWH := 0
     static LastState := ""
-    static WasTyping := false ; Fix for Phase 2 Logic
+    static WasTyping := false 
+    static LastAltEnter := 0 ; Fix: Initialize variable
     
     ; 1. DETECTAR FOCO ACTUAL
     try {
@@ -148,85 +149,27 @@ WatchDog() {
     
     ; [LOG] Inicio de Ciclo
     Log("CYCLE[" . Tick . "]: Iniciando WatchDog... Focus=" . FriendlyName)
-
-    ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
-    WinID := 0
+    
     HasWindow := false
+    WinID := 0
     WX := 0, WY := 0, WW := 0, WH := 0
     
-    SetTitleMatchMode 2
-    
-    ; Búsqueda de Ventana
-    if WinExist("AntiGravity ahk_exe Code.exe") {
-        WinID := WinGetID("AntiGravity ahk_exe Code.exe")
-        Log("WIN: Encontrada 'AntiGravity ahk_exe Code.exe' ID: " . WinID)
-    } else if WinExist("AntiGravity") && !WinActive("ahk_class CabinetWClass") {
-        WinID := WinGetID("AntiGravity")
-        Log("WIN: Encontrada 'AntiGravity' ID: " . WinID)
-    } else if WinExist("ahk_exe Code.exe") {
-        WinID := WinGetID("ahk_exe Code.exe")
-        Log("WIN: Encontrada fallback 'Code.exe' ID: " . WinID)
+    if (ActiveProcess = "Code.exe" or ActiveProcess = "Antigravity.exe" or ActiveProcess = "AntiGravity.exe") {
+        HasWindow := true
+        WinID := WinExist("A")
+        WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
     } else {
-        Log("WIN: Ninguna ventana detectada.")
-    }
-
-    if (WinID > 0) {
-       try {
-            ; Verificar si REALMENTE está activa o si estamos en otra ventana
-            if (ActiveProcess = "Code.exe" or ActiveProcess = "AntiGravity.exe" or ActiveProcess = "Antigravity.exe") {
-                WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
-                MinMax := WinGetMinMax("ahk_id " . WinID)
-            
-                Log("WIN-STATE: MinMax Status = " . MinMax)
-            
-                if (MinMax == -1) { ; Minimized
-                    HasWindow := false
-                    Log("SKIP: Ventana minimizada.")
-                } else {
-                    HasWindow := true
-                }
-            } else {
-                 Log("WIN: AntiGravity existe pero NO tiene foco. Foco actual: " . FriendlyName)
-            }
-       } catch as e {
-            Log("ERROR: Fallo al obtener geometría de ventana. " . e.Message)
-            HasWindow := false
-       }
-    }
-
-    if (!HasWindow) {
-        UpdateHUD(FriendlyName, "MODO NINJA (Standby)", "cGray")
-        Log("HUD: Actualizado a MODO NINJA (" . FriendlyName . ")")
-        Log("SKIP: Sin ventana, saltando escaneo visual.")
+        UpdateHUD("ESPERANDO", "Buscando AntiGravity...", "cGray")
+        if (ZoneOverlay)
+            ZoneOverlay.Hide()
         return
     }
 
-    ; --- 0.1 AJUSTE DE GEOMETRÍA FINAL ---
-    if (HasWindow) {
-        ; --- ZONA CIEGA EXTENDIDA (VS CODE SIDEBAR) ---
-        MarginLeft := 350 
-        
-        Log("RAW-COORDS: X=" . WX . " Y=" . WY . " W=" . WW . " H=" . WH)
-        
-        WX := WX + MarginLeft 
-        WY := WY + 50 
-        WW := WW - MarginLeft - 20 
-        WH := WH - 90 
-        
-        if (WW <= 0 or WH <= 0) {
-            Log("WARNING: Dimensiones de búsqueda inválidas tras márgenes (" . WX . "," . WY . "," . WW . "," . WH . "). Abortando.")
-            return
-        }
-        
-        Log("SAFE-ZONE: [" . WX . "," . WY . "] -> [" . (WX+WW) . "," . (WY+WH) . "] (Margen aplicado: " . MarginLeft . ")")
-    }
-                
-    
     ; Formatear string de coordenadas
     CoordStr := (HasWindow) ? " [" . WX . "," . WY . "] " . Tick : " [-,-] " . Tick
 
     ; --- DEFINICIÓN DE ZONA DE CHAT (CALIBRADA) ---
-    ; Prioridad: Configuración de Usuario > Heurística
+    ; Prioridad: Configuración de Usuario > Heurística Simple
     global ChatRelX, ChatRelY, ChatRelW, ChatRelH
     
     if (ChatRelW > 0) {
@@ -235,14 +178,13 @@ WatchDog() {
         ScanY := WY + ChatRelY
         ScanW := ChatRelW
         ScanH := ChatRelH
-        ; Log("ROI (Calibrado): " . ScanX . "," . ScanY . " " . ScanW . "x" . ScanH)
     } else {
-        ; Fallback: FASE 1 (Hardcoded Safe Margins)
-        ScanX := WX + 60
-        ScanY := WY + 100
-        ScanW := WW - 60
-        ScanH := WH - 100
-        ; Log("ROI (Auto): " . ScanX . "," . ScanY . " " . ScanW . "x" . ScanH)
+        ; Fallback: Heurística Básica (Sin márgenes exagerados)
+        ; El usuario reportó que estaba muy a la derecha. Usaremos casi el ancho completo.
+        ScanX := WX + 20
+        ScanY := WY + 80 ; Saltar header
+        ScanW := WW - 40
+        ScanH := WH - 90
     }
 
     ; --- VISUAL OVERLAY UPDATE ---
@@ -264,8 +206,8 @@ WatchDog() {
         }
     }
 
-    ; 2. Chequeo Visual (Respaldo)
-    if (!UserTyping && HasWindow) {
+    ; 2. Chequeo Visual (Respaldo: send.png = Caja con texto)
+    if (HasWindow) {
         if ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, Tolerance . " " . IndicatorFolder . "send.png") {
             UserTyping := true
         }
@@ -276,7 +218,7 @@ WatchDog() {
         if (UserTyping) {
             ; Usuario toma el control
             SoundBeep 1000, 50 
-            UpdateHUD("ESCRIBIENDO (" . FriendlyName . ")", "Control Manual Activado " . Tick, "cOrange")
+            ; UpdateHUD("ESCRIBIENDO (" . FriendlyName . ")", "Control Manual Activado " . Tick, "cOrange") ; Moved to new logic
         } else {
             ; Usuario libera el control
             SoundBeep 600, 50
@@ -284,10 +226,41 @@ WatchDog() {
         WasTyping := UserTyping
     }
     
-    if (UserTyping) {
-        ; Si está escribiendo, saltamos lógica de trabajo
-    }
+    ; --- LOGICA PRINCIPAL (DUAL MODE) ---
+    HUDText := "CAZANDO (" . FriendlyName . ")"
+    HUDSub := "Zona: " . WX . "," . WY . " [" . Tick . "]"
+    HUDColor := "cGray"
 
+    if (UserTyping) {
+        ; MODO: USUARIO ESCRIBIENDO / BOT CAZANDO
+        HUDText := "USUARIO ESCRIBIENDO / BOT CAZANDO"
+        HUDSub := "Alt+Enter: BLOQUEADO | Clics: ACTIVOS"
+        HUDColor := "cOrange"
+        
+        ; NO enviamos Alt+Enter
+        
+    } else {
+        ; MODO: CAZANDO AUTOMÁTICO
+        HUDText := "CAZANDO (" . FriendlyName . ")"
+        HUDSub := "Auto-Confirm: ON | Clics: ACTIVOS"
+        HUDColor := "c00FF00" ; Green implies safe/active
+        
+        ; AUTO-CONFIRM (ALT+ENTER cada 3s si la caja está vacía)
+        if (A_TickCount - LastAltEnter > 3000) {
+            Send "!{Enter}"
+            LastAltEnter := A_TickCount
+            Log("ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)")
+            
+            ; Pequeño flash visual en HUD
+            UpdateHUD("CONFIRMANDO...", "Enviando Alt+Enter", "cCyan")
+            Sleep 200
+        }
+    }
+    
+    UpdateHUD(HUDText, HUDSub, HUDColor)
+
+    ; --- CONTINUAR SIEMPRE CON LA CAZA DE BOTONES (NO RETURN) ---
+    
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
     if (HasWindow) {
         Log("SEARCH: Buscando 'AcceptAll_Priority.png'...")
@@ -579,9 +552,12 @@ Log(Msg) {
     Timestamp := FormatTime(, "yyyy-MM-dd HH:mm:ss")
     try {
         FileAppend "[" . Timestamp . "] " . Msg . "`n", LogFile
+    } catch {
+        ; Ignore log errors
     }
 }
 
+; Double-check closure of previous functions
 F9::
 {
     global HUDVisible
