@@ -45,25 +45,31 @@ Este no es un simple script. Es una tríada de sistemas operando en paralelo par
 *   **Misión**: Escanea la ventana activa en busca de elementos de Accessibility Tree.
 *   **Objetivos**: Popups nativos de Windows, cuadros de diálogo de sistema y ventanas que el DOM no ve.
 
-### 3. Project OmniGod v2.0 (Capa Visual Inteligente) 👁️
-*   **Tecnología**: AutoHotKey v2 (Computer Vision).
+### 3. Project OmniGod v3.5 (Ghost Architecture) 👁️
+*   **Tecnología**: AutoHotKey v2 (Computer Vision) + Neural Heuristics.
 *   **Misión**: Escaneo de píxeles en pantalla (Image Search).
-*   **Inteligencia ("Smart Brain")**:
-    *   🛑 **Semáforo de Contexto**: Detecta si estás escribiendo (icono "Enviar" o Chat Vacío) y se pausa automáticamente. Solo actúa cuando ve el indicador de "Agente Trabajando" (Cuadrado Rojo).
-    *   📜 **Scroll Táctico**: Si detecta una lista expandida ("Collapse all"), hace scroll automático para cazar botones ocultos.
-    *   🎯 **Puntería Zen**: Ajuste de coordenadas al centro exacto del botón para evitar clics fallidos en bordes.
-*   **Objetivos**: Cualquier cosa en la carpeta `Targets`.
-
+*   **Novedades v3.5**:
+    *   🧱 **Smart Zoning (Real Data)**: Usa **Raycast** de píxeles para detectar los bordes reales de la caja de chat. Adiós a los rectángulos arbitrarios. (F11)
+    *   🧠 **Zone Memory**: Si el botón de enviar desaparece al escribir, el bot **recuerda** la última zona válida. Estabilidad total.
+    *   🤝 **Hive Mind (Mente Colmena)**: OmniGod comparte su "Zona de Visión" en tiempo real con OmniControl. Si un botón aparece fuera del chat, OmniControl lo ignorará por seguridad.
+    *   👻 **Strict Focus**: Diseño minimalista "Hollow Border" que desaparece si cambias de ventana.
+    *   ⌨️ **Smart Typing v2**: Detecta actividad física en el teclado para no interrumpir tu escritura jamás.
 
 ---
 
 ## ⚙️ Configuración y Personalización
 
+### Comandos de Teclado
+*   **F8**: Pausar/Reanudar todo el sistema (Kill Switch).
+*   **F10**: Calibración Manual de Zona (Dibuja tu rectángulo).
+*   **F11**: **Auto-Detect / Reset Zone** (Usa Raycast para encontrar la caja de chat automáticamente).
+*   **Shift+F11**: Mock de Visión Neuronal (Experimental).
+
 ### Ajustar Tiempos de Espera
 Si sientes que el agente es muy rápido (o muy lento), edita `OmniBot/OmniGod.ahk`:
 ```autohotkey
 ; Tiempo que debe pasar sin que toques el teclado para que el bot actúe
-if (A_TimeIdlePhysical > 5000) { ... } ; 5000ms = 5 Segundos
+if (A_TimeIdlePhysical > 2000) { ... } ; 2000ms = 2 Segundos
 ```
 
 ### Añadir Nuevos Objetivos
@@ -78,8 +84,8 @@ No necesitas tocar código.
 **P: El bot hace clic en el botón de Stop o Cancelar.**
 R: ¡Cuidado! Esas imágenes deben ir en la carpeta `Indicators`, NO en `Targets`. Si están en Targets, el bot las atacará.
 
-**P: VS Code me pide "Reload" a veces.**
-R: Ghost Agent requiere inyectarse. Si VS Code se actualiza, es posible que debas reinstalar la extensión "Custom CSS and JS Loader" y re-aplicar.
+**P: OmniControl no hace clic en un botón fuera del chat.**
+R: **Es una característica, no un bug.** Desde v3.5, OmniControl respeta la zona definida por OmniGod. Si quieres que haga clic, asegúrate de que OmniGod haya detectado esa área (F11).
 
 **P: ¿Es seguro?**
 R: Todo corre local en tu máquina. El código es Open Source. Tú tienes el control.
@@ -87,4 +93,4 @@ R: Todo corre local en tu máquina. El código es Open Source. Tú tienes el con
 ---
 
 *Desarrollado para la Élite de Programación.*
-**v3.3 Universal Soldier**
+**v3.5 Ghost Architecture**

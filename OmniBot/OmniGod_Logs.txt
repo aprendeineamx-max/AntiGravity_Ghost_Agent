@@ -36444,3 +36444,2235 @@ scroll_down.png: ? ENCONTRADO (1251,38)
 [2025-12-11 04:34:59] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
 [2025-12-11 04:35:00] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
 [2025-12-11 04:35:00] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:35:01] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:35:01] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:35:02] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:35:02] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:35:03] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:35:03] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:35:04] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:35:04] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:35:04] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:35:04] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:35:04] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:35:04] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:35:05] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:35:05] CYCLE[35]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:35:09] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:35:10] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:35:10] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:35:10] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:35:10] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:35:10] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:35:10] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:35:11] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:35:11] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:35:11] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:35:11] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:35:12] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:35:12] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:35:12] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:35:12] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:35:13] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:35:13] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:35:13] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:35:13] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:35:13] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:35:13] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:35:13] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:35:13] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:35:14] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:35:14] CYCLE[36]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:35:20] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:35:21] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:35:21] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:35:21] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:35:21] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:35:22] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:35:22] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:35:22] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:35:22] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:35:23] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:35:23] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:35:23] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:35:23] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:35:24] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:35:24] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:35:25] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:35:25] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:35:25] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:35:25] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:35:25] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:35:25] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:35:25] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:35:25] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:35:26] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:35:26] CYCLE[37]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:27] CYCLE[38]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:27] CYCLE[39]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:28] CYCLE[40]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:28] CYCLE[41]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:29] CYCLE[42]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:29] CYCLE[43]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:30] CYCLE[44]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:30] CYCLE[45]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:31] CYCLE[46]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:31] CYCLE[47]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:32] CYCLE[48]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:32] CYCLE[49]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:33] CYCLE[50]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:33] CYCLE[51]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:34] CYCLE[52]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:34] CYCLE[53]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:35] CYCLE[54]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:35] CYCLE[55]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:36] CYCLE[56]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:36] CYCLE[57]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:37] CYCLE[58]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:37] CYCLE[59]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:38] CYCLE[60]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:38] CYCLE[61]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:39] CYCLE[62]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:39] CYCLE[63]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:40] CYCLE[64]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:40] CYCLE[65]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:41] CYCLE[66]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:41] CYCLE[67]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:42] CYCLE[68]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:42] CYCLE[69]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:43] CYCLE[70]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:43] CYCLE[71]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:44] CYCLE[72]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:44] CYCLE[73]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:45] CYCLE[74]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:45] CYCLE[75]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:46] CYCLE[76]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:46] CYCLE[77]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:47] CYCLE[78]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:47] CYCLE[79]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:48] CYCLE[80]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:48] CYCLE[81]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:49] CYCLE[82]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:49] CYCLE[83]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:50] CYCLE[84]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:50] CYCLE[85]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:51] CYCLE[86]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:51] CYCLE[87]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:52] CYCLE[88]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:52] CYCLE[89]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:53] CYCLE[90]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:53] CYCLE[91]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:54] CYCLE[92]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:54] CYCLE[93]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:55] CYCLE[94]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:55] CYCLE[95]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:56] CYCLE[96]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:56] CYCLE[97]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:57] CYCLE[98]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:57] CYCLE[99]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:58] CYCLE[0]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:58] CYCLE[1]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:59] CYCLE[2]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:35:59] CYCLE[3]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:00] CYCLE[4]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:00] CYCLE[5]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:01] CYCLE[6]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:01] CYCLE[7]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:02] CYCLE[8]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:02] CYCLE[9]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:03] CYCLE[10]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:03] CYCLE[11]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:04] CYCLE[12]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:04] CYCLE[13]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:05] CYCLE[14]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:05] CYCLE[15]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:06] CYCLE[16]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:06] CYCLE[17]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:07] CYCLE[18]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:07] CYCLE[19]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:08] CYCLE[20]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:08] CYCLE[21]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:09] CYCLE[22]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:09] CYCLE[23]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:10] CYCLE[24]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:10] CYCLE[25]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:11] CYCLE[26]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:11] CYCLE[27]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:12] CYCLE[28]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:12] CYCLE[29]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:13] CYCLE[30]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:13] CYCLE[31]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:14] CYCLE[32]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:14] CYCLE[33]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:15] CYCLE[34]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:15] CYCLE[35]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:16] CYCLE[36]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:16] CYCLE[37]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:17] CYCLE[38]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:17] CYCLE[39]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:18] CYCLE[40]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:18] CYCLE[41]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:19] CYCLE[42]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:19] CYCLE[43]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:20] CYCLE[44]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:20] CYCLE[45]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:21] CYCLE[46]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:21] CYCLE[47]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:22] CYCLE[48]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:22] CYCLE[49]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:23] CYCLE[50]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:23] CYCLE[51]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:24] CYCLE[52]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:24] CYCLE[53]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:25] CYCLE[54]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:25] CYCLE[55]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:26] CYCLE[56]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:26] CYCLE[57]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:27] CYCLE[58]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:27] CYCLE[59]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:28] CYCLE[60]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:28] CYCLE[61]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:29] CYCLE[62]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:29] CYCLE[63]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:30] CYCLE[64]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:30] CYCLE[65]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:31] CYCLE[66]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:31] CYCLE[67]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:32] CYCLE[68]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:32] CYCLE[69]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:33] CYCLE[70]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:33] CYCLE[71]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:34] CYCLE[72]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:34] CYCLE[73]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:35] CYCLE[74]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:35] CYCLE[75]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:36] CYCLE[76]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:36] CYCLE[77]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:37] CYCLE[78]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:37] CYCLE[79]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:38] CYCLE[80]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:38] CYCLE[81]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:39] CYCLE[82]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:39] CYCLE[83]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:40] CYCLE[84]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:40] CYCLE[85]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:41] CYCLE[86]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:41] CYCLE[87]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:42] CYCLE[88]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:42] CYCLE[89]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:43] CYCLE[90]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:43] CYCLE[91]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:44] CYCLE[92]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:44] CYCLE[93]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:45] CYCLE[94]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:45] CYCLE[95]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:46] CYCLE[96]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:46] CYCLE[97]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:47] CYCLE[98]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:47] CYCLE[99]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:48] CYCLE[0]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:48] CYCLE[1]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:49] CYCLE[2]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:49] CYCLE[3]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:50] CYCLE[4]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:50] CYCLE[5]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:51] CYCLE[6]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:51] CYCLE[7]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:52] CYCLE[8]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:52] CYCLE[9]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:53] CYCLE[10]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:53] CYCLE[11]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:54] CYCLE[12]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:54] CYCLE[13]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:55] CYCLE[14]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:55] CYCLE[15]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:56] CYCLE[16]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:56] CYCLE[17]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:57] CYCLE[18]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:57] CYCLE[19]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:58] CYCLE[20]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:58] CYCLE[21]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:59] CYCLE[22]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:36:59] CYCLE[23]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:00] CYCLE[24]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:00] CYCLE[25]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:01] CYCLE[26]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:01] CYCLE[27]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:02] CYCLE[28]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:02] CYCLE[29]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:03] CYCLE[30]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:03] CYCLE[31]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:04] CYCLE[32]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:04] CYCLE[33]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:05] CYCLE[34]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:05] CYCLE[35]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:06] CYCLE[36]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:06] CYCLE[37]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:07] CYCLE[38]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:07] CYCLE[39]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:08] CYCLE[40]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:08] CYCLE[41]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:09] CYCLE[42]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:09] CYCLE[43]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:10] CYCLE[44]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:10] CYCLE[45]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:11] CYCLE[46]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:11] CYCLE[47]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:12] CYCLE[48]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:12] CYCLE[49]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:13] CYCLE[50]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:13] CYCLE[51]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:14] CYCLE[52]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:14] CYCLE[53]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:15] CYCLE[54]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:15] CYCLE[55]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:16] CYCLE[56]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:16] CYCLE[57]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:17] CYCLE[58]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:17] CYCLE[59]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:18] CYCLE[60]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:18] CYCLE[61]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:19] CYCLE[62]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:19] CYCLE[63]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:20] CYCLE[64]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:20] CYCLE[65]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:21] CYCLE[66]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:21] CYCLE[67]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:22] CYCLE[68]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:22] CYCLE[69]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:23] CYCLE[70]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:23] CYCLE[71]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:24] CYCLE[72]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:24] CYCLE[73]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:25] CYCLE[74]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:25] CYCLE[75]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:26] CYCLE[76]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:26] CYCLE[77]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:27] CYCLE[78]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:27] CYCLE[79]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:28] CYCLE[80]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:28] CYCLE[81]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:29] CYCLE[82]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:29] CYCLE[83]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:30] CYCLE[84]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:30] CYCLE[85]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:31] CYCLE[86]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:31] CYCLE[87]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:32] CYCLE[88]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:32] CYCLE[89]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:33] CYCLE[90]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:33] CYCLE[91]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:34] CYCLE[92]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:34] CYCLE[93]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:35] CYCLE[94]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:35] CYCLE[95]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:36] CYCLE[96]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:36] CYCLE[97]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:37] CYCLE[98]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:37] CYCLE[99]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:38] CYCLE[0]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:38] CYCLE[1]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:39] CYCLE[2]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:39] CYCLE[3]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:40] CYCLE[4]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:40] CYCLE[5]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:41] CYCLE[6]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:41] CYCLE[7]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:42] CYCLE[8]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:42] CYCLE[9]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:43] CYCLE[10]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:43] CYCLE[11]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:44] CYCLE[12]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:44] CYCLE[13]: Iniciando WatchDog... Focus=Google Chrome
+[2025-12-11 04:37:45] CYCLE[14]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:37:49] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:37:49] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:37:49] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:37:50] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:37:50] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:37:50] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:37:50] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:37:51] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:37:51] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:37:51] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:37:51] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:37:51] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:37:51] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:37:52] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:37:52] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:37:52] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:37:52] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:37:53] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:37:53] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:37:53] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:37:53] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:37:53] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:37:53] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:37:53] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:37:54] CYCLE[15]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:37:56] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:37:57] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:37:57] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:37:57] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:37:57] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:37:57] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:37:57] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:37:58] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:37:58] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:37:58] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:37:58] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:37:59] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:37:59] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:37:59] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:37:59] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:37:59] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:37:59] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:00] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:00] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:00] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:00] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:00] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:00] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:00] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:01] CYCLE[16]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:04] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:04] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:04] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:04] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:04] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:05] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:05] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:05] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:05] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:06] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:06] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:06] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:06] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:07] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:07] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:07] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:07] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:08] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:08] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:08] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:08] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:08] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:08] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:09] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:09] CYCLE[17]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:12] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:12] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:12] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:13] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:13] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:14] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:14] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:14] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:14] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:15] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:15] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:15] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:15] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:16] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:16] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:16] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:16] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:17] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:17] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:17] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:17] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:17] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:17] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:17] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:18] CYCLE[18]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:20] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:21] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:21] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:21] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:21] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:21] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:21] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:22] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:22] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:22] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:22] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:23] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:23] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:23] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:23] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:24] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:24] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:24] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:24] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:24] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:24] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:24] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:24] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:24] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:25] CYCLE[19]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:28] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:29] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:29] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:29] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:29] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:30] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:30] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:30] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:30] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:31] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:31] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:32] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:32] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:32] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:32] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:33] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:33] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:33] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:33] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:33] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:33] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:34] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:34] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:34] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:34] CYCLE[20]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:37] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:38] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:38] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:38] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:38] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:38] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:38] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:39] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:39] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:39] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:39] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:40] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:40] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:40] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:40] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:40] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:40] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:41] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:41] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:41] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:41] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:41] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:41] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:41] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:42] CYCLE[21]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:44] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:45] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:45] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:45] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:45] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:45] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:45] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:46] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:46] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:46] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:46] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:47] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:47] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:47] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:47] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:47] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:47] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:48] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:48] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:48] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:48] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:48] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:48] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:48] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:49] CYCLE[22]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:52] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:38:52] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:38:52] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:38:52] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:38:52] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:38:53] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:38:53] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:38:53] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:38:53] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:38:54] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:38:54] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:38:54] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:38:54] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:38:54] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:38:54] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:38:55] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:38:55] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:38:55] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:38:55] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:38:55] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:38:55] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:38:56] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:38:56] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:38:56] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:38:56] CYCLE[23]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:38:59] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:00] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:00] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:00] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:00] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:01] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:01] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:01] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:01] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:01] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:01] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:02] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:02] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:02] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:02] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:03] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:03] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:03] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:03] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:03] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:03] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:03] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:03] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:04] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:04] CYCLE[24]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:07] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:07] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:07] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:08] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:08] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:08] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:08] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:08] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:08] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:08] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:08] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:09] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:09] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:09] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:09] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:10] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:10] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:10] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:10] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:10] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:10] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:10] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:10] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:11] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:11] CYCLE[25]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:14] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:14] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:14] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:15] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:15] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:15] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:15] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:15] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:15] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:16] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:16] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:16] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:16] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:16] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:16] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:17] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:17] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:17] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:17] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:17] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:17] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:17] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:17] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:18] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:18] CYCLE[26]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:21] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:21] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:21] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:22] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:22] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:22] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:22] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:22] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:22] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:23] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:23] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:23] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:23] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:24] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:24] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:24] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:24] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:24] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:24] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:24] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:24] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:25] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:25] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:25] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:25] CYCLE[27]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:28] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:28] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:28] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:29] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:29] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:29] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:29] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:30] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:30] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:30] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:30] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:30] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:30] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:31] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:31] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:31] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:31] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:32] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:32] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:32] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:32] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:32] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:32] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:32] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:33] CYCLE[28]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:36] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:36] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:36] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:36] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:36] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:37] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:37] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:37] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:37] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:37] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:37] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:38] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:38] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:38] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:38] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:39] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:39] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:39] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:39] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:39] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:39] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:40] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:40] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:40] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:40] CYCLE[29]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:43] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:43] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:43] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:44] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:44] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:44] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:44] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:45] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:45] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:45] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:45] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:45] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:45] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:46] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:46] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:46] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:46] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:47] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:47] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:47] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:47] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:47] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:47] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:47] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:48] CYCLE[30]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:50] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:50] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:50] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:51] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:51] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:51] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:51] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:52] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:52] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:52] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:52] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:39:52] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:39:52] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:39:53] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:39:53] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:39:53] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:39:53] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:39:54] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:39:54] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:39:54] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:39:54] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:39:54] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:39:54] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:39:54] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:39:55] CYCLE[31]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:39:58] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:39:58] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:39:58] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:39:59] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:39:59] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:39:59] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:39:59] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:39:59] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:39:59] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:39:59] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:39:59] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:00] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:00] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:01] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:01] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:01] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:01] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:01] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:01] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:01] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:01] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:01] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:01] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:02] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:02] CYCLE[32]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:05] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:05] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:05] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:06] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:06] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:06] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:06] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:06] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:06] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:07] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:07] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:07] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:07] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:07] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:07] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:08] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:08] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:08] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:08] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:08] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:08] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:09] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:09] CYCLE[33]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:12] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:12] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:12] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:13] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:13] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:13] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:13] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:14] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:14] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:14] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:14] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:14] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:14] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:15] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:15] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:15] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:15] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:15] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:15] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:15] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:15] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:16] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:16] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:16] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:16] CYCLE[34]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:19] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:19] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:19] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:20] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:20] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:20] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:20] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:21] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:21] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:21] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:21] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:22] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:22] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:22] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:22] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:22] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:22] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:23] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:23] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:23] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:23] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:23] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:23] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:23] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:24] CYCLE[35]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:26] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:27] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:27] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:27] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:27] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:27] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:27] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:28] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:28] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:29] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:29] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:29] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:29] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:29] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:29] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:30] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:30] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:30] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:30] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:30] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:30] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:30] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:31] CYCLE[36]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:34] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:34] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:34] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:35] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:35] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:35] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:35] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:35] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:35] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:35] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:35] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:36] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:36] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:36] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:36] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:37] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:37] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:37] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:37] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:37] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:37] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:37] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:37] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:38] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:38] CYCLE[37]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:41] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:41] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:41] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:41] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:41] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:42] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:42] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:42] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:42] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:42] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:42] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:43] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:43] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:43] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:43] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:44] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:44] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:44] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:44] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:44] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:44] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:44] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:44] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:45] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:45] CYCLE[38]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:48] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:48] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:48] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:48] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:48] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:49] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:49] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:49] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:49] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:49] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:49] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:50] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:50] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:50] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:50] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:51] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:51] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:51] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:51] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:51] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:51] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:51] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:51] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:52] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:40:52] CYCLE[39]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:40:55] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:40:55] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:40:55] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:40:56] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:40:56] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:40:56] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:40:56] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:40:57] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:40:57] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:40:57] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:40:57] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:40:58] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:40:58] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:40:58] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:40:58] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:40:58] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:40:58] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:40:59] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:40:59] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:40:59] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:40:59] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:40:59] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:40:59] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:40:59] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:00] CYCLE[40]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:02] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:03] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:03] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:03] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:03] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:03] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:03] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:04] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:04] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:04] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:04] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:05] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:05] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:05] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:05] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:05] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:05] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:06] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:06] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:06] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:06] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:06] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:06] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:06] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:07] CYCLE[41]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:10] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:10] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:10] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:10] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:10] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:10] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:10] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:11] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:11] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:11] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:11] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:12] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:12] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:12] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:12] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:12] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:12] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:13] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:13] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:13] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:13] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:13] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:13] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:13] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:14] CYCLE[42]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:16] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:17] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:17] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:17] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:17] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:17] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:17] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:18] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:18] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:18] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:18] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:19] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:19] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:19] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:19] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:19] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:19] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:20] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:20] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:20] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:20] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:20] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:20] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:20] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:21] CYCLE[43]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:24] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:24] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:24] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:25] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:25] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:25] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:25] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:26] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:26] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:26] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:26] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:26] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:26] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:27] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:27] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:27] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:27] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:27] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:27] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:27] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:27] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:28] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:28] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:28] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:28] CYCLE[44]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:31] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:31] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:31] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:32] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:32] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:32] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:32] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:33] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:33] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:33] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:33] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:33] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:33] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:34] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:34] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:34] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:34] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:35] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:35] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:35] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:35] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:35] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:35] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:35] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:36] CYCLE[45]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:39] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:39] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:39] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:39] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:39] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:39] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:39] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:40] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:40] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:40] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:40] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:41] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:41] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:42] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:42] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:42] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:42] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:43] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:43] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:43] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:43] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:43] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:43] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:43] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:44] CYCLE[46]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:48] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:48] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:48] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:49] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:49] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:49] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:49] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:50] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:50] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:50] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:50] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:41:51] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:41:51] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:41:52] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:41:52] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:41:52] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:41:52] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:41:52] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:41:52] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:41:53] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:41:53] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:41:53] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:41:53] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:41:53] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:41:54] CYCLE[47]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:41:57] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:41:57] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:41:57] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:41:58] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:41:58] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:41:59] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:41:59] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:41:59] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:41:59] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:41:59] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:41:59] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:42:01] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:42:01] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:42:01] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:42:01] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:42:02] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:42:02] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:42:02] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:42:02] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:42:02] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:42:02] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:42:02] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:42:02] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:42:03] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:42:03] CYCLE[48]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:42:07] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:42:07] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:42:07] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:42:07] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:42:07] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:42:08] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:42:08] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:42:08] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:42:08] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:42:09] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:42:09] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:42:09] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:42:09] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:42:10] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:42:10] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:42:10] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:42:10] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:42:11] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:42:11] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:42:11] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:42:11] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:42:11] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:42:11] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:42:11] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:42:12] CYCLE[49]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:42:15] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:42:15] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:42:15] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:42:16] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:42:16] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:42:16] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:42:16] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:42:17] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:42:17] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:42:17] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:42:17] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:42:18] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:42:18] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:42:18] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:42:18] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:42:19] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:42:19] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:42:19] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:42:19] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:42:19] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:42:19] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:42:20] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:42:20] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:42:20] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:42:21] CYCLE[50]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:42:24] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:42:24] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:42:24] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:42:25] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:42:25] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:42:25] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:42:25] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:42:26] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:42:26] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:42:26] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:42:26] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:42:28] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:42:28] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:42:28] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:42:28] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:42:29] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:42:29] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:42:29] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:42:29] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:42:29] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:42:29] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:42:30] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:42:30] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:42:30] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:42:31] CYCLE[51]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:42:33] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:42:33] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:42:33] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:42:34] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:42:34] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:42:34] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:42:34] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:42:34] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:42:34] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:42:34] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:42:34] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:42:35] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:42:35] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:42:36] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:42:36] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:42:36] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:42:36] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:42:36] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:42:36] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:42:36] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:42:36] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:42:37] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:42:37] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:42:37] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:42:37] CYCLE[52]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:38] CYCLE[53]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:38] CYCLE[54]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:39] CYCLE[55]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:39] CYCLE[56]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:40] CYCLE[57]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:40] CYCLE[58]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:41] CYCLE[59]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:41] CYCLE[60]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:42] CYCLE[61]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:42] CYCLE[62]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:43] CYCLE[63]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:43] CYCLE[64]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:44] CYCLE[65]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:44] CYCLE[66]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:45] CYCLE[67]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:45] CYCLE[68]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:46] CYCLE[69]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:46] CYCLE[70]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:47] CYCLE[71]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:47] CYCLE[72]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:48] CYCLE[73]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:48] CYCLE[74]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:49] CYCLE[75]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:49] CYCLE[76]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:50] CYCLE[77]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:50] CYCLE[78]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:51] CYCLE[79]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:51] CYCLE[80]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:52] CYCLE[81]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:52] CYCLE[82]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:53] CYCLE[83]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:53] CYCLE[84]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:54] CYCLE[85]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:54] CYCLE[86]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:55] CYCLE[87]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:55] CYCLE[88]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:56] CYCLE[89]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:56] CYCLE[90]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:57] CYCLE[91]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:57] CYCLE[92]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:58] CYCLE[93]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:58] CYCLE[94]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:59] CYCLE[95]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:42:59] CYCLE[96]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:00] CYCLE[97]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:00] CYCLE[98]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:01] CYCLE[99]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:01] CYCLE[0]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:02] CYCLE[1]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:02] CYCLE[2]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:03] CYCLE[3]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:03] CYCLE[4]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:04] CYCLE[5]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:04] CYCLE[6]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:05] CYCLE[7]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:05] CYCLE[8]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:06] CYCLE[9]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:06] CYCLE[10]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:07] CYCLE[11]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:07] CYCLE[12]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:08] CYCLE[13]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:08] CYCLE[14]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:09] CYCLE[15]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:09] CYCLE[16]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:10] CYCLE[17]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:10] CYCLE[18]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:11] CYCLE[19]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:11] CYCLE[20]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:12] CYCLE[21]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:12] CYCLE[22]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:13] CYCLE[23]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:13] CYCLE[24]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:14] CYCLE[25]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:14] CYCLE[26]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:15] CYCLE[27]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:15] CYCLE[28]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:16] CYCLE[29]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:16] CYCLE[30]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:17] CYCLE[31]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:17] CYCLE[32]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:18] CYCLE[33]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:18] CYCLE[34]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:19] CYCLE[35]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:19] CYCLE[36]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:20] CYCLE[37]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:20] CYCLE[38]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:21] CYCLE[39]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:21] CYCLE[40]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:22] CYCLE[41]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:22] CYCLE[42]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:23] CYCLE[43]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:23] CYCLE[44]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:24] CYCLE[45]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:24] CYCLE[46]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:25] CYCLE[47]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:25] CYCLE[48]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:26] CYCLE[49]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:26] CYCLE[50]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:27] CYCLE[51]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:27] CYCLE[52]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:28] CYCLE[53]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:28] CYCLE[54]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:29] CYCLE[55]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:29] CYCLE[56]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:30] CYCLE[57]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:30] CYCLE[58]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:31] CYCLE[59]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:31] CYCLE[60]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:32] CYCLE[61]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:32] CYCLE[62]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:33] CYCLE[63]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:33] CYCLE[64]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:34] CYCLE[65]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:34] CYCLE[66]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:35] CYCLE[67]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:35] CYCLE[68]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:36] CYCLE[69]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:36] CYCLE[70]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:37] CYCLE[71]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:37] CYCLE[72]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:38] CYCLE[73]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:38] CYCLE[74]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:39] CYCLE[75]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:39] CYCLE[76]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:40] CYCLE[77]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:40] CYCLE[78]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:41] CYCLE[79]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:41] CYCLE[80]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:42] CYCLE[81]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:42] CYCLE[82]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:43] CYCLE[83]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:43] CYCLE[84]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:44] CYCLE[85]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:44] CYCLE[86]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:45] CYCLE[87]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:45] CYCLE[88]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:46] CYCLE[89]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:46] CYCLE[90]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:47] CYCLE[91]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:47] CYCLE[92]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:48] CYCLE[93]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:48] CYCLE[94]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:49] CYCLE[95]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:49] CYCLE[96]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:50] CYCLE[97]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:50] CYCLE[98]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:51] CYCLE[99]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:51] CYCLE[0]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:52] CYCLE[2]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:53] CYCLE[3]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:53] CYCLE[4]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:54] CYCLE[5]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:54] CYCLE[6]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:55] CYCLE[7]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:55] CYCLE[8]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:56] CYCLE[9]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:56] CYCLE[10]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:57] CYCLE[11]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:57] CYCLE[12]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:58] CYCLE[14]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:59] CYCLE[15]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:43:59] CYCLE[16]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:00] CYCLE[17]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:00] CYCLE[18]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:01] CYCLE[19]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:02] CYCLE[21]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:02] CYCLE[22]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:03] CYCLE[23]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:03] CYCLE[24]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:04] CYCLE[25]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:04] CYCLE[26]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:05] CYCLE[27]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:05] CYCLE[28]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:06] CYCLE[29]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:06] CYCLE[30]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:07] CYCLE[31]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:07] CYCLE[32]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:08] CYCLE[33]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:08] CYCLE[34]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:09] CYCLE[35]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:09] CYCLE[36]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:10] CYCLE[37]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:10] CYCLE[38]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:11] CYCLE[39]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:11] CYCLE[40]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:12] CYCLE[41]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:12] CYCLE[42]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:13] CYCLE[44]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:14] CYCLE[45]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:14] CYCLE[46]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:15] CYCLE[47]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:15] CYCLE[48]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:16] CYCLE[49]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:16] CYCLE[50]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:17] CYCLE[51]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:17] CYCLE[52]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:18] CYCLE[53]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:18] CYCLE[54]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:19] CYCLE[55]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:19] CYCLE[56]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:20] CYCLE[57]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:20] CYCLE[58]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:21] CYCLE[59]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:21] CYCLE[60]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:22] CYCLE[61]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:22] CYCLE[62]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:23] CYCLE[63]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:23] CYCLE[64]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:24] CYCLE[65]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:24] CYCLE[66]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:25] CYCLE[67]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:25] CYCLE[68]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:26] CYCLE[69]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:26] CYCLE[70]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:27] CYCLE[71]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:27] CYCLE[72]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:28] CYCLE[73]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:28] CYCLE[74]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:29] CYCLE[75]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:29] CYCLE[76]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:30] CYCLE[77]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:30] CYCLE[78]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:31] CYCLE[79]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:31] CYCLE[80]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:32] CYCLE[81]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:32] CYCLE[82]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:33] CYCLE[83]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:33] CYCLE[84]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:34] CYCLE[85]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:34] CYCLE[86]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:35] CYCLE[87]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:35] CYCLE[88]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:36] CYCLE[89]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:36] CYCLE[90]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:37] CYCLE[91]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:37] CYCLE[92]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:38] CYCLE[93]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:38] CYCLE[94]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:39] CYCLE[95]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:39] CYCLE[96]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:40] CYCLE[97]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:40] CYCLE[98]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:41] CYCLE[99]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:41] CYCLE[0]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:42] CYCLE[1]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:42] CYCLE[2]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:43] CYCLE[3]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:43] CYCLE[4]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:44] CYCLE[5]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:44] CYCLE[6]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:45] CYCLE[7]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:45] CYCLE[8]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:46] CYCLE[9]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:46] CYCLE[10]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:47] CYCLE[11]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:47] CYCLE[12]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:48] CYCLE[13]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:48] CYCLE[14]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:49] CYCLE[15]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:50] CYCLE[17]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:50] CYCLE[18]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:51] CYCLE[19]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:52] CYCLE[20]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:52] CYCLE[21]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:53] CYCLE[22]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:53] CYCLE[23]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:54] CYCLE[24]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:54] CYCLE[25]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:55] CYCLE[26]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:55] CYCLE[27]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:56] CYCLE[28]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:56] CYCLE[29]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:57] CYCLE[30]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:57] CYCLE[31]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:58] CYCLE[32]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:58] CYCLE[33]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:59] CYCLE[34]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:44:59] CYCLE[35]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:00] CYCLE[36]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:00] CYCLE[37]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:01] CYCLE[38]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:01] CYCLE[39]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:02] CYCLE[40]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:02] CYCLE[41]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:03] CYCLE[42]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:03] CYCLE[43]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:04] CYCLE[44]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:04] CYCLE[45]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:05] CYCLE[46]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:05] CYCLE[47]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:06] CYCLE[48]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:06] CYCLE[49]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:07] CYCLE[50]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:07] CYCLE[51]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:08] CYCLE[52]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:08] CYCLE[53]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:09] CYCLE[54]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:09] CYCLE[55]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:10] CYCLE[56]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:10] CYCLE[57]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:11] CYCLE[58]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:11] CYCLE[59]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:12] CYCLE[60]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:12] CYCLE[61]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:13] CYCLE[62]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:13] CYCLE[63]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:14] CYCLE[64]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:14] CYCLE[65]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:15] CYCLE[66]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:15] CYCLE[67]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:16] CYCLE[68]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:16] CYCLE[69]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:17] CYCLE[70]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:17] CYCLE[71]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:18] CYCLE[72]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:18] CYCLE[73]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:19] CYCLE[74]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:19] CYCLE[75]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:20] CYCLE[76]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:20] CYCLE[77]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:21] CYCLE[78]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:21] CYCLE[79]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:22] CYCLE[80]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:22] CYCLE[81]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:23] CYCLE[82]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:23] CYCLE[83]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:24] CYCLE[84]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:24] CYCLE[85]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:25] CYCLE[86]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:25] CYCLE[87]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:26] CYCLE[88]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:26] CYCLE[89]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:27] CYCLE[90]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:27] CYCLE[91]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:28] CYCLE[92]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:28] CYCLE[93]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:29] CYCLE[94]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:29] CYCLE[95]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:30] CYCLE[96]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:30] CYCLE[97]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:31] CYCLE[98]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:31] CYCLE[99]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:32] CYCLE[0]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:32] CYCLE[1]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:33] CYCLE[2]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:33] CYCLE[3]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:34] CYCLE[4]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:34] CYCLE[5]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:35] CYCLE[6]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:35] CYCLE[7]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:36] CYCLE[8]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:36] CYCLE[9]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:37] CYCLE[10]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:37] CYCLE[11]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:38] CYCLE[12]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:38] CYCLE[13]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:39] CYCLE[14]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:39] CYCLE[15]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:40] CYCLE[16]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:40] CYCLE[17]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:41] CYCLE[18]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:41] CYCLE[19]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:42] CYCLE[20]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:42] CYCLE[21]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:43] CYCLE[22]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:43] CYCLE[23]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:44] CYCLE[24]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:44] CYCLE[25]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:45] CYCLE[26]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:45] CYCLE[27]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:46] CYCLE[28]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:46] CYCLE[29]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:47] CYCLE[30]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:47] CYCLE[31]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:48] CYCLE[32]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:48] CYCLE[33]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:49] CYCLE[34]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:49] CYCLE[35]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:50] CYCLE[36]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:50] CYCLE[37]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:51] CYCLE[38]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:51] CYCLE[39]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:52] CYCLE[41]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:53] CYCLE[42]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:53] CYCLE[43]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:54] CYCLE[44]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:54] CYCLE[45]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:55] CYCLE[46]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:55] CYCLE[47]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:56] CYCLE[48]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:56] CYCLE[49]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:57] CYCLE[50]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:57] CYCLE[51]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:58] CYCLE[52]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:58] CYCLE[53]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:59] CYCLE[54]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:45:59] CYCLE[55]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:00] CYCLE[56]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:00] CYCLE[57]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:01] CYCLE[58]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:01] CYCLE[59]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:02] CYCLE[60]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:02] CYCLE[61]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:03] CYCLE[62]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:03] CYCLE[63]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:04] CYCLE[64]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:04] CYCLE[65]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:05] CYCLE[66]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:05] CYCLE[67]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:06] CYCLE[68]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:06] CYCLE[69]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:07] CYCLE[70]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:07] CYCLE[71]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:08] CYCLE[72]: Iniciando WatchDog... Focus=mstsc.exe
+[2025-12-11 04:46:08] CYCLE[73]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:09] CYCLE[74]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:09] CYCLE[75]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:10] CYCLE[76]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:10] CYCLE[77]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:11] CYCLE[78]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:11] CYCLE[79]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:12] CYCLE[80]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:12] CYCLE[81]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:46:13] CYCLE[82]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:46:16] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:46:16] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:46:16] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:46:17] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:46:17] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:46:17] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:46:17] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:46:18] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:46:18] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:46:18] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:46:18] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:46:19] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:46:19] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:46:19] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:46:19] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:46:20] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:46:20] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:46:20] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:46:20] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:46:20] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:46:20] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:46:20] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:46:20] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:46:21] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:46:21] CYCLE[83]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:46:24] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:46:24] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:46:24] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:46:26] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:46:26] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:46:26] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:46:26] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:46:26] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:46:26] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:46:26] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:46:26] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:46:27] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:46:27] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:46:28] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:46:28] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:46:29] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:46:29] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:46:29] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:46:29] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:46:29] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:46:29] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:46:29] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:46:29] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:46:30] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:46:30] CYCLE[84]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:46:33] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:46:33] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:46:33] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:46:34] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:46:34] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:46:35] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:46:35] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:46:35] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:46:35] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:46:35] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:46:35] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:46:36] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:46:36] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:46:37] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:46:37] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:46:37] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:46:37] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:46:38] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:46:38] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:46:38] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:46:38] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:46:38] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:46:38] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:46:38] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:46:39] CYCLE[85]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:46:42] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:46:42] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:46:42] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:46:43] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:46:43] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:46:43] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:46:43] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:46:44] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:46:44] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:46:44] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:46:44] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:46:45] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:46:45] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:46:45] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:46:45] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:46:45] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:46:45] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:46:46] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:46:46] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:46:46] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:46:46] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:46:47] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:46:47] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:46:47] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:46:48] CYCLE[86]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:46:51] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:46:52] DETECCION: AcceptAll_Priority encontrado en 1271,595
+[2025-12-11 04:46:52] Z-CHECK: MouseOver=Antigravity.exe vs Target=Antigravity.exe
+[2025-12-11 04:46:52] ACCION: Clic CONFIRMADO en AcceptAll_Priority en 1301,605
+[2025-12-11 04:46:53] CYCLE[87]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:46:56] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:46:56] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:46:56] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:46:57] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:46:57] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:46:57] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:46:57] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:46:58] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:46:58] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:46:58] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:46:58] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:46:59] DETECCION: Cuadrito Azul - accept all.PNG encontrado en 1268,591
+[2025-12-11 04:46:59] Z-CHECK: Mouse=Antigravity.exe
+[2025-12-11 04:46:59] ACCION: Clic CONFIRMADO en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 04:47:00] CYCLE[88]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:04] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:05] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:47:05] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:47:05] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:47:05] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:47:05] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:47:05] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:47:06] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:47:06] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:47:07] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:47:07] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:47:08] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:47:08] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:47:08] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:47:08] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:47:09] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:47:09] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:47:09] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:47:09] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:47:10] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:47:10] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:47:10] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:47:10] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:47:10] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:47:11] CYCLE[89]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:15] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:15] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:47:15] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:47:16] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:47:16] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:47:16] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:47:16] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:47:17] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:47:17] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:47:17] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:47:17] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:47:17] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:47:17] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:47:18] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:47:18] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:47:18] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:47:18] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:47:18] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:47:18] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:47:18] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:47:18] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:47:19] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:47:19] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:47:19] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:47:19] CYCLE[90]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:23] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:23] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:47:23] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:47:24] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:47:24] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:47:24] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:47:24] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:47:25] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:47:25] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:47:25] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:47:25] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:47:26] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:47:26] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:47:27] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:47:27] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:47:27] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:47:27] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:47:28] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:47:28] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:47:28] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:47:28] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:47:28] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:47:28] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:47:28] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:47:29] CYCLE[91]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:32] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:47:32] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:32] DETECCION: AcceptAll_Priority encontrado en 1271,595
+[2025-12-11 04:47:32] Z-CHECK: MouseOver=Antigravity.exe vs Target=Antigravity.exe
+[2025-12-11 04:47:32] ACCION: Clic CONFIRMADO en AcceptAll_Priority en 1301,605
+[2025-12-11 04:47:33] CYCLE[92]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:36] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:47:36] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:36] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:47:36] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:47:37] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:47:37] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:47:37] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:47:37] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:47:38] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:47:38] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:47:38] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:47:38] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:47:39] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:47:39] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:47:40] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:47:40] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:47:40] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:47:40] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:47:41] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:47:41] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:47:41] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:47:41] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:47:41] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:47:41] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:47:41] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:47:42] CYCLE[93]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:44] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:47:44] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:45] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:47:45] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:47:46] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:47:46] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:47:46] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:47:46] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:47:47] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:47:47] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:47:47] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:47:47] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:47:48] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:47:48] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:47:49] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:47:49] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:47:49] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:47:49] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:47:50] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:47:50] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:47:50] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:47:50] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:47:50] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:47:50] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:47:51] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:47:51] CYCLE[94]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:47:55] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:47:55] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:47:56] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:47:56] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:47:56] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:47:56] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:47:56] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:47:56] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:47:57] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:47:57] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:47:58] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:47:58] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:47:58] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:47:58] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:47:59] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:47:59] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:00] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:00] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:01] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:01] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:01] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:01] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:01] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:01] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:01] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:02] CYCLE[95]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:04] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:48:04] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:05] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:05] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:05] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:05] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:05] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:05] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:06] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:06] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:07] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:07] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:08] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:08] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:09] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:09] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:10] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:10] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:10] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:10] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:10] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:10] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:11] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:11] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:11] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:11] CYCLE[96]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:15] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:15] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:15] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:16] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:16] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:16] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:16] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:17] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:17] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:17] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:17] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:17] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:17] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:18] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:18] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:18] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:18] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:19] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:19] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:19] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:19] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:19] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:19] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:19] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:20] CYCLE[97]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:23] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:48:23] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:24] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:24] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:24] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:24] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:24] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:24] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:25] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:25] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:25] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:25] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:26] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:26] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:26] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:26] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:26] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:26] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:27] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:27] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:27] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:27] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:27] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:27] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:27] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:28] CYCLE[98]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:31] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:48:32] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:32] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:32] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:32] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:32] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:33] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:33] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:34] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:34] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:34] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:34] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:34] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:34] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:35] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:35] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:35] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:35] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:35] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:35] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:35] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:35] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:35] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:35] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:36] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:36] CYCLE[99]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:40] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:48:40] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:40] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:40] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:41] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:41] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:41] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:41] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:42] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:42] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:42] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:42] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:42] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:42] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:43] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:43] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:43] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:43] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:43] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:43] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:43] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:43] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:44] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:44] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:44] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:45] CYCLE[0]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:48] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:48:48] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:49] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:49] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:49] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:49] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:49] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:49] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:50] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:50] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:50] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:50] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:50] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:50] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:51] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:51] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:48:51] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:48:51] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:48:52] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:48:52] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:48:52] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:48:52] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:48:52] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:48:52] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:48:52] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:48:53] CYCLE[1]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:48:56] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:48:56] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:48:57] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:48:57] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:48:57] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:48:57] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:48:58] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:48:58] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:48:58] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:48:58] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:48:58] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:48:58] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:48:59] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:48:59] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:48:59] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:48:59] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:49:00] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:49:00] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:49:00] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:49:00] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:49:00] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:49:00] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:49:00] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:49:00] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:49:01] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:49:01] CYCLE[2]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:49:05] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:49:05] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:49:05] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:49:05] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:49:06] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:49:06] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:49:06] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:49:06] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:49:07] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:49:07] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:49:07] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:49:07] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:49:07] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:49:07] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:49:08] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:49:08] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:49:08] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:49:08] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:49:09] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:49:09] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:49:09] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:49:09] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:49:09] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:49:09] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:49:09] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:49:10] CYCLE[3]: Iniciando WatchDog... Focus=Antigravity.exe
+[2025-12-11 04:49:13] ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)
+[2025-12-11 04:49:13] SEARCH: Buscando 'AcceptAll_Priority.png'...
+[2025-12-11 04:49:14] Result: AcceptAll_Priority NO encontrado.
+[2025-12-11 04:49:14] SEARCH: Buscando 'working.png' (Estado Activo)...
+[2025-12-11 04:49:14] SCAN: Iniciando escaneo de objetivos...
+[2025-12-11 04:49:14] SEARCH: Verificando AcceptAll_Priority.png
+[2025-12-11 04:49:14] RESULT: AcceptAll_Priority.png no encontrado.
+[2025-12-11 04:49:14] SEARCH: Verificando Cuadrito Azul -  Allow Once.PNG
+[2025-12-11 04:49:15] RESULT: Cuadrito Azul -  Allow Once.PNG no encontrado.
+[2025-12-11 04:49:15] SEARCH: Verificando Cuadrito Azul -  SETUP.PNG
+[2025-12-11 04:49:15] RESULT: Cuadrito Azul -  SETUP.PNG no encontrado.
+[2025-12-11 04:49:15] SEARCH: Verificando Cuadrito Azul - accept all.PNG
+[2025-12-11 04:49:16] RESULT: Cuadrito Azul - accept all.PNG no encontrado.
+[2025-12-11 04:49:16] SEARCH: Verificando Cuadrito Azul - Accept Alt + Enter.png
+[2025-12-11 04:49:17] RESULT: Cuadrito Azul - Accept Alt + Enter.png no encontrado.
+[2025-12-11 04:49:17] SEARCH: Verificando Expand all.PNG
+[2025-12-11 04:49:17] RESULT: Expand all.PNG no encontrado.
+[2025-12-11 04:49:17] SEARCH: Verificando haciaabajo.PNG
+[2025-12-11 04:49:18] RESULT: haciaabajo.PNG no encontrado.
+[2025-12-11 04:49:18] SEARCH: Verificando haciaabajo2.PNG
+[2025-12-11 04:49:18] RESULT: haciaabajo2.PNG no encontrado.
+[2025-12-11 04:49:18] SEARCH: Verificando Rectangulo azul -  de Allow Once.PNG
+[2025-12-11 04:49:18] RESULT: Rectangulo azul -  de Allow Once.PNG no encontrado.
+[2025-12-11 04:49:18] SEARCH: Verificando scroll_down.png
+[2025-12-11 04:49:18] RESULT: scroll_down.png no encontrado.
+[2025-12-11 04:49:19] CYCLE[4]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:19] CYCLE[5]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:20] CYCLE[6]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:20] CYCLE[7]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:21] CYCLE[8]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:21] CYCLE[9]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:22] CYCLE[10]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:22] CYCLE[11]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:23] CYCLE[12]: Iniciando WatchDog... Focus=Escritorio/Explorer
+[2025-12-11 04:49:23] CYCLE[13]: Iniciando WatchDog... Focus=Escritorio/Explorer

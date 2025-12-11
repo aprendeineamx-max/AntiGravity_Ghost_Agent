@@ -283,9 +283,27 @@ WatchDog() {
                        LastScanW := ScanW
                        LastScanH := ScanH
                        break
-                   }
-                }
-            }
+        }
+    }
+    
+    ; --- EXPORTAR ZONA EN VIVO (PARA OMNICONTROL) ---
+    ; Escribir solo si hubo cambios para evitar escritura excesiva en disco
+    static CachedScanX := 0, CachedScanY := 0, CachedScanW := 0, CachedScanH := 0
+    
+    if (ScanX != CachedScanX || ScanY != CachedScanY || ScanW != CachedScanW || ScanH != CachedScanH) {
+        try {
+            IniWrite(ScanX, "OmniGod_Live.ini", "LiveZone", "GlobalX")
+            IniWrite(ScanY, "OmniGod_Live.ini", "LiveZone", "GlobalY")
+            IniWrite(ScanW, "OmniGod_Live.ini", "LiveZone", "GlobalW")
+            IniWrite(ScanH, "OmniGod_Live.ini", "LiveZone", "GlobalH")
+            
+            CachedScanX := ScanX
+            CachedScanY := ScanY
+            CachedScanW := ScanW
+            CachedScanH := ScanH
+            ; Log("LIVE-ZONE: Updated -> " . ScanX . "," . ScanY . " [" . ScanW . "x" . ScanH . "]")
+        } catch {
+             ; Ignorar errores de escritura (ej. archivo bloqueado)
         }
     }
 
