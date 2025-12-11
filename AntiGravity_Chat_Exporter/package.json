@@ -15,7 +15,11 @@
         "commands": [
             {
                 "command": "antigravity.exportChatNow",
-                "title": "Force Chat Export"
+                "title": "AntiGravity: Force Chat Export"
+            },
+            {
+                "command": "antigravity.exporter.configure",
+                "title": "AntiGravity: Exporter Settings"
             }
         ]
     }
