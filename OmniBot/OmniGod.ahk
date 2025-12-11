@@ -60,49 +60,62 @@ return
 
 WatchDog() {
     ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
-    ; Calculamos el perímetro ANTES de buscar cualquier cosa.
-    ; Si no hay ventana, NO HAY BÚSQUEDA VISUAL. Punto.
-    
-    TargetWin := ""
+    WinID := 0
     HasWindow := false
     WX := 0, WY := 0, WW := 0, WH := 0
     
     SetTitleMatchMode 2
-    if WinExist("AntiGravity") {
-        TargetWin := "AntiGravity"
+    
+    ; Búsqueda de Ventana: Priorizamos la APP real, evitamos Explorer/Carpetas
+    if WinExist("AntiGravity ahk_exe Code.exe") {
+        WinID := WinGetID("AntiGravity ahk_exe Code.exe")
+    } else if WinExist("AntiGravity") && !WinActive("ahk_class CabinetWClass") { ; Evitar Explorador de Archivos
+        WinID := WinGetID("AntiGravity")
     } else if WinExist("ahk_exe Code.exe") {
-        TargetWin := "ahk_exe Code.exe"
+        WinID := WinGetID("ahk_exe Code.exe")
     }
 
-    if (TargetWin != "") {
-        WinGetPos &WX, &WY, &WW, &WH, TargetWin
-        ; Ajuste de bordes (Client Area aproximada)
-        WX := WX + 10
-        WY := WY + 50 ; Saltar barra de título
-        WW := WX + WW - 20 ; Convertir WW a X2 absoluto
-        WH := WY + WH - 60 ; Convertir WH a Y2 absoluto
-        HasWindow := true
-    } else {
-        UpdateHUD("MODO NINJA", "Sin ventana visual. Solo remoto.", "cGray")
+    if (WinID != 0) {
+        try {
+            WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
+            ; Ajuste de bordes (Client Area aproximada)
+            WX := WX + 10
+            WY := WY + 50 
+            WW := WX + WW - 20 
+            WH := WY + WH - 60 
+            HasWindow := true
+        } catch {
+            HasWindow := false
+        }
+    }
+
+    if (!HasWindow) {
+        UpdateHUD("MODO NINJA", "Esperando Ventana... (Solo Remoto)", "cGray")
     }
 
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
-    ; SOLO si tenemos ventana (Confinado)
     if (HasWindow) {
         if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
-             UpdateHUD("PRIORIDAD", "Finalizando Tarea", "c00FF00")
-             MouseGetPos &OrigX, &OrigY
+             ; Validación Z-Order (¿Estoy clicando la ventana correcta?)
              TargetX := FoundX + 30 
              TargetY := FoundY + 10
+             
+             ; Movemos mouse para validar qué ventana está debajo
              MouseMove TargetX, TargetY
-             Sleep 10
-             Click "Down"
-             Sleep 10
-             Click "Up"
-             Sleep 10
-             MouseMove OrigX, OrigY
-             Sleep 500 
-             return
+             Sleep 10 ; Breve pausa para que Windows actualice
+             MouseGetPos ,,, &WinUnderMouse
+             
+             if (WinUnderMouse == WinID) {
+                 UpdateHUD("PRIORIDAD", "Finalizando Tarea", "c00FF00")
+                 Click "Down"
+                 Sleep 10
+                 Click "Up"
+                 Sleep 500 
+                 return
+             } else {
+                 ; Falso positivo: Ventana superpuesta (Browser/Fotos)
+                 ; No hacemos nada, dejamos pasar
+             }
         }
     }
 
@@ -114,7 +127,7 @@ WatchDog() {
         IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "working.png")
     }
     
-    ; B. Chequeo Remoto (Para modo Minimizado/Background)
+    ; B. Chequeo Remoto 
     IsWorkingRemote := false
     if (!IsWorkingVisual) {
         try {
@@ -139,8 +152,7 @@ WatchDog() {
         UpdateHUD("TRABAJANDO", Source . ": Enviando Alt+Enter...", ColorStatus)
         
         try {
-            if WinExist("AntiGravity") or WinExist("ahk_exe Code.exe") {
-                WinID := WinGetID()
+             if (WinID != 0) {
                 SetKeyDelay 10, 10
                 ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
             } else {
@@ -151,14 +163,11 @@ WatchDog() {
     } 
     
     ; --- 2. MODALIDAD MUERTE SUBITA ---
-    ; Solo si tenemos ventana (Visual Cleanup)
     if (WasWorking and HasWindow) {
-        ; Loop rápido de limpieza en área confinada
-        Loop 20 { ; Reducido a 2s (20*100ms) para ser más preciso
+        Loop 20 { 
             Loop Targets.Length {
                 tImg := Targets[A_Index]
                 if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . tImg) {
-                     ; Proximity Check
                      SafeToClick := true
                      Loop Files, IndicatorFolder . "Ignore\*.png"
                      {
@@ -175,18 +184,19 @@ WatchDog() {
                          continue
                      }
 
-                     MouseGetPos &OrigX, &OrigY
                      TargetX := FoundX + 15 
                      TargetY := FoundY + 10
                      MouseMove TargetX, TargetY
                      Sleep 10
-                     Click "Down"
-                     Sleep 10
-                     Click "Up"
-                     Sleep 10
-                     MouseMove OrigX, OrigY
-                     UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
-                     Sleep 500 
+                     MouseGetPos ,,, &WinUnderMouse
+                     
+                     if (WinUnderMouse == WinID) {
+                         Click "Down"
+                         Sleep 10
+                         Click "Up"
+                         UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
+                         Sleep 500 
+                     }
                 }
             }
             Sleep 100
@@ -210,7 +220,6 @@ WatchDog() {
             if FileExist(imgPath) {
                 try {
                     if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . imgPath) {
-                        ; Proximity Check
                          SafeToClick := true
                          Loop Files, IndicatorFolder . "Ignore\*.png"
                          {
@@ -224,34 +233,37 @@ WatchDog() {
                             }
                          }
                          if (!SafeToClick) {
-                         continue
-                     }
+                             continue
+                         }
     
                         MouseGetPos &OrigX, &OrigY
                         TargetX := FoundX + 15 
                         TargetY := FoundY + 10
                         MouseMove TargetX, TargetY
+                        
+                        ; Z-ORDER CHECK
                         Sleep 10
-                        Click "Down"
-                        Sleep 10
-                        Click "Up"
-                        Sleep 10
-                        MouseMove OrigX, OrigY
-                        UpdateHUD("👁️ CAZADO", "[OBJETIVO ELIMINADO]", "c00FFFF") 
-                        SetTimer RemoveToolTip, -1000
-                        return 
+                        MouseGetPos ,,, &WinUnderMouse
+                        
+                        if (WinUnderMouse == WinID) {
+                            Click "Down"
+                            Sleep 10
+                            Click "Up"
+                            UpdateHUD("👁️ CAZADO", "[OBJETIVO ELIMINADO]", "c00FFFF") 
+                            MouseMove OrigX, OrigY
+                            SetTimer RemoveToolTip, -1000
+                            return 
+                        } else {
+                            ; Obstruido por otra ventana
+                            MouseMove OrigX, OrigY
+                        }
                     }
                 }
             }
         }
         
-        ; Scroll Logic (Optional, confined)
-        if ImageSearch(&AnchorX, &AnchorY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "working.png") {
-             ; Scroll logic if needed
-        }
-
     } else {
-        ; Ya manejado al principio (Modo Ninja No-Visual)
+        ; Ya manejado al principio
     }
 }
 
