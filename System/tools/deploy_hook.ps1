@@ -1,4 +1,5 @@
-$Source = "C:\AntiGravityExt\AntiGravity_Ghost_Agent\AntiGravity_Internal_Hook"
+$ScriptDir = Split-Path $MyInvocation.MyCommand.Path
+$Source = Join-Path $ScriptDir "..\..\AntiGravity_Internal_Hook"
 $Dest = "C:\Users\Administrator\AppData\Local\Programs\Antigravity\resources\app\extensions\antigravity-internal-hook"
 
 Write-Host "Deploying Internal Hook..." -ForegroundColor Cyan

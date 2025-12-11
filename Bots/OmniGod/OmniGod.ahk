@@ -838,8 +838,8 @@ F11::
     Log("VISION: Iniciando Neural Scan (Python/PS Bridge)...")
     UpdateHUD("VISION", "Analizando...", "c00FFFF")
     
-    VisionScript := A_ScriptDir . "\..\tools\OmniVision.ps1"
-    OutputFile := A_ScriptDir . "\..\vision_result.json"
+    VisionScript := A_ScriptDir . "\..\OmniControl\OmniVision.ps1"
+    OutputFile := A_ScriptDir . "\..\Shared\vision_result.json"
     
     ; Ejecutar PS1 oculto
     RunWait("powershell -NoProfile -ExecutionPolicy Bypass -File `"" . VisionScript . "`" > `"" . OutputFile . "`"", , "Hide")

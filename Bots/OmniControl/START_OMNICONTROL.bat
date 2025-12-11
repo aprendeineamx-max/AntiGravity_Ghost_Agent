@@ -13,7 +13,7 @@ echo   Starting OmniControl Overwatch System...
 echo.
 
 :: Launch PowerShell script with Hidden WindowStyle (The WPF GUI will still appear)
-start "" powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "tools\OmniControl_HUD.ps1"
+start "" powershell -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File "OmniControl_HUD.ps1"
 
 echo   [ OK ] System injected.
 timeout /t 2 >nul
