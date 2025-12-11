@@ -1,96 +1,75 @@
-# ⚛️ AntiGravity Ghost Agent
-### *Protocolo de Automatización de Fricción Cero para VS Code*
+# 👻 AntiGravity Ghost Agent ecosystem
 
-> **"Tú escribes código. El Agente maneja la burocracia."**
+> **"Autonomía Híbrida: Extensión Interna + Enjambre Externo"**
 
-AntiGravity Ghost Agent es una suite de automatización de **grado militar** diseñada para eliminar el 100% de las interrupciones en tu flujo de trabajo con IAs (Gemini, Copilot, etc.). Si aparece un botón pidiendo "Aceptar", "Permitir" o "Confirmar", este sistema lo destruye en milisegundos.
-
----
-
-## 🔰 Inicio Rápido (Principiantes)
-
-Si solo quieres que funcione **YA**:
-
-1.  **Instala los Requisitos**:
-    *   Tener **VS Code**.
-    *   Tener **AutoHotKey v2** instalado.
-
-2.  **Inicia el Sistema**:
-    *   Ve a la carpeta del proyecto.
-    *   Doble clic en `START_OMNICONTROL.bat`.
-    *   Doble clic en `OmniBot/OmniGod.ahk`.
-
-3.  **Calibra tu Arma (OmniGod)**:
-    *   Cuando veas un botón azul molesto en VS Code...
-    *   Usa `Win + Shift + S` y recorta **SOLO** el botón azul.
-    *   Guárdalo como `.png` en la carpeta `OmniBot/Targets/`.
-    *   Recarga el script OmniGod (Click derecho en el icono 'H' verde > Reload).
-
-**¡Listo!** El sistema ahora vigila tu espalda.
+Bienvenido al arsenal definitivo para dominar AntiGravity. Este repositorio contiene un ecosistema de herramientas diseñadas para operar en simbiosis, permitiendo automatización total, desde el núcleo del IDE hasta el sistema operativo.
 
 ---
 
-## 🧠 Arquitectura del Sistema (Avanzados)
+## 🏗️ Arquitectura del Sistema
 
-Este no es un simple script. Es una tríada de sistemas operando en paralelo para garantizar redundancia y velocidad.
+El sistema se divide en tres pilares fundamentales que trabajan juntos:
 
-### 1. Ghost Agent (Capa Interna) 👻
-*   **Tecnología**: JavaScript inyectado en el proceso de renderizado de Electron.
-*   **Misión**: Intercepta el DOM de VS Code.
-*   **Objetivos**: Detecta botones `[aria-label="Accept"]`, `.monaco-button` y prompts de chat.
-*   **Ventaja**: Latencia Cero.
+### 1. 🧬 Internal Hook (El Cerebro)
+**Ubicación:** `AntiGravity_Internal_Hook/`
+Una extensión nativa de VSCode/AntiGravity que vive dentro del proceso del IDE.
+*   **Capacidades:**
+    *   **Auto-Authorize Loop:** Acepta solicitudes de "Allow" automáticamente (1000ms).
+    *   **Smart Submit:** Envía el chat solo cuando NO estás escribiendo (`GHOST_CMD.txt`).
+    *   **Smart Typing:** Detecta si estás escribiendo y pausa a los bots externos (`GHOST_STATUS.txt`).
+*   **Instalación:** Ejecuta `tools/deploy_hook.ps1` y reinicia AntiGravity (`Ctrl + R`).
 
-### 2. OmniControl HUD (Capa Accesibilidad) 🛡️
-*   **Tecnología**: PowerShell + .NET UIAutomation + Win32 API.
-*   **Misión**: Escanea la ventana activa en busca de elementos de Accessibility Tree.
-*   **Objetivos**: Popups nativos de Windows, cuadros de diálogo de sistema y ventanas que el DOM no ve.
+### 2. 🦾 OmniGod (El Músculo)
+**Ubicación:** `OmniBot/`
+Un script de AutoHotKey (AHK) que opera a nivel de Kernel de Windows.
+*   **Capacidades:**
+    *   **Clics Invencibles:** Puede hacer clic en coordenadas absolutas donde la API interna falla.
+    *   **Macros de Sistema:** (Futuro) Excel, Screenshots, OCR externo.
+    *   **Inmortalidad:** Se auto-reinicia si falla.
 
-### 3. Project OmniGod v3.5 (Ghost Architecture) 👁️
-*   **Tecnología**: AutoHotKey v2 (Computer Vision) + Neural Heuristics.
-*   **Misión**: Escaneo de píxeles en pantalla (Image Search).
-*   **Novedades v3.5**:
-    *   🧱 **Smart Zoning (Real Data)**: Usa **Raycast** de píxeles para detectar los bordes reales de la caja de chat. Adiós a los rectángulos arbitrarios. (F11)
-    *   🧠 **Zone Memory**: Si el botón de enviar desaparece al escribir, el bot **recuerda** la última zona válida. Estabilidad total.
-    *   🤝 **Hive Mind (Mente Colmena)**: OmniGod comparte su "Zona de Visión" en tiempo real con OmniControl. Si un botón aparece fuera del chat, OmniControl lo ignorará por seguridad.
-    *   👻 **Strict Focus**: Diseño minimalista "Hollow Border" que desaparece si cambias de ventana.
-    *   ⌨️ **Smart Typing v2**: Detecta actividad física en el teclado para no interrumpir tu escritura jamás.
-
----
-
-## ⚙️ Configuración y Personalización
-
-### Comandos de Teclado
-*   **F8**: Pausar/Reanudar todo el sistema (Kill Switch).
-*   **F10**: Calibración Manual de Zona (Dibuja tu rectángulo).
-*   **F11**: **Auto-Detect / Reset Zone** (Usa Raycast para encontrar la caja de chat automáticamente).
-*   **Shift+F11**: Mock de Visión Neuronal (Experimental).
-
-### Ajustar Tiempos de Espera
-Si sientes que el agente es muy rápido (o muy lento), edita `OmniBot/OmniGod.ahk`:
-```autohotkey
-; Tiempo que debe pasar sin que toques el teclado para que el bot actúe
-if (A_TimeIdlePhysical > 2000) { ... } ; 2000ms = 2 Segundos
-```
-
-### Añadir Nuevos Objetivos
-No necesitas tocar código.
-*   **Para Objetivos (Cosas a destruir)**: Agrega imágenes `.png` a `OmniBot/Targets/`.
-*   **Para Indicadores (Señales de Estado)**: Agrega imágenes `.png` a `OmniBot/Indicators/` (ej. botón de stop, icono de enviar).
+### 3. 🎛️ OmniDashboard (El Panel de Control)
+**Ubicación:** `dashboard/`
+Una interfaz web moderna para monitorear y controlar a los agentes.
+*   **Capacidades:**
+    *   **Ver Logs en Tiempo Real.**
+    *   **Calibrar Visión.**
+    *   **Activar/Desactivar Módulos.**
+*   **Inicio:** Ejecuta `START_DASHBOARD.bat`.
 
 ---
 
-## ❓ Solución de Problemas (Troubleshooting)
+## 🚀 Guía de Inicio Rápido
 
-**P: El bot hace clic en el botón de Stop o Cancelar.**
-R: ¡Cuidado! Esas imágenes deben ir en la carpeta `Indicators`, NO en `Targets`. Si están en Targets, el bot las atacará.
+### Fase 1: Despliegue del Hook Interno
+Si es tu primera vez:
+1.  Abre una terminal en `C:\AntiGravityExt\AntiGravity_Ghost_Agent`.
+2.  Ejecuta: `powershell -File tools/deploy_hook.ps1`.
+3.  Reinicia AntiGravity.
+4.  Verás el mensaje: **"👻 ANTIGRAVITY HOOK: AUTONOMOUS MODE"**.
 
-**P: OmniControl no hace clic en un botón fuera del chat.**
-R: **Es una característica, no un bug.** Desde v3.5, OmniControl respeta la zona definida por OmniGod. Si quieres que haga clic, asegúrate de que OmniGod haya detectado esa área (F11).
-
-**P: ¿Es seguro?**
-R: Todo corre local en tu máquina. El código es Open Source. Tú tienes el control.
+### Fase 2: Desarrollo y Sincronización
+Todo el código vive en este repositorio.
+*   Si editas la extensión en `AntiGravity_Internal_Hook/extension.js`:
+    *   Ejecuta `tools/deploy_hook.ps1` para actualizar el IDE.
+    *   Recarga ventana (`Ctrl+R`).
 
 ---
 
-*Desarrollado para la Élite de Programación.*
-**v3.5 Ghost Architecture**
+## 📂 Estructura del Repositorio
+
+| Carpeta | Descripción |
+| :--- | :--- |
+| **`AntiGravity_Internal_Hook/`** | Código fuente de la extensión VSCode. |
+| **`OmniBot/`** | Scripts de AutoHotKey (`OmniGod.ahk`) y tests visuales. |
+| **`dashboard/`** | Servidor Node.js y Frontend para el panel de control. |
+| **`tools/`** | Scripts de utilidad (`deploy_hook.ps1`, `verify_overlay.ps1`). |
+| **`docs/`** | Documentación técnica y reportes de integración. |
+| **`logs/`** | Archivos de depuración y registros históricos. |
+
+---
+
+## 🔮 El Futuro (Roadmap)
+Consulta `ROADMAP.md` para ver los planes de dominación mundial (Integración con Excel, Visión Artificial Avanzada y Bases de Datos de Prompts).
+
+---
+*Generated by AntiGravity Agent*
