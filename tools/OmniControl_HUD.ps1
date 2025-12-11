@@ -69,10 +69,9 @@ namespace OmniSystem {
 
         public static string ScanAndDestroy(string titlePart) {
             try {
-                // --- SMART TYPING CHECK ---
-                if (!IsUserIdle(2000)) {
-                    return "PAUSED: TYPING..."; 
-                }
+                // Check Idle Status once per scan
+                bool isUserActive = !IsUserIdle(1500); // Reduced to 1.5s
+                string status = "Scanning...";
 
                 var root = AutomationElement.RootElement;
                 var winCond = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Window);
@@ -81,8 +80,7 @@ namespace OmniSystem {
                 foreach (AutomationElement win in windows) {
                     string winName = win.Current.Name;
                     if (winName.Contains(titlePart)) {
-                         // Log found window
-                         // Log("Found Window: " + winName);
+                         Log("Found Window: " + winName); // VERBOSE
 
                          var btnCond = new PropertyCondition(AutomationElement.ControlTypeProperty, ControlType.Button);
                          var buttons = win.FindAll(TreeScope.Descendants, btnCond);
@@ -91,10 +89,10 @@ namespace OmniSystem {
                              string name = btn.Current.Name;
                              if (string.IsNullOrEmpty(name)) continue;
                              
-                             // DEBUG: Log all buttons seen to understand what we are missing
-                             // Log("Seen Button: '" + name + "' Rect: " + btn.Current.BoundingRectangle);
+                             Log("Seen Button: '" + name + "' Rect: " + btn.Current.BoundingRectangle); // VERBOSE
 
                              bool isMatch = false;
+                             // Expanded Logic
                              if (name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
                              else if (name.IndexOf("Allow", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
                              else if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0) isMatch = true;
@@ -109,10 +107,24 @@ namespace OmniSystem {
                                      
                                      if (btnCX < ZoneX || btnCX > (ZoneX + ZoneW) || 
                                          btnCY < ZoneY || btnCY > (ZoneY + ZoneH)) {
-                                         
-                                         Log("IGNORED (Outside): '" + name + "' at " + btnRect + " Zone: " + ZoneX + "," + ZoneY + " " + ZoneW + "x" + ZoneH);
-                                         return "IGNORED (Outside Zone): " + name; 
+                                         Log("IGNORED (Outside): '" + name + "' at " + btnRect);
+                                         continue;
                                      }
+                                 }
+
+                                 // --- PRIORITY CHECK (The "Force Brute" Logic) ---
+                                 // If it's a critical confirmation, WE CLICK even if user is typing.
+                                 bool isPriority = false;
+                                 if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                                     name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0 ||
+                                     name.Contains("Yes")) {
+                                     isPriority = true;
+                                 }
+
+                                 if (isUserActive && !isPriority) {
+                                     // Only pause for non-critical stuff
+                                     status = "PAUSED: TYPING...";
+                                     continue; 
                                  }
 
                                  // ACTION
@@ -121,8 +133,7 @@ namespace OmniSystem {
                                      Log("CLICKING: " + name);
                                      invoke.Invoke();
                                      
-                                     if (name.IndexOf("Run command", StringComparison.OrdinalIgnoreCase) >= 0 ||
-                                         name.IndexOf("Accept", StringComparison.OrdinalIgnoreCase) >= 0) {
+                                     if (isPriority) {
                                          try { 
                                             Log("SENDING ALT+ENTER");
                                             System.Windows.Forms.SendKeys.SendWait("%{ENTER}"); 
@@ -134,6 +145,7 @@ namespace OmniSystem {
                          }
                     }
                 }
+                return status;
             } catch (Exception ex) {
                 Log("ERROR: " + ex.Message);
             }
