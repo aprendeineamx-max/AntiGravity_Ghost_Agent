@@ -60,7 +60,12 @@ return
 
 WatchDog() {
     static Tick := 0
+    static LastWX := 0, LastWY := 0, LastWW := 0, LastWH := 0
+    static LastState := ""
+    static LogHeartbeat := 0
+    
     Tick := Mod(Tick + 1, 100) ; 0-99 Heartbeat
+    LogHeartbeat := Mod(LogHeartbeat + 1, 10) ; Log cada ~10 ticks (approx 1-2 segs)
 
     ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
     WinID := 0
@@ -80,15 +85,54 @@ WatchDog() {
 
     if (WinID != 0) {
         try {
-            WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
-            ; Ajuste de bordes
-            WX := WX + 10
-            WY := WY + 50 
-            WW := WX + WW - 20 
-            WH := WY + WH - 60 
-            HasWindow := true
+            ; Verificar si está minimizada (-1)
+            MinMax := WinGetMinMax("ahk_id " . WinID)
+            if (MinMax == -1) {
+                HasWindow := false
+                ; Consolidamos estado NINJA/MINIMIZED
+                if (LastState != "NINJA") {
+                    UpdateHUD("MODO NINJA", "Ventana Minimizada - Solo Remoto", "cGray")
+                    Log("ESTADO: MODO NINJA (Ventana Minimizada)")
+                    LastState := "NINJA"
+                }
+                if (LogHeartbeat == 0) {
+                     Log("ESTADO: MODO NINJA (Ventana Minimizada - Heartbeat)")
+                }
+            } else {
+                WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
+                
+                ; --- ZONA CIEGA EXTENDIDA (VS CODE SIDEBAR) ---
+                ; 122px era la sidebar. Subimos a 350px para saltar Explorer, Search, etc.
+                MarginLeft := 350 
+                
+                WX := WX + MarginLeft 
+                WY := WY + 50 
+                WW := WX + WW - MarginLeft - 20 
+                WH := WY + WH - 60 
+                
+                ; Validación de coordenadas anti-crash (Error 87)
+                if (WW > WX and WH > WY) {
+                    HasWindow := true
+                } else {
+                    HasWindow := false
+                    if (LastState != "INVALID_SIZE") {
+                        Log("WARNING: Coordenadas inválidas (Ventana muy pequeña?)")
+                        LastState := "INVALID_SIZE"
+                    }
+                    if (LogHeartbeat == 0) {
+                        Log("WARNING: Ventana muy pequeña tras aplicar margen de " . MarginLeft . "px. [WX:" . WX . "]")
+                    }
+                }
+
+                ; Log Geometría Change (Siempre)
+                if (HasWindow and (WX != LastWX or WY != LastWY or WW != LastWW or WH != LastWH)) {
+                    Log("GEOMETRIA CAMBIO: Zona Segura [" . WX . "," . WY . "] -> [" . WW . "," . WH . "] (Margen Izq: " . MarginLeft . "px)")
+                    LastWX := WX, LastWY := WY, LastWW := WW, LastWH := WH
+                }
+            }
         } catch {
             HasWindow := false
+            Log("ERROR: Fallo al obtener WinGetPos de ID: " . WinID)
         }
     }
 
@@ -96,30 +140,42 @@ WatchDog() {
     CoordStr := (HasWindow) ? " [" . WX . "," . WY . "] " . Tick : " [-,-] " . Tick
 
     if (!HasWindow) {
-        UpdateHUD("MODO NINJA", "Solo Remoto " . CoordStr, "cGray")
+         UpdateHUD("MODO NINJA", "Solo Remoto " . CoordStr, "cGray")
+         if (LogHeartbeat == 0) {
+             Log("ESTADO: MODO NINJA (Buscando ventana...)")
+         }
     }
 
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
     if (HasWindow) {
-        if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
+        if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*60 " . ImageFolder . "AcceptAll_Priority.png") {
              TargetX := FoundX + 30 
              TargetY := FoundY + 10
+             
+             Log("DETECCION: AcceptAll_Priority encontrado en " . FoundX . "," . FoundY)
              
              MouseMove TargetX, TargetY
              Sleep 10 
              MouseGetPos ,, &WinUnderMouse
              
              ; Z-ORDER RELAXED: Check Process Name instead of ID
-             WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
-             TargetName := WinGetProcessName("ahk_id " . WinID)
+             try {
+                WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
+                TargetName := WinGetProcessName("ahk_id " . WinID)
              
-             if (WinName == TargetName) {
-                 UpdateHUD("PRIORIDAD", "Finalizando" . CoordStr, "c00FF00")
-                 Click "Down"
-                 Sleep 10
-                 Click "Up"
-                 Sleep 500 
-                 return
+                if (WinName == TargetName) {
+                    UpdateHUD("PRIORIDAD", "Finalizando" . CoordStr, "c00FF00")
+                    Log("ACCION: Clic CONFIRMADO en AcceptAll_Priority en " . TargetX . "," . TargetY)
+                    Click "Down"
+                    Sleep 10
+                    Click "Up"
+                    Sleep 500 
+                    return
+                } else {
+                    Log("WARNING: Bloqueado por Z-Order. Ventana encima: " . WinName)
+                }
+             } catch {
+                Log("ERROR: Fallo crítico en Z-Order check (Priority)")
              }
         }
     }
@@ -129,7 +185,8 @@ WatchDog() {
     IsWorkingVisual := false
     
     if (HasWindow) {
-        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*10 " . IndicatorFolder . "working.png")
+        ; Tolerancia estricta para botón rojo working sin confundir gris
+        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*15 " . IndicatorFolder . "working.png")
     }
     
     ; B. Chequeo Remoto 
@@ -154,12 +211,24 @@ WatchDog() {
         WasWorking := true
         ColorStatus := IsWorkingRemote ? "c00FFFF" : "cFFFF00"
         Source := IsWorkingRemote ? "GHOST LINK" : "VISUAL"
+        
+        if (LastState != "TRABAJANDO") {
+            Log("ESTADO: TRABAJANDO (" . Source . ") - Bloqueando clics")
+            LastState := "TRABAJANDO"
+        }
+        ; Log masivo si el usuario quiere "todo"
+        if (LogHeartbeat == 0) {
+             Log("ESTADO: TRABAJANDO por " . Source)
+        }
+        
         UpdateHUD("TRABAJANDO", Source . " " . CoordStr, ColorStatus)
         
         try {
              if (WinID != 0) {
                 SetKeyDelay 10, 10
                 ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
+                ; No logueamos cada Alt+Enter para no explotar el log (pasa cada 500ms), 
+                ; pero el cambio de estado ya indica que está ocurriendo.
             } else {
                  UpdateHUD("BUSCANDO", "Esperando ventana..." . CoordStr, "cRed")
             }
@@ -169,12 +238,14 @@ WatchDog() {
     
     ; --- 2. MODALIDAD MUERTE SUBITA ---
     if (WasWorking and HasWindow) {
+        Log("ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA")
         Loop 20 { 
             Tick := Mod(Tick + 1, 100) ; Heartbeat en sub-loop
             UpdateHUD("CAZANDO (SD)", "Limpieza Rápida " . Tick, "cOrange")
             Loop Targets.Length {
                 tImg := Targets[A_Index]
-                if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . tImg) {
+                ; TOLERANCIA REDUCIDA: *100 -> *30 para evitar falsos positivos
+                if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*30 " . ImageFolder . tImg) {
                      SafeToClick := true
                      Loop Files, IndicatorFolder . "Ignore\*.png"
                      {
@@ -184,6 +255,7 @@ WatchDog() {
                         y2 := FoundY + 50
                         if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
                             SafeToClick := false
+                            Log("IGNORED: " . tImg . " at " . FoundX . " (Blacklist match: " . A_LoopFileName . ")")
                             break
                         }
                      }
@@ -197,35 +269,61 @@ WatchDog() {
                      Sleep 10
                      MouseGetPos ,, &WinUnderMouse
                      
-                     WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
-                     TargetName := WinGetProcessName("ahk_id " . WinID)
-                     
-                     if (WinName == TargetName) {
-                         Click "Down"
-                         Sleep 10
-                         Click "Up"
-                         UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
-                         Sleep 500 
+                     try {
+                         WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
+                         TargetName := WinGetProcessName("ahk_id " . WinID)
+                         
+                         if (WinName == TargetName) {
+                             Click "Down"
+                             Sleep 10
+                             Click "Up"
+                             Log("ACCION (SD): Clic CONFIRMADO en " . tImg . " at " . TargetX . "," . TargetY)
+                             UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
+                             Sleep 500 
+                         } else {
+                             Log("WARNING (SD): Clic bloqueado por ventana " . WinName)
+                         }
+                     } catch {
+                        Log("ERROR (SD): Fallo Z-Order check")
                      }
                 }
             }
             Sleep 100
         }
         WasWorking := false
+        LastState := "CLEANUP_DONE"
+        Log("ESTADO: MUERTE SÚBITA FINALIZADA")
         return 
     }
 
     ; --- 3. CHEQUEO DE SEGURIDAD USER ---
     if (HasWindow and ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png")) {
+        if (LastState != "USER_TYPING") {
+            UpdateHUD("PAUSADO", "Usuario Escribiendo " . Tick, "cOrange")
+            Log("ESTADO: PAUSADO - Usuario detectado escribiendo (send.png visible)")
+            LastState := "USER_TYPING"
+        }
+        if (LogHeartbeat == 0) {
+             Log("ESTADO: PAUSADO - Usuario detectado escribiendo")
+        }
         UpdateHUD("PAUSADO", "Usuario Escribiendo " . Tick, "cOrange")
         return
     }
 
     ; --- 4. IDLE / SCAN NORMAL ---
     if (HasWindow) {
-        ; MOSTRAR COORDENADAS CON HEARTBEAT
-        UpdateHUD("👁️ BUSCANDO...", "Zona: " . WX . "," . WY . " | " . WW . "," . WH . " [" . Tick . "]", "cGray")
+        if (LastState != "HUNTING") {
+             LastState := "HUNTING"
+             Log("ESTADO: CAZANDO (Escaneo Normal)")
+        }
         
+        UpdateHUD("👁️ BUSCANDO...", "Zona Conf.: " . WX . "," . WY . " | " . WW . "," . WH . " [" . Tick . "]", "cGray")
+        
+        if (LogHeartbeat == 0) {
+             ; Log heartbeat para mostrar que está escaneando
+             Log("SCAN: Escaneando targets en zona confinada...")
+        }
+
         Loop Targets.Length {
             ; ... (loop code) ...
 
@@ -233,6 +331,7 @@ WatchDog() {
             imgPath := ImageFolder . imgName
             if FileExist(imgPath) {
                 try {
+                    ; Tolerancia estandar (*50) para escaneo normal
                     if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . imgPath) {
                          SafeToClick := true
                          Loop Files, IndicatorFolder . "Ignore\*.png"
@@ -243,6 +342,7 @@ WatchDog() {
                             y2 := FoundY + 50
                             if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
                                 SafeToClick := false
+                                Log("IGNORED: " . imgName . " por proximidad a " . A_LoopFileName)
                                 break
                             }
                          }
@@ -253,25 +353,34 @@ WatchDog() {
                         MouseGetPos &OrigX, &OrigY
                         TargetX := FoundX + 15 
                         TargetY := FoundY + 10
+                        
+                        Log("DETECCION: " . imgName . " encontrado en " . FoundX . "," . FoundY)
+                        
                         MouseMove TargetX, TargetY
                         
                         Sleep 10
                         MouseGetPos ,,, &WinUnderMouse
                         
-                        WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
-                        TargetName := WinGetProcessName("ahk_id " . WinID)
-                         
-                        if (WinName == TargetName) {
-                            Click "Down"
-                            Sleep 10
-                            Click "Up"
-                            UpdateHUD("👁️ CAZADO", "[OBJETIVO ELIMINADO]", "c00FFFF") 
+                        try {
+                            WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
+                            TargetName := WinGetProcessName("ahk_id " . WinID)
+                            
+                            if (WinName == TargetName) {
+                                Click "Down"
+                                Sleep 10
+                                Click "Up"
+                                Log("ACCION: Clic CONFIRMADO en " . imgName . " at " . TargetX . "," . TargetY)
+                                UpdateHUD("👁️ CAZADO", "[OBJETIVO ELIMINADO]", "c00FFFF") 
+                                MouseMove OrigX, OrigY
+                                SetTimer RemoveToolTip, -1000
+                                return 
+                            } else {
+                                MouseMove OrigX, OrigY
+                                Log("WARNING: Objetivo detectado pero obstruido por: " . WinName)
+                            }
+                        } catch {
                             MouseMove OrigX, OrigY
-                            SetTimer RemoveToolTip, -1000
-                            return 
-                        } else {
-                            ; Obstruido por otra ventana
-                            MouseMove OrigX, OrigY
+                            Log("ERROR: Fallo Z-Order Normal Scan")
                         }
                     }
                 }

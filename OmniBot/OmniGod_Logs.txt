@@ -19,3 +19,82 @@
 [2025-12-11 00:30:15] SISTEMA INICIADO
 [2025-12-11 00:31:07] SISTEMA INICIADO
 [2025-12-11 00:31:22] SISTEMA INICIADO
+[2025-12-11 00:33:55] Estado cambiado a: PAUSADO
+[2025-12-11 00:33:55] Estado cambiado a: ACTIVO
+[2025-12-11 00:33:56] Estado cambiado a: PAUSADO
+[2025-12-11 00:34:09] Estado cambiado a: ACTIVO
+[2025-12-11 00:34:11] Estado cambiado a: PAUSADO
+[2025-12-11 00:37:15] SISTEMA INICIADO
+[2025-12-11 00:38:43] SISTEMA INICIADO
+[2025-12-11 00:38:43] GEOMETRIA CAMBIO: Zona Segura [2,42] -> [1364,718]
+[2025-12-11 00:38:46] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:39:05] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:39:16] GEOMETRIA CAMBIO: Zona Segura [-31990,-31950] -> [-31850,-31982]
+[2025-12-11 00:39:43] SISTEMA INICIADO
+[2025-12-11 00:39:43] GEOMETRIA CAMBIO: Zona Segura [2,42] -> [1364,718]
+[2025-12-11 00:39:46] ESTADO: PAUSADO - Usuario detectado escribiendo (send.png visible)
+[2025-12-11 00:39:49] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:40:02] ESTADO: TRABAJANDO (VISUAL) - Bloqueando clics
+[2025-12-11 00:40:34] ESTADO: MUERTE SUBITA (Limpieza Rápida)
+[2025-12-11 00:40:40] ACCION (SD): Clic en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 00:40:42] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:40:51] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:41:01] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:41:10] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:41:20] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:41:32] SISTEMA INICIADO
+[2025-12-11 00:41:32] GEOMETRIA CAMBIO: Zona Segura [2,42] -> [1364,718]
+[2025-12-11 00:41:35] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:41:49] ESTADO: PAUSADO - Usuario detectado escribiendo (send.png visible)
+[2025-12-11 00:43:22] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:23] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:23] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:24] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:24] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:24] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:24] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:25] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:25] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:25] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:25] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:26] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:26] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:26] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:26] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:27] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:27] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:27] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:27] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:28] ESTADO: Ventana Minimizada detectada - Desactivando búsquedas visuales
+[2025-12-11 00:43:28] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:43:31] ESTADO: PAUSADO - Usuario detectado escribiendo (send.png visible)
+[2025-12-11 00:44:06] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:44:18] ESTADO: TRABAJANDO (VISUAL) - Bloqueando clics
+[2025-12-11 00:45:00] ESTADO: MUERTE SUBITA (Limpieza Rápida)
+[2025-12-11 00:45:27] SISTEMA INICIADO
+[2025-12-11 00:45:27] ESTADO: MODO NINJA (Ventana no detectada o minimizada)
+[2025-12-11 00:45:28] GEOMETRIA CAMBIO: Zona Segura [2,42] -> [1364,718]
+[2025-12-11 00:45:30] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:46:10] ESTADO: PAUSADO - Usuario detectado escribiendo (send.png visible)
+[2025-12-11 00:46:26] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:46:37] ESTADO: TRABAJANDO (VISUAL) - Bloqueando clics
+[2025-12-11 00:47:48] ACCION: Clic en AcceptAll_Priority (Prioridad 0) en 1301,605
+[2025-12-11 00:47:50] ESTADO: MUERTE SUBITA (Limpieza Rápida)
+[2025-12-11 00:47:56] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:48:05] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:48:14] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:48:24] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:48:25] ACCION (SD): Clic en haciaabajo.PNG at 1287,253
+[2025-12-11 00:48:33] ACCION (SD): Clic en Expand all.PNG at 122,52
+[2025-12-11 00:50:33] SISTEMA INICIADO
+[2025-12-11 00:50:33] GEOMETRIA CAMBIO: Zona Segura [52,42] -> [1364,718]
+[2025-12-11 00:50:36] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:50:48] ESTADO: TRABAJANDO (VISUAL) - Bloqueando clics
+[2025-12-11 00:51:14] ESTADO: MUERTE SUBITA (Limpieza Rápida)
+[2025-12-11 00:51:20] ERROR (SD): Fallo Z-Order check
+[2025-12-11 00:52:11] ACCION (SD): Clic en AcceptAll_Priority.png at 1286,605
+[2025-12-11 00:52:15] ACCION (SD): Clic en Cuadrito Azul - accept all.PNG at 1283,601
+[2025-12-11 00:52:59] SISTEMA INICIADO
+[2025-12-11 00:52:59] GEOMETRIA CAMBIO: Zona Segura [342,42] -> [1354,718] (Margen Izq: 350px)
+[2025-12-11 00:53:02] ESTADO: CAZANDO (Escaneo Normal)
+[2025-12-11 00:53:35] ESTADO: TRABAJANDO (VISUAL) - Bloqueando clics
