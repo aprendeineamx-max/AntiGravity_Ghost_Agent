@@ -53,10 +53,32 @@ while ($listener.IsListening) {
     try {
         if ($path -eq "/api/status") {
             $json = Get-ProcessStatus
-            $buffer = [System.Text.Encoding]::UTF8.GetBytes($json)
+            # Inject AgentWorking state from Ghost
+            $statusObj = $json | ConvertFrom-Json
+            $statusObj | Add-Member -NotePropertyName "AgentWorking" -NotePropertyValue ($global:AgentWorking -eq $true)
+            $newJson = $statusObj | ConvertTo-Json
+            
+            $buffer = [System.Text.Encoding]::UTF8.GetBytes($newJson)
             $response.ContentType = "application/json"
             $response.ContentLength64 = $buffer.Length
             $response.OutputStream.Write($buffer, 0, $buffer.Length)
+        }
+        elseif ($path -eq "/api/report_state") {
+            if ($method -eq "POST") {
+                $reader = New-Object System.IO.StreamReader($request.InputStream, $request.ContentEncoding)
+                $body = $reader.ReadToEnd()
+                $reader.Close()
+                
+                try {
+                    $data = $body | ConvertFrom-Json
+                    $global:AgentWorking = $data.working
+                }
+                catch { $global:AgentWorking = $false }
+                
+                $msg = "OK"
+                $buffer = [System.Text.Encoding]::UTF8.GetBytes($msg)
+                $response.OutputStream.Write($buffer, 0, $buffer.Length)
+            }
         }
         elseif ($path -eq "/api/log_chat") {
             if ($method -eq "POST") {

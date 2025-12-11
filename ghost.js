@@ -14,23 +14,45 @@
             '.quick-input-widget .quick-input-list-entry',
             '.notification-toast .monaco-button',
             '.modal-body .monaco-button',
-            '.chat-notification-widget .monaco-button', // Specific for Chat
+            '.chat-notification-widget .monaco-button',
             '[aria-label="Allow Always"]',
             '[aria-label="Allow Once"]',
             '[aria-label="Accept all"]',
             '[title="Accept all"]',
             '.chat-input-control .monaco-button',
-            '[role="button"]', // Generic catch-all (strictly text filtered)
-            'button'
+            '[role="button"]',
+            'button',
+            '.codicon-debug-stop', // Visual cue for "Working" (Stop button)
+            '[aria-label="Stop"]',
+            '[title="Stop Generating"]'
         ],
         keywords: [
-            'accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si', // Standard
-            'setup', 'configurar', 'trust', 'connect', // Browser
-            'allow once', 'always allow', 'allow always', // Dropdowns
-            'accept all', // Specific
-            'acceptalt', 'run command' // AI Chat specific
+            'accept', 'autorizar', 'allow', 'confirm', 'alt+enter', 'yes', 'si',
+            'setup', 'configurar', 'trust', 'connect',
+            'allow once', 'always allow', 'allow always',
+            'accept all',
+            'acceptalt', 'run command',
+            'expand all', 'expandir todo', // New User Request
+            'stop generating' // State detection
         ]
     };
+
+    let isWorking = false;
+    let lastReport = 0;
+
+    const reportState = (working) => {
+        const now = Date.now();
+        if (working !== isWorking || now - lastReport > 1000) { // Heartbeat every 1s or on change
+            isWorking = working;
+            lastReport = now;
+            fetch('http://localhost:1337/api/report_state', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ working: isWorking })
+            }).catch(() => { }); // Silent fail
+        }
+    };
+
 
     console.log(`${AGENT_NAME}: Initialized. Waiting via MutationObserver...`);
 
@@ -134,6 +156,17 @@
             setTimeout(init, 100);
         }
     };
+
+    // State Poller (Checks if Agent is Working)
+    setInterval(() => {
+        // Look for typical "Stop" indicators in VS Code / Antigravity
+        // .codicon-debug-stop often used for stop buttons
+        // or check if a button with "stop generating" exists
+        const stopBtn = document.querySelector('.codicon-debug-stop, [aria-label="Stop Generating"], [title="Stop Generating"]');
+        const processing = !!stopBtn; // True if stop button exists
+
+        reportState(processing);
+    }, 500);
 
     init();
 

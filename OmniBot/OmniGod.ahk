@@ -59,85 +59,120 @@ Loop {
 return
 
 WatchDog() {
-    ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
-    ; Este botón aparece cuando el agente termina. Hay que darle clic AUNQUE ya no haya cuadro rojo.
-    ; Aumentamos tolerancia a *100 para asegurar detección (azules variables)
-    if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
-         ToolTip "✨ FINALIZANDO TAREA: Accept All detectado", 10, 10, 1
-         MouseGetPos &OrigX, &OrigY
-         
-         ; Click Preciso
-         TargetX := FoundX + 30 ; Centro del botón ancho
-         TargetY := FoundY + 10
-         MouseMove TargetX, TargetY
-         Sleep 50
-         Click "Down"
-         Sleep 50
-         Click "Up"
-         Sleep 50
-         MouseMove OrigX, OrigY
-         
-         Sleep 500 ; Pausa para no spammear
-         return
+    ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
+    ; Calculamos el perímetro ANTES de buscar cualquier cosa.
+    ; Si no hay ventana, NO HAY BÚSQUEDA VISUAL. Punto.
+    
+    TargetWin := ""
+    HasWindow := false
+    WX := 0, WY := 0, WW := 0, WH := 0
+    
+    SetTitleMatchMode 2
+    if WinExist("AntiGravity") {
+        TargetWin := "AntiGravity"
+    } else if WinExist("ahk_exe Code.exe") {
+        TargetWin := "ahk_exe Code.exe"
     }
 
-    ; --- 1. CHEQUEO DE ACTIVIDAD (PRIORIDAD ALTA) ---
-    ; Verificamos si el agente está trabajando ANTES de verificar seguridad.
-    ; Esto previene que el botón "Send" bloquee la lógica de finalización (Muerte Súbita).
-    
+    if (TargetWin != "") {
+        WinGetPos &WX, &WY, &WW, &WH, TargetWin
+        ; Ajuste de bordes (Client Area aproximada)
+        WX := WX + 10
+        WY := WY + 50 ; Saltar barra de título
+        WW := WX + WW - 20 ; Convertir WW a X2 absoluto
+        WH := WY + WH - 60 ; Convertir WH a Y2 absoluto
+        HasWindow := true
+    } else {
+        UpdateHUD("MODO NINJA", "Sin ventana visual. Solo remoto.", "cGray")
+    }
+
+    ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
+    ; SOLO si tenemos ventana (Confinado)
+    if (HasWindow) {
+        if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . "AcceptAll_Priority.png") {
+             UpdateHUD("PRIORIDAD", "Finalizando Tarea", "c00FF00")
+             MouseGetPos &OrigX, &OrigY
+             TargetX := FoundX + 30 
+             TargetY := FoundY + 10
+             MouseMove TargetX, TargetY
+             Sleep 10
+             Click "Down"
+             Sleep 10
+             Click "Up"
+             Sleep 10
+             MouseMove OrigX, OrigY
+             Sleep 500 
+             return
+        }
+    }
+
+    ; --- 1. CHEQUEO DE ACTIVIDAD (HÍBRIDO) ---
     static WasWorking := false
-    IsWorking := ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png")
+    IsWorkingVisual := false
+    
+    if (HasWindow) {
+        IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "working.png")
+    }
+    
+    ; B. Chequeo Remoto (Para modo Minimizado/Background)
+    IsWorkingRemote := false
+    if (!IsWorkingVisual) {
+        try {
+           whr := ComObject("WinHttp.WinHttpRequest.5.1")
+           whr.Open("GET", "http://localhost:1337/api/status", true)
+           whr.Send()
+           if (whr.WaitForResponse(0.1)) { 
+               resp := whr.ResponseText
+               if InStr(resp, '"AgentWorking":true') {
+                   IsWorkingRemote := true
+               }
+           }
+        }
+    }
+
+    IsWorking := IsWorkingVisual or IsWorkingRemote
 
     if (IsWorking) {
         WasWorking := true
-        ToolTip "⚡ AGENTE TRABAJANDO: Sending Alt+Enter...", 10, 10, 1
+        ColorStatus := IsWorkingRemote ? "c00FFFF" : "cFFFF00"
+        Source := IsWorkingRemote ? "GHOST LINK" : "VISUAL"
+        UpdateHUD("TRABAJANDO", Source . ": Enviando Alt+Enter...", ColorStatus)
         
-        ; "Target Lock": Asegurar que enviamos las teclas a la ventana correcta (AntiGravity)
         try {
-            MouseGetPos ,, &WinID 
-            if WinExist("ahk_id " . WinID) {
-                WinActivate
-                Sleep 10
-                Send "!{Enter}"
+            if WinExist("AntiGravity") or WinExist("ahk_exe Code.exe") {
+                WinID := WinGetID()
+                SetKeyDelay 10, 10
+                ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
+            } else {
+                 UpdateHUD("BUSCANDO", "Esperando ventana de Antigravity...", "cRed")
             }
         }
-        return ; SI ESTAMOS TRABAJANDO, SALIMOS AQUI. No chequeamos seguridad (el usuario puede querer interrumpir, pero el alt+enter domina)
+        return 
     } 
     
-    ; --- 2. MODALIDAD MUERTE SUBITA (TRANSICIÓN CRÍTICA) ---
-    ; Si WasWorking era true y ahora IsWorking es false, acabamos de terminar.
-    ; Esta fase tiene prioridad sobre el botón "Send".
-    if (WasWorking) {
-        ToolTip "🔥 FINALIZANDO: Scan Agresivo (10s) de TODOS los Objetivos...", 10, 10, 1
-        
-        ; LISTA DE OBJETIVOS: Usamos la lista global cargada de la carpeta Targets.
-        ; El usuario solicitó que se ataque a TODOS los botones azules en esa carpeta.
-        
-        Loop 100 { ; 100 iteraciones * 100ms = 10 Segundos de Furia
+    ; --- 2. MODALIDAD MUERTE SUBITA ---
+    ; Solo si tenemos ventana (Visual Cleanup)
+    if (WasWorking and HasWindow) {
+        ; Loop rápido de limpieza en área confinada
+        Loop 20 { ; Reducido a 2s (20*100ms) para ser más preciso
             Loop Targets.Length {
                 tImg := Targets[A_Index]
-                if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, "*100 " . ImageFolder . tImg) {
-                     
-                     ; --- VERIFICACIÓN DE SEGURIDAD (PROXIMIDAD) ---
-                     ; Solo ignoramos si la imagen prohibida está EN LA MISMA POSICIÓN que el objetivo encontrado.
+                if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*100 " . ImageFolder . tImg) {
+                     ; Proximity Check
                      SafeToClick := true
                      Loop Files, IndicatorFolder . "Ignore\*.png"
                      {
-                        ; ROI (Region of Interest)
                         x1 := FoundX - 10
                         y1 := FoundY - 10
-                        x2 := FoundX + 50
+                        x2 := FoundX + 50 
                         y2 := FoundY + 50
-                        
                         if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
                             SafeToClick := false
                             break
                         }
                      }
-                     
                      if (!SafeToClick) {
-                         UpdateHUD("IGNORADO", "Objetivo coincide con Lista Negra", "cFF0000")
-                         continue 
+                         continue
                      }
 
                      MouseGetPos &OrigX, &OrigY
@@ -150,7 +185,7 @@ WatchDog() {
                      Click "Up"
                      Sleep 10
                      MouseMove OrigX, OrigY
-                     UpdateHUD("CAZADO (SD)", tImg, "c00FFFF") ; Cyan
+                     UpdateHUD("CAZADO (SD)", "[OBJETIVO ELIMINADO]", "c00FFFF")
                      Sleep 500 
                 }
             }
@@ -160,134 +195,63 @@ WatchDog() {
         return 
     }
 
-    ; --- 3. CHEQUEO DE SEGURIDAD (¿USUARIO ESCRIBIENDO?) ---
-    ; Ahora sí, si no estamos trabajando ni finalizando, respetamos al usuario.
-    if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "send.png") {
-        ToolTip "🛑 USUARIO AL MANDO (Pausado)", 10, 10, 1
+    ; --- 3. CHEQUEO DE SEGURIDAD USER ---
+    if (HasWindow and ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png")) {
+        UpdateHUD("PAUSADO", "Usuario Escribiendo", "cOrange")
         return
     }
 
     ; --- 4. IDLE / SCAN NORMAL ---
-    ToolTip "💤 AGENTE INACTIVO (Esperando...)", 10, 10, 1
-    
-    ; Solo si estamos realmente ociosos (sin cuadrado rojo, sin user typing)
-    ; ejecutamos lista negra o scroll si fuera necesario, pero por ahora solo retornamos
-    ; o dejamos pasar al scroll logic si se desea.
-    ; ... (Scroll Logic is below) ...
-    
-    ; Si queremos mantener el Scroll Logic activo en IDLE, borramos el return de arriba.
-    ; Pero el usuario pidio que SOLO busque objetivos si scroll.
-    ; Vamos a dejar pasar al bloque de Targets si no hay Return.
-    
-    ; IMPORTANTE: El bloque original tenía Targets check y Scroll al final.
-    ; Si retornamos aquí, el bot nunca busca targets en modo IDLE (normal).
-    ; Quitamos el return para permitir que busque targets "sueltos" si los hay.
-    ; Pero el tooltip dice "Esperando...". Mejor cambiamos el tooltip abajo.
-    
-    
-    ; 3. ESTRATEGIA DE EXPANSIÓN (Collapse = Scroll)
-    ; ... (Keep existing scroll logic) ...
-
-    ; 4. LISTA NEGRA (Evitar falsos positivos como botones de Code Runner)
-    ; Si vemos algo de la lista negra, abortamos el ataque.
-    Loop Files, IndicatorFolder . "Ignore\*.png"
-    {
-        if ImageSearch(&IgnX, &IgnY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . A_LoopFileFullPath) {
-            ; Opción A: Abortar todo (Más seguro)
-            ; ToolTip "🛑 OBJETIVO PROHIBIDO DETECTADO: " . A_LoopFileName, 10, 10, 1
-            ; return
-            
-            ; Opción B: (Más avanzada) - Solo no dar clic si está muy cerca de donde íbamos a dar clic
-            ; Por ahora usaremos Opción A si el usuario quiere pausar por defecto.
-        }
-    }
-
-    Loop Targets.Length {
-        imgName := Targets[A_Index]
-        imgPath := ImageFolder . imgName
-        
-        if FileExist(imgPath) {
-            try {
-                if ImageSearch(&FoundX, &FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . imgPath) {
-                    
-                    ; --- VERIFICACIÓN DE SEGURIDAD (IGNORAR SI COINCIDE CON LISTA NEGRA) ---
-                    ; Check de proximidad: Si lo que encontramos está cerca de una imagen prohibida...
-                    ; Por simplicidad/rendimiento: Si hay una imagen 'Ignore' visible, asumimos riesgo y NO atacamos este ciclo.
-                     ; --- VERIFICACIÓN DE SEGURIDAD (PROXIMIDAD) ---
-                     ; Solo ignoramos si la imagen prohibida está EN LA MISMA POSICIÓN que el objetivo encontrado.
-                     SafeToClick := true
-                     Loop Files, IndicatorFolder . "Ignore\*.png"
-                     {
-                        ; Definir un área pequeña alrededor del objetivo encontrado (ROI)
-                        x1 := FoundX - 10
-                        y1 := FoundY - 10
-                        x2 := FoundX + 50 ; Asumiendo iconos pequeños/medianos
-                        y2 := FoundY + 50
-                        
-                        if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
-                            ; Si encontramos una imagen 'Ignore' JUSTO AQUÍ, es un falso positivo.
-                            SafeToClick := false
-                            break
-                        }
+    if (HasWindow) {
+        UpdateHUD("👁️ BUSCANDO...", "Escaneando Perímetro...", "cGray")
+        Loop Targets.Length {
+            imgName := Targets[A_Index]
+            imgPath := ImageFolder . imgName
+            if FileExist(imgPath) {
+                try {
+                    if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . imgPath) {
+                        ; Proximity Check
+                         SafeToClick := true
+                         Loop Files, IndicatorFolder . "Ignore\*.png"
+                         {
+                            x1 := FoundX - 10
+                            y1 := FoundY - 10
+                            x2 := FoundX + 50 
+                            y2 := FoundY + 50
+                            if ImageSearch(&IgnX, &IgnY, x1, y1, x2, y2, Tolerance . " " . A_LoopFileFullPath) {
+                                SafeToClick := false
+                                break
+                            }
+                         }
+                         if (!SafeToClick) {
+                         continue
                      }
-                     
-                     if (!SafeToClick) {
-                         UpdateHUD("IGNORADO", "Objetivo en Zona Prohibida (Proximidad)", "cFF0000")
-                         continue 
-                     }
-
-                    MouseGetPos &OrigX, &OrigY
-                    ; ... (Keep existing click logic) ...
-                    
-                    ; Mover al CENTRO SEGURO (Balanceado para iconos y botones grandes)
-                    TargetX := FoundX + 15 
-                    TargetY := FoundY + 10
-                    MouseMove TargetX, TargetY
-                    
-                    ; --- CLIC ROBUSTO ---
-                    Sleep 50
-                    Click "Down"
-                    Sleep 50
-                    Click "Up"
-                    Sleep 50
-                    
-                    ; Regresar mouse instantáneamente
-                    MouseMove OrigX, OrigY
-                    
-                    ToolTip "👻 CAZADO: " . imgName, 10, 10, 1
-                    SetTimer RemoveToolTip, -1000
-                    return 
+    
+                        MouseGetPos &OrigX, &OrigY
+                        TargetX := FoundX + 15 
+                        TargetY := FoundY + 10
+                        MouseMove TargetX, TargetY
+                        Sleep 10
+                        Click "Down"
+                        Sleep 10
+                        Click "Up"
+                        Sleep 10
+                        MouseMove OrigX, OrigY
+                        UpdateHUD("👁️ CAZADO", "[OBJETIVO ELIMINADO]", "c00FFFF") 
+                        SetTimer RemoveToolTip, -1000
+                        return 
+                    }
                 }
             }
         }
-    }
-
-    ; --- ESTRATEGIA DE SCROLL (Vertical Scan) ---
-    ; Si hemos llegado aqui, no hay botones visibles.
-    ; Usamos la posicion del boton "Stop" (working.png) como ancla para saber donde esta el chat.
-    
-    if ImageSearch(&AnchorX, &AnchorY, 0, 0, A_ScreenWidth, A_ScreenHeight, Tolerance . " " . IndicatorFolder . "working.png") {
-        ; Mover el mouse 300 pixeles ARRIBA del boton de Stop.
-        ; Esto coloca el cursor justo en medio del historial del chat.
-        CenterX := AnchorX + 15
-        CenterY := AnchorY - 300
-        MouseMove CenterX, CenterY
         
-        ToolTip "📜 SCROLL ACTIVO (Centrado en Chat)", 10, 10, 1
-        
-        ; Scroll Agresivo hacia ABAJO (Prioridad)
-        Loop 5 {
-            Click "WheelDown"
-            Sleep 50
+        ; Scroll Logic (Optional, confined)
+        if ImageSearch(&AnchorX, &AnchorY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "working.png") {
+             ; Scroll logic if needed
         }
-        
-        ; Pequeño rebote hacia ARRIBA para "sacudir" y revelar botones pegados al borde
-        Click "WheelUp" 
-        Sleep 100
-        
+
     } else {
-        ; Fallback si por alguna razon extraña perdimos el ancla
-        ToolTip "⚠️ PERDIDO: No encuentro el chat para scrollear", 10, 10, 1
+        ; Ya manejado al principio (Modo Ninja No-Visual)
     }
 }
 
