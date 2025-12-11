@@ -49,7 +49,34 @@ function activate(context) {
 
     context.subscriptions.push({ dispose: () => watcher.close() });
 
-    // 3. Discovery Phase (Background)
+    // 3. Smart Typing (Idle Detection)
+    const statusPath = 'C:\\AntiGravityExt\\GHOST_STATUS.txt';
+    let typingTimer = null;
+
+    if (!fs.existsSync(statusPath)) { fs.writeFileSync(statusPath, 'IDLE'); }
+
+    vscode.workspace.onDidChangeTextDocument(e => {
+        // Clear existing timer
+        if (typingTimer) clearTimeout(typingTimer);
+
+        // Immediate: User is typing
+        try {
+            // Only write if not already TYPING to save IO
+            // fs.writeFileSync(statusPath, 'TYPING'); // Too aggressive?
+            // Actually, let's keep it simple. Optimization later.
+            fs.writeFileSync(statusPath, 'TYPING');
+        } catch (err) { }
+
+        // Debounce: Set back to IDLE after 1s
+        typingTimer = setTimeout(() => {
+            try {
+                fs.writeFileSync(statusPath, 'IDLE');
+                // console.log('[Ghost] User is IDLE'); 
+            } catch (err) { }
+        }, 1000);
+    });
+
+    // 4. Discovery Phase (Background)
     setTimeout(async () => {
         try {
             const commands = await vscode.commands.getCommands(true);
@@ -58,7 +85,10 @@ function activate(context) {
     }, 5000);
 }
 
-function deactivate() { }
+function deactivate() {
+    // Ensure we don't leave it stuck on TYPING
+    try { fs.writeFileSync('C:\\AntiGravityExt\\GHOST_STATUS.txt', 'IDLE'); } catch (e) { }
+}
 
 module.exports = {
     activate,
