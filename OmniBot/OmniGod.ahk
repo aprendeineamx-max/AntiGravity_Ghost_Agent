@@ -62,10 +62,11 @@ WatchDog() {
     static Tick := 0
     static LastWX := 0, LastWY := 0, LastWW := 0, LastWH := 0
     static LastState := ""
-    static LogHeartbeat := 0
     
-    Tick := Mod(Tick + 1, 100) ; 0-99 Heartbeat
-    LogHeartbeat := Mod(LogHeartbeat + 1, 10) ; Log cada ~10 ticks (approx 1-2 segs)
+    Tick := Mod(Tick + 1, 100)
+    
+    ; [LOG] Inicio de Ciclo
+    Log("CYCLE[" . Tick . "]: Iniciando WatchDog...")
 
     ; --- 0. GEOMETRÍA DE CONFINAMIENTO (CRUCIAL) ---
     WinID := 0
@@ -77,32 +78,31 @@ WatchDog() {
     ; Búsqueda de Ventana
     if WinExist("AntiGravity ahk_exe Code.exe") {
         WinID := WinGetID("AntiGravity ahk_exe Code.exe")
+        Log("WIN: Encontrada 'AntiGravity ahk_exe Code.exe' ID: " . WinID)
     } else if WinExist("AntiGravity") && !WinActive("ahk_class CabinetWClass") {
         WinID := WinGetID("AntiGravity")
+        Log("WIN: Encontrada 'AntiGravity' ID: " . WinID)
     } else if WinExist("ahk_exe Code.exe") {
         WinID := WinGetID("ahk_exe Code.exe")
+        Log("WIN: Encontrada fallback 'Code.exe' ID: " . WinID)
+    } else {
+        Log("WIN: Ninguna ventana detectada.")
     }
 
     if (WinID != 0) {
         try {
             ; Verificar si está minimizada (-1)
             MinMax := WinGetMinMax("ahk_id " . WinID)
+            Log("WIN-STATE: MinMax Status = " . MinMax)
+            
             if (MinMax == -1) {
                 HasWindow := false
-                ; Consolidamos estado NINJA/MINIMIZED
-                if (LastState != "NINJA") {
-                    UpdateHUD("MODO NINJA", "Ventana Minimizada - Solo Remoto", "cGray")
-                    Log("ESTADO: MODO NINJA (Ventana Minimizada)")
-                    LastState := "NINJA"
-                }
-                if (LogHeartbeat == 0) {
-                     Log("ESTADO: MODO NINJA (Ventana Minimizada - Heartbeat)")
-                }
+                Log("ESTADO: MODO NINJA (Ventana Minimizada detectada)")
             } else {
                 WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
+                Log("RAW-COORDS: X=" . WX . " Y=" . WY . " W=" . WW . " H=" . WH)
                 
                 ; --- ZONA CIEGA EXTENDIDA (VS CODE SIDEBAR) ---
-                ; 122px era la sidebar. Subimos a 350px para saltar Explorer, Search, etc.
                 MarginLeft := 350 
                 
                 WX := WX + MarginLeft 
@@ -110,44 +110,46 @@ WatchDog() {
                 WW := WX + WW - MarginLeft - 20 
                 WH := WY + WH - 60 
                 
-                ; Validación de coordenadas anti-crash (Error 87)
+                Log("SAFE-ZONE: [" . WX . "," . WY . "] -> [" . WW . "," . WH . "] (Margen aplicado: " . MarginLeft . ")")
+                
+                ; Validación de coordenadas
                 if (WW > WX and WH > WY) {
                     HasWindow := true
                 } else {
                     HasWindow := false
-                    if (LastState != "INVALID_SIZE") {
-                        Log("WARNING: Coordenadas inválidas (Ventana muy pequeña?)")
-                        LastState := "INVALID_SIZE"
-                    }
-                    if (LogHeartbeat == 0) {
-                        Log("WARNING: Ventana muy pequeña tras aplicar margen de " . MarginLeft . "px. [WX:" . WX . "]")
-                    }
-                }
-
-                ; Log Geometría Change (Siempre)
-                if (HasWindow and (WX != LastWX or WY != LastWY or WW != LastWW or WH != LastWH)) {
-                    Log("GEOMETRIA CAMBIO: Zona Segura [" . WX . "," . WY . "] -> [" . WW . "," . WH . "] (Margen Izq: " . MarginLeft . "px)")
-                    LastWX := WX, LastWY := WY, LastWW := WW, LastWH := WH
+                    Log("WARNING: Coordenadas inválidas (Zona negativa o cero).")
                 }
             }
         } catch {
             HasWindow := false
-            Log("ERROR: Fallo al obtener WinGetPos de ID: " . WinID)
+            Log("ERROR: Excepción en WinGetPos/MinMax para ID: " . WinID)
         }
     }
 
-    ; Formatear string de coordenadas + Heartbeat
+    ; Formatear string de coordenadas
     CoordStr := (HasWindow) ? " [" . WX . "," . WY . "] " . Tick : " [-,-] " . Tick
 
     if (!HasWindow) {
          UpdateHUD("MODO NINJA", "Solo Remoto " . CoordStr, "cGray")
-         if (LogHeartbeat == 0) {
-             Log("ESTADO: MODO NINJA (Buscando ventana...)")
-         }
+         Log("HUD: Actualizado a MODO NINJA")
+    }
+
+    ; --- SMART TYPING DETECTION (NO BLOQUEANTE) ---
+    UserTyping := false
+    if (HasWindow) {
+        Log("SEARCH: Buscando 'send.png' para detectar usuario...")
+        if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png") {
+            UserTyping := true
+            Log("DETECTADO: Usuario escribiendo (send.png en " . FoundX . "," . FoundY . "). Alt+Enter será SUPRIMIDO.")
+            UpdateHUD("ESCRIBIENDO", "Clics: ON | Enter: OFF " . Tick, "cOrange")
+        } else {
+            Log("SEARCH: 'send.png' no encontrado. Usuario libre.")
+        }
     }
 
     ; --- PRIORIDAD 0: FINALIZADOR (ACCEPT ALL) ---
     if (HasWindow) {
+        Log("SEARCH: Buscando 'AcceptAll_Priority.png'...")
         if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*60 " . ImageFolder . "AcceptAll_Priority.png") {
              TargetX := FoundX + 30 
              TargetY := FoundY + 10
@@ -158,10 +160,10 @@ WatchDog() {
              Sleep 10 
              MouseGetPos ,, &WinUnderMouse
              
-             ; Z-ORDER RELAXED: Check Process Name instead of ID
              try {
                 WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
                 TargetName := WinGetProcessName("ahk_id " . WinID)
+                Log("Z-CHECK: MouseOver=" . WinName . " vs Target=" . TargetName)
              
                 if (WinName == TargetName) {
                     UpdateHUD("PRIORIDAD", "Finalizando" . CoordStr, "c00FF00")
@@ -177,6 +179,8 @@ WatchDog() {
              } catch {
                 Log("ERROR: Fallo crítico en Z-Order check (Priority)")
              }
+        } else {
+            Log("Result: AcceptAll_Priority NO encontrado.")
         }
     }
 
@@ -185,14 +189,18 @@ WatchDog() {
     IsWorkingVisual := false
     
     if (HasWindow) {
-        ; Tolerancia estricta para botón rojo working sin confundir gris
+        Log("SEARCH: Buscando 'working.png' (Estado Activo)...")
         IsWorkingVisual := ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*15 " . IndicatorFolder . "working.png")
+        if (IsWorkingVisual) {
+             Log("DETECTADO: 'working.png' encontrado en " . FoundX . "," . FoundY)
+        }
     }
     
     ; B. Chequeo Remoto 
     IsWorkingRemote := false
     if (!IsWorkingVisual) {
         try {
+           ; Log("HTTP: Consultando estado remoto...") ; Comentado para no saturar EXCESIVAMENTE si es muy rápido
            whr := ComObject("WinHttp.WinHttpRequest.5.1")
            whr.Open("GET", "http://localhost:1337/api/status", true)
            whr.Send()
@@ -200,6 +208,7 @@ WatchDog() {
                resp := whr.ResponseText
                if InStr(resp, '"AgentWorking":true') {
                    IsWorkingRemote := true
+                   Log("HTTP: Estado Remoto = WORKING")
                }
            }
         }
@@ -212,39 +221,32 @@ WatchDog() {
         ColorStatus := IsWorkingRemote ? "c00FFFF" : "cFFFF00"
         Source := IsWorkingRemote ? "GHOST LINK" : "VISUAL"
         
-        if (LastState != "TRABAJANDO") {
-            Log("ESTADO: TRABAJANDO (" . Source . ") - Bloqueando clics")
-            LastState := "TRABAJANDO"
-        }
-        ; Log masivo si el usuario quiere "todo"
-        if (LogHeartbeat == 0) {
-             Log("ESTADO: TRABAJANDO por " . Source)
-        }
+        Log("ESTADO: TRABAJANDO (" . Source . ")")
         
-        UpdateHUD("TRABAJANDO", Source . " " . CoordStr, ColorStatus)
-        
-        try {
-             if (WinID != 0) {
-                SetKeyDelay 10, 10
-                ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
-                ; No logueamos cada Alt+Enter para no explotar el log (pasa cada 500ms), 
-                ; pero el cambio de estado ya indica que está ocurriendo.
-            } else {
-                 UpdateHUD("BUSCANDO", "Esperando ventana..." . CoordStr, "cRed")
+        if (!UserTyping) {
+            UpdateHUD("TRABAJANDO", Source . " " . CoordStr, ColorStatus)
+            try {
+                 if (WinID != 0) {
+                    Log("ACTION: Enviando Alt+Enter...")
+                    SetKeyDelay 10, 10
+                    ControlSend "{Alt down}{Enter}{Alt up}",, "ahk_id " . WinID
+                }
             }
+        } else {
+             UpdateHUD("ESCRIBIENDO", "Enter Bloqueado (Working) " . Tick, "cOrange")
+             Log("ACTION: Alt+Enter SUPRIMIDO por Modo Escritura.")
         }
-        return 
     } 
     
     ; --- 2. MODALIDAD MUERTE SUBITA ---
     if (WasWorking and HasWindow) {
         Log("ESTADO: INICIANDO SECUENCIA MUERTE SÚBITA")
         Loop 20 { 
-            Tick := Mod(Tick + 1, 100) ; Heartbeat en sub-loop
+            Tick := Mod(Tick + 1, 100) 
             UpdateHUD("CAZANDO (SD)", "Limpieza Rápida " . Tick, "cOrange")
             Loop Targets.Length {
                 tImg := Targets[A_Index]
-                ; TOLERANCIA REDUCIDA: *100 -> *30 para evitar falsos positivos
+                Log("SEARCH (SD): Buscando " . tImg)
                 if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, "*30 " . ImageFolder . tImg) {
                      SafeToClick := true
                      Loop Files, IndicatorFolder . "Ignore\*.png"
@@ -291,47 +293,24 @@ WatchDog() {
             Sleep 100
         }
         WasWorking := false
-        LastState := "CLEANUP_DONE"
         Log("ESTADO: MUERTE SÚBITA FINALIZADA")
         return 
     }
 
-    ; --- 3. CHEQUEO DE SEGURIDAD USER ---
-    if (HasWindow and ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . IndicatorFolder . "send.png")) {
-        if (LastState != "USER_TYPING") {
-            UpdateHUD("PAUSADO", "Usuario Escribiendo " . Tick, "cOrange")
-            Log("ESTADO: PAUSADO - Usuario detectado escribiendo (send.png visible)")
-            LastState := "USER_TYPING"
-        }
-        if (LogHeartbeat == 0) {
-             Log("ESTADO: PAUSADO - Usuario detectado escribiendo")
-        }
-        UpdateHUD("PAUSADO", "Usuario Escribiendo " . Tick, "cOrange")
-        return
-    }
-
     ; --- 4. IDLE / SCAN NORMAL ---
     if (HasWindow) {
-        if (LastState != "HUNTING") {
-             LastState := "HUNTING"
-             Log("ESTADO: CAZANDO (Escaneo Normal)")
+        if (!UserTyping) {
+            UpdateHUD("👁️ BUSCANDO...", "Zona Conf.: " . WX . "," . WY . " | " . WW . "," . WH . " [" . Tick . "]", "cGray")
         }
         
-        UpdateHUD("👁️ BUSCANDO...", "Zona Conf.: " . WX . "," . WY . " | " . WW . "," . WH . " [" . Tick . "]", "cGray")
-        
-        if (LogHeartbeat == 0) {
-             ; Log heartbeat para mostrar que está escaneando
-             Log("SCAN: Escaneando targets en zona confinada...")
-        }
+        Log("SCAN: Iniciando escaneo de objetivos...")
 
         Loop Targets.Length {
-            ; ... (loop code) ...
-
             imgName := Targets[A_Index]
             imgPath := ImageFolder . imgName
+            Log("SEARCH: Verificando " . imgName)
             if FileExist(imgPath) {
                 try {
-                    ; Tolerancia estandar (*50) para escaneo normal
                     if ImageSearch(&FoundX, &FoundY, WX, WY, WW, WH, Tolerance . " " . imgPath) {
                          SafeToClick := true
                          Loop Files, IndicatorFolder . "Ignore\*.png"
@@ -359,11 +338,12 @@ WatchDog() {
                         MouseMove TargetX, TargetY
                         
                         Sleep 10
-                        MouseGetPos ,,, &WinUnderMouse
+                        MouseGetPos ,, &WinUnderMouse
                         
                         try {
                             WinName := WinGetProcessName("ahk_id " . WinUnderMouse)
                             TargetName := WinGetProcessName("ahk_id " . WinID)
+                            Log("Z-CHECK: Mouse=" . WinName)
                             
                             if (WinName == TargetName) {
                                 Click "Down"
@@ -382,13 +362,14 @@ WatchDog() {
                             MouseMove OrigX, OrigY
                             Log("ERROR: Fallo Z-Order Normal Scan")
                         }
+                    } else {
+                        Log("RESULT: " . imgName . " no encontrado.")
                     }
                 }
             }
         }
-        
     } else {
-        ; Ya manejado al principio
+        Log("SKIP: Sin ventana, saltando escaneo visual.")
     }
 }
 
