@@ -34,10 +34,25 @@ try {
         Log("CONFIG: Zona calibrada cargada. " . ChatRelW . "x" . ChatRelH)
 }
 
-; --- OVERLAY GUI (VISUALIZER) ---
-global ZoneOverlay := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20")
-ZoneOverlay.BackColor := "00FFFF"
-WinSetTransparent(40, ZoneOverlay) ; 0-255 (40 = Very subtle glass)
+; --- OVERLAY GUI (VISUALIZER - HOLLOW BOX) ---
+global BorderThickness := 5
+global BorderColor := "00FFFF"
+global BorderAlpha := 150 ; 0-255 (Visible but see-through)
+
+global GuiTop := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20")
+global GuiBot := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20")
+global GuiLeft := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20")
+global GuiRight := Gui("+AlwaysOnTop -Caption +ToolWindow +E0x20")
+
+GuiTop.BackColor := BorderColor
+GuiBot.BackColor := BorderColor
+GuiLeft.BackColor := BorderColor
+GuiRight.BackColor := BorderColor
+
+WinSetTransparent(BorderAlpha, GuiTop)
+WinSetTransparent(BorderAlpha, GuiBot)
+WinSetTransparent(BorderAlpha, GuiLeft)
+WinSetTransparent(BorderAlpha, GuiRight)
 
 ; --- INICIO ---
 TraySetIcon "shell32.dll", 1
@@ -53,7 +68,11 @@ F8::
     IsActive := !IsActive
     
     if (!IsActive) {
-        ZoneOverlay.Hide() ; Hide overlay immediately
+        ; Hide all borders
+        GuiTop.Hide()
+        GuiBot.Hide()
+        GuiLeft.Hide()
+        GuiRight.Hide()
     }
     
     ; Sync with Server
@@ -160,8 +179,10 @@ WatchDog() {
         WinGetPos &WX, &WY, &WW, &WH, "ahk_id " . WinID
     } else {
         UpdateHUD("ESPERANDO", "Buscando AntiGravity...", "cGray")
-        if (ZoneOverlay)
-            ZoneOverlay.Hide()
+        GuiTop.Hide()
+        GuiBot.Hide()
+        GuiLeft.Hide()
+        GuiRight.Hide()
         return
     }
 
@@ -172,6 +193,9 @@ WatchDog() {
     ; Prioridad: Configuración de Usuario > Heurística Simple
     global ChatRelX, ChatRelY, ChatRelW, ChatRelH
     
+    ; Debug de variables globales para asegurar que F10 funciona
+    ; if (Tick == 0) Log("DEBUG: ChatRelW=" . ChatRelW)
+
     if (ChatRelW > 0) {
         ; Usar calibración guardada (Relativa a la ventana)
         ScanX := WX + ChatRelX
@@ -179,48 +203,65 @@ WatchDog() {
         ScanW := ChatRelW
         ScanH := ChatRelH
     } else {
-        ; Fallback: Heurística Básica (Sin márgenes exagerados)
-        ; El usuario reportó que estaba muy a la derecha. Usaremos casi el ancho completo.
-        ScanX := WX + 20
+        ; Fallback: Heurística Inteligente (Asumir Sidebar izquierdo ~20%)
+        SidebarMargin := WW * 0.20 
+        
+        ScanX := WX + SidebarMargin
         ScanY := WY + 80 ; Saltar header
-        ScanW := WW - 40
+        ScanW := WW - SidebarMargin - 25 ; Margen derecho pequeño
         ScanH := WH - 90
     }
 
-    ; --- VISUAL OVERLAY UPDATE ---
-    if (IsActive && HUDVisible) {
-        ZoneOverlay.Show("x" . ScanX . " y" . ScanY . " w" . ScanW . " h" . ScanH . " NoActivate")
+    ; --- VISUAL OVERLAY UPDATE (HOLLOW BOX) ---
+    if (IsActive && HUDVisible && HasWindow) {
+        ; Top
+        GuiTop.Show("x" . ScanX . " y" . ScanY . " w" . ScanW . " h" . BorderThickness . " NoActivate")
+        ; Bottom
+        GuiBot.Show("x" . ScanX . " y" . (ScanY + ScanH - BorderThickness) . " w" . ScanW . " h" . BorderThickness . " NoActivate")
+        ; Left
+        GuiLeft.Show("x" . ScanX . " y" . ScanY . " w" . BorderThickness . " h" . ScanH . " NoActivate")
+        ; Right
+        GuiRight.Show("x" . (ScanX + ScanW - BorderThickness) . " y" . ScanY . " w" . BorderThickness . " h" . ScanH . " NoActivate")
     } else {
-        ZoneOverlay.Hide()
+        GuiTop.Hide()
+        GuiBot.Hide()
+        GuiLeft.Hide()
+        GuiRight.Hide()
     }
 
     ; --- SMART TYPING DETECTION (FASE 2: HEURÍSTICA + VISUAL + AUDITIVA) ---
     UserTyping := false
     
-    ; 1. Heurística Instantánea (Cursor Check)
+    ; --- SMART TYPING DETECTION (FASE 2: HEURÍSTICA + VISUAL + AUDITIVA) ---
+    UserTyping := false
+    
+    ; 1. Heurística Física (Teclado/Mouse activo recientemente)
+    ; Si el usuario tocó algo en los últimos 2 segundos, asumimos que está interactuando.
+    if (A_TimeIdlePhysical < 2000) {
+        UserTyping := true
+        ; Log("HEURISTICA: Actividad física reciente.")
+    }
+
+    ; 2. Heurística de Cursor (Mouse sobre el chat + Icono de texto)
     MouseGetPos(&MX, &MY)
     if (MX >= ScanX && MX <= (ScanX + ScanW) && MY >= ScanY && MY <= (ScanY + ScanH)) {
         if (A_Cursor == "IBeam") {
             UserTyping := true
-            ; Log("HEURISTICA: IBeam.")
         }
     }
 
-    ; 2. Chequeo Visual (Respaldo: send.png = Caja con texto)
+    ; 3. Chequeo Visual (Respaldo: send.png = Caja con texto)
     if (HasWindow) {
         if ImageSearch(&FoundX, &FoundY, ScanX, ScanY, ScanX+ScanW, ScanY+ScanH, Tolerance . " " . IndicatorFolder . "send.png") {
             UserTyping := true
         }
     }
     
-    ; 3. Feedback Sensorial (Cambio de Estado)
+    ; 4. Feedback Sensorial (Cambio de Estado)
     if (UserTyping != WasTyping) {
         if (UserTyping) {
-            ; Usuario toma el control
             SoundBeep 1000, 50 
-            ; UpdateHUD("ESCRIBIENDO (" . FriendlyName . ")", "Control Manual Activado " . Tick, "cOrange") ; Moved to new logic
         } else {
-            ; Usuario libera el control
             SoundBeep 600, 50
         }
         WasTyping := UserTyping
@@ -233,17 +274,18 @@ WatchDog() {
 
     if (UserTyping) {
         ; MODO: USUARIO ESCRIBIENDO / BOT CAZANDO
-        HUDText := "USUARIO ESCRIBIENDO / BOT CAZANDO"
+        HUDText := "USUARIO ESCRIBIENDO"
         HUDSub := "Alt+Enter: BLOQUEADO | Clics: ACTIVOS"
         HUDColor := "cOrange"
         
-        ; NO enviamos Alt+Enter
+        ; Resetear timer de Alt+Enter para que no dispare apenas dejes de escribir
+        LastAltEnter := A_TickCount 
         
     } else {
         ; MODO: CAZANDO AUTOMÁTICO
-        HUDText := "CAZANDO (" . FriendlyName . ")"
+        HUDText := "CAZANDO"
         HUDSub := "Auto-Confirm: ON | Clics: ACTIVOS"
-        HUDColor := "c00FF00" ; Green implies safe/active
+        HUDColor := "c00FF00" 
         
         ; AUTO-CONFIRM (ALT+ENTER cada 3s si la caja está vacía)
         if (A_TickCount - LastAltEnter > 3000) {
@@ -251,7 +293,6 @@ WatchDog() {
             LastAltEnter := A_TickCount
             Log("ACTION: Auto-Confirm (Alt+Enter) enviado (Idle Check)")
             
-            ; Pequeño flash visual en HUD
             UpdateHUD("CONFIRMANDO...", "Enviando Alt+Enter", "cCyan")
             Sleep 200
         }
@@ -665,7 +706,32 @@ F10::
 }
 
 ; --- PHASE 3: NEURAL VISION (F11) ---
+; --- AUTO-DETECT / RESET ZONE (F11) ---
 F11::
+{
+    global ChatRelX, ChatRelY, ChatRelW, ChatRelH
+    
+    ; Resetear variables a 0 activa el modo "Dinámico" en WatchDog
+    ChatRelX := 0
+    ChatRelY := 0
+    ChatRelW := 0
+    ChatRelH := 0
+    
+    try {
+        IniWrite("0", ConfigFile, "ChatZone", "RelW") ; Marcar como no-calibrado en disco
+        
+        SoundBeep 1000, 100
+        UpdateHUD("ZONA AUTO", "Modo Dinámico Activado", "cCyan")
+        Log("CALIBRATION: Reset a MODO AUTOMÁTICO (Dinámico)")
+        
+        MsgBox "Modo de Detección Automática ACTIVADO.`n`nEl bot ahora ajustará la zona azul automáticamente al tamaño de la ventana.", "Auto-Detect", "Iconi T2"
+    } catch as err {
+        Log("ERROR al resetear config: " . err.Message)
+    }
+}
+
+; --- PHASE 3: NEURAL VISION (SHIFT + F11) ---
++F11::
 {
     Log("VISION: Iniciando Neural Scan (Python/PS Bridge)...")
     UpdateHUD("VISION", "Analizando...", "c00FFFF")
