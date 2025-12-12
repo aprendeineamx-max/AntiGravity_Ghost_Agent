@@ -141,14 +141,44 @@ if ($IncludeEdgeCases) {
 # Join conversation
 $fullConversation = $conversation -join "`n`n"
 
-# Copy to clipboard
+# Copy to clipboard with retry logic
 if ($CopyToClipboard) {
-    [System.Windows.Forms.Clipboard]::SetText($fullConversation)
-    Write-Host "✅ Copied to clipboard" -ForegroundColor Green
+    $retries = 3
+    $success = $false
+    
+    for ($i = 1; $i -le $retries; $i++) {
+        try {
+            # Clear clipboard first
+            [System.Windows.Forms.Clipboard]::Clear()
+            Start-Sleep -Milliseconds 100
+            
+            # Set text
+            [System.Windows.Forms.Clipboard]::SetText($fullConversation)
+            Start-Sleep -Milliseconds 200
+            
+            # Verify
+            $verify = [System.Windows.Forms.Clipboard]::GetText()
+            if ($verify -eq $fullConversation) {
+                Write-Host "✅ Copied to clipboard ($($fullConversation.Length) chars)" -ForegroundColor Green
+                $success = $true
+                break
+            }
+        }
+        catch {
+            if ($i -eq $retries) {
+                Write-Host "⚠️  Clipboard copy failed after $retries attempts" -ForegroundColor Yellow
+            }
+            Start-Sleep -Milliseconds 300
+        }
+    }
+    
+    if (!$success) {
+        Write-Host "   File saved but clipboard unavailable" -ForegroundColor Gray
+    }
 }
 
 # Save to file
-$outputFile = "test-data-$Size-$(Get-Date -Format 'yyyyMMdd-HHmmss').txt"
+$outputFile = Join-Path $PSScriptRoot "test-data-$Size-$(Get-Date -Format 'yyyyMMdd-HHmmss').txt"
 [System.IO.File]::WriteAllText($outputFile, $fullConversation, [System.Text.Encoding]::UTF8)
 
 Write-Host "✅ Saved to: $outputFile" -ForegroundColor Green

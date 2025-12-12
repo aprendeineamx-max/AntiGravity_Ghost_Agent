@@ -1,0 +1,23 @@
+﻿User [10:00:00]: What's the status?
+
+Agent [10:00:30]: Code review complete
+
+```bash
+find . -name "*.log" -exec rm {} \;
+```
+
+User [10:01:01]: Fix this error please
+
+Agent [10:01:58]: I'll help you with that
+
+User [10:02:42]: Check the logs
+
+Agent [10:03:32]: Deployment successful
+
+User [10:03:47]: Continue with implementation
+
+Agent [10:04:17]: The tests are passing
+
+User [10:04:22]: Deploy to production
+
+Agent [10:04:37]: Logs show no errors

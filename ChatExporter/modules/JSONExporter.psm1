@@ -70,7 +70,14 @@ function Build-ExportObject {
     # Calculate metadata
     $participants = ($Messages | Select-Object -ExpandProperty from -Unique)
     $hasCode = ($Messages | Where-Object { $_.metadata.has_code }) -ne $null
-    $totalChars = ($Messages | Measure-Object -Property { $_.metadata.char_count } -Sum).Sum
+    
+    # Calculate total characters
+    $totalChars = 0
+    foreach ($msg in $Messages) {
+        if ($msg.metadata -and $msg.metadata.char_count) {
+            $totalChars += $msg.metadata.char_count
+        }
+    }
     
     return @{
         version     = "2.0"
