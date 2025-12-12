@@ -1,0 +1,25 @@
+{
+    "export": {
+        "outputDir": "%USERPROFILE%\\Documents\\AntiGravity_Chat_Exports",
+        "dualExport": true,
+        "validateSchema": false
+    },
+    "parser": {
+        "detectCodeBlocks": true,
+        "detectInlineCode": true,
+        "extractTimestamps": true,
+        "roleMarkers": [
+            "User",
+            "Agent",
+            "System"
+        ]
+    },
+    "features": {
+        "deduplication": false,
+        "attachmentHandling": false
+    },
+    "metadata": {
+        "source": "AntiGravity Chat Exporter v2.1 (Modular)",
+        "schemaVersion": "2.0"
+    }
+}
