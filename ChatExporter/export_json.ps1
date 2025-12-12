@@ -1,6 +1,6 @@
 # ==========================================
 # Chat Export JSON - Dual Format Exporter
-# Version: 2.0
+# Version: 2.1 - FIXED PARSER
 # ==========================================
 
 param(
@@ -23,7 +23,7 @@ if (!(Test-Path $OutputDir)) {
 }
 
 Write-Host "==========================================`n" -ForegroundColor Cyan
-Write-Host " ANTIGRAVITY CHAT EXPORT - JSON v2.0`n" -ForegroundColor Cyan
+Write-Host " ANTIGRAVITY CHAT EXPORT - JSON v2.1`n" -ForegroundColor Cyan
 Write-Host "==========================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -43,7 +43,7 @@ Write-Host "   Clipboard size: $(($clipboardText.Length / 1KB).ToString('F2')) K
 Write-Host ""
 
 # ==========================================
-# STEP 2: Parse Messages
+# STEP 2: Parse Messages - FIXED VERSION
 # ==========================================
 
 Write-Host "[2/5] Parsing messages..." -ForegroundColor Yellow
@@ -54,17 +54,29 @@ function Parse-ChatMessage {
     $messages = @()
     $msgCounter = 1
     
-    # Split by common message markers
+    # Split into lines
     $lines = $content -split "`n"
+    $totalLines = $lines.Count
+    $lineIndex = 0
+    
     $currentMessage = $null
     $currentFrom = "unknown"
     $currentText = @()
     
-    foreach ($line in $lines) {
-        # Detectar role changes
-        if ($line -match "^(User|Agent|System):\s*(.*)") {
+    # Use while loop with manual index to avoid foreach issues
+    while ($lineIndex -lt $totalLines) {
+        $line = $lines[$lineIndex]
+        $lineIndex++
+        
+        # Check for role markers
+        if ($line -match "^(User|Agent|System)[\s:]+(.*)$") {
             # Save previous message
             if ($currentMessage) {
+                $fullText = ($currentText -join "`n").Trim()
+                $currentMessage.content.text = $fullText
+                $currentMessage.content.markdown = $fullText
+                $currentMessage.metadata.char_count = $fullText.Length
+                $currentMessage.metadata.line_count = $currentText.Count
                 $messages += $currentMessage
             }
             
@@ -72,7 +84,7 @@ function Parse-ChatMessage {
             $currentFrom = $matches[1].ToLower()
             $currentText = @($matches[2])
             
-            # Extract timestamp if present
+            # Extract timestamp
             $timeMatch = $line | Select-String -Pattern "\[(\d{2}:\d{2}:\d{2})\]"
             $timestamp = if ($timeMatch) { $timeMatch.Matches[0].Groups[1].Value } else { "Unknown" }
             
@@ -94,19 +106,21 @@ function Parse-ChatMessage {
             }
             $msgCounter++
         }
+        # Check for code block start
         elseif ($line -match "^```(\w*)") {
-            # Code block start
             $lang = $matches[1]
             if (!$lang) { $lang = "plaintext" }
             
             $codeLines = @()
-            $inCode = $true
             
-            # Collect code block
-            while ($inCode) {
-                $nextLine = if ($lines.Count -gt 0) { $lines[0]; $lines = $lines[1..($lines.Count - 1)] } else { "" }
+            # Collect code block lines (FIXED: use while with index)
+            while ($lineIndex -lt $totalLines) {
+                $nextLine = $lines[$lineIndex]
+                $lineIndex++
+                
                 if ($nextLine -match "^```$") {
-                    $inCode = $false
+                    # End of code block
+                    break
                 }
                 else {
                     $codeLines += $nextLine
@@ -164,7 +178,7 @@ $totalChars = ($messages | Measure-Object -Property { $_.metadata.char_count } -
 $export = @{
     version     = "2.0"
     exported_at = (Get-Date).ToUniversalTime().ToString("o")
-    source      = "AntiGravity Chat Exporter v2.0"
+    source      = "AntiGravity Chat Exporter v2.1"
     metadata    = @{
         total_messages   = $messages.Count
         participants     = $participants

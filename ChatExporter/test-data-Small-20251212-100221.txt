@@ -1,0 +1,43 @@
+﻿User [10:00:00]: Check the logs
+
+Agent [10:00:57]: Code review complete
+
+```javascript
+const result = array.map(item => item.value);
+```
+
+User [10:01:56]: Fix this error please
+
+```bash
+find . -name "*.log" -exec rm {} \;
+```
+
+Agent [10:02:12]: Deployment successful
+
+User [10:02:51]: Deploy to production
+
+Agent [10:03:06]: README updated with latest changes
+
+```powershell
+Get-ChildItem | Where-Object { $_.Name -like "*.ps1" }
+```
+
+User [10:03:34]: Review this code
+
+```python
+def process_data(data):\n    return [x * 2 for x in data]
+```
+
+Agent [10:04:17]: The tests are passing
+
+```python
+def process_data(data):\n    return [x * 2 for x in data]
+```
+
+User [10:04:44]: Deploy to production
+
+Agent [10:05:17]: Logs show no errors
+
+```javascript
+const result = array.map(item => item.value);
+```
