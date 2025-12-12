@@ -166,6 +166,8 @@ WatchDog() {
 
     Tick := Mod(Tick + 1, 100)
     
+    SetTimer, WatchSaveDialog, 1000
+
     ; [LOG] Inicio de Ciclo
     Log("CYCLE[" . Tick . "]: Iniciando WatchDog... Focus=" . FriendlyName)
     
@@ -857,3 +859,113 @@ F11::
         Log("VISION ERROR: " . err.Message)
     }
 }
+
+; ========================================
+; CHAT AUTO-EXPORT MODULE (Integrated)
+; ========================================
+
+global ChatAutoExportEnabled := true
+global LastChatHash := ""
+global ChatCheckInterval := 1000
+global LiveIniPath := A_ScriptDir . "\\OmniGod_Live.ini"
+
+SetTimer ChatAutoExportTimer, ChatCheckInterval
+
+ChatAutoExportTimer() {
+    global ChatAutoExportEnabled, LastChatHash, LiveIniPath, LogFile
+    
+    if (!ChatAutoExportEnabled) {
+        return
+    }
+    
+    ; Only if AntiGravity is active
+    try {
+        if (!WinActive("ahk_exe Antigravity.exe")) {
+            return
+        }
+    } catch {
+        return
+    }
+    
+    ; Get chat zone
+    try {
+        ChatX := IniRead(LiveIniPath, "Active", "ChatX", "0")
+        ChatY := IniRead(LiveIniPath, "Active", "ChatY", "0") 
+        ChatW := IniRead(LiveIniPath, "Active", "ChatW", "100")
+        ChatH := IniRead(LiveIniPath, "Active", "ChatH", "100")
+    } catch {
+        return
+    }
+    
+    if (ChatX = "0" or ChatY = "0") {
+        return
+    }
+    
+    ; Check if user is typing
+    try {
+        FocusedControl := ControlGetFocus("A")
+        if (InStr(FocusedControl, "Edit") or InStr(FocusedControl, "Input") or InStr(FocusedControl, "Text")) {
+            return
+        }
+    }
+    
+    ; Quick pixel hash to detect changes
+    try {
+        Color1 := PixelGetColor(ChatX+10, ChatY+10)
+        Color2 := PixelGetColor(ChatX+ChatW-10, ChatY+ChatH-10)
+        Color3 := PixelGetColor(ChatX+(ChatW//2), ChatY+(ChatH//2))
+        CurrentHash := Color1 . Color2 . Color3
+    } catch {
+        return
+    }
+    
+    ; New messages detected
+    if (CurrentHash != LastChatHash and LastChatHash != "") {
+        try {
+            FileAppend "[" . A_Now . "] Chat change detected. Auto-exporting...`n", LogFile
+            
+            ; Wait for render
+            Sleep 500
+            
+            ; Backup clipboard
+            ClipBackup := A_Clipboard
+            
+            ; Click in chat
+            ClickX := ChatX + (ChatW // 2)
+            ClickY := ChatY + (ChatH // 2)
+            Click ClickX, ClickY
+            Sleep 100
+            
+            ; Select all and copy
+            Send "^a"
+            Sleep 200
+            Send "^c"
+            Sleep 300
+            
+            ; Signal extension
+            SignalFile := "C:\\AntiGravityExt\\AntiGravity_Ghost_Agent\\.auto_export_signal"
+            try FileDelete SignalFile
+            FileAppend A_NowUTC "`n", SignalFile
+            
+            ; Restore clipboard
+            A_Clipboard := ClipBackup
+            
+            FileAppend "[" . A_Now . "] Auto-export completed.`n", LogFile
+            UpdateHUD("AUTO-EXPORT", "✅ Exported", "green")
+        } catch as err {
+            FileAppend "[" . A_Now . "] Auto-export error: " . err.Message . "`n", LogFile
+        }
+    }
+    
+    LastChatHash := CurrentHash
+}
+
+; Toggle auto-export
+^F12:: {
+    global ChatAutoExportEnabled
+    ChatAutoExportEnabled := !ChatAutoExportEnabled
+    status := ChatAutoExportEnabled ? "ENABLED" : "DISABLED"
+    UpdateHUD("AUTO-EXPORT", status, ChatAutoExportEnabled ? "green" : "red")
+    TrayTip "Chat Auto-Export " . status, "OmniGod", 1
+}
+
