@@ -24,6 +24,43 @@
             {
                 "command": "antigravity.importFromClipboard",
                 "title": "AntiGravity: Import Chat from Clipboard"
+            },
+            {
+                "command": "antigravity.exporter.autoCopyChat",
+                "title": "AntiGravity: Auto-Copy Chat Now"
+            },
+            {
+                "command": "antigravity.exporter.exportJSON",
+                "title": "AntiGravity: Export Chat as JSON"
+            },
+            {
+                "command": "antigravity.exporter.exportMarkdown",
+                "title": "AntiGravity: Export Chat as Markdown"
+            },
+            {
+                "command": "antigravity.exporter.validateExport",
+                "title": "AntiGravity: Validate Last Export"
+            },
+            {
+                "command": "antigravity.exporter.openFolder",
+                "title": "AntiGravity: Open Export Folder"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "antigravity.exporter.autoCopyChat",
+                "key": "ctrl+alt+c",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "antigravity.exporter.exportJSON",
+                "key": "ctrl+alt+j",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "antigravity.exporter.exportMarkdown",
+                "key": "ctrl+alt+m",
+                "when": "editorTextFocus"
             }
         ]
     }

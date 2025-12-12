@@ -438,6 +438,145 @@ function activate(context) {
         });
     });
 
+    // ==========================================
+    // NEW PLUGIN-LIKE COMMANDS
+    // ==========================================
+
+    // Command 1: Auto-Copy Chat Now
+    vscode.commands.registerCommand('antigravity.exporter.autoCopyChat', async () => {
+        debugLog('[Command] Auto-Copy Chat triggered');
+        try {
+            // Simulate Ctrl+A, Ctrl+C
+            await vscode.commands.executeCommand('editor.action.selectAll');
+            await new Promise(resolve => setTimeout(resolve, 100));
+            await vscode.commands.executeCommand('editor.action.clipboardCopyAction');
+
+            vscode.window.showInformationMessage('✅ Chat copied to clipboard');
+            debugLog('[Command] Auto-copy successful');
+        } catch (error) {
+            vscode.window.showErrorMessage('❌ Failed to copy chat');
+            debugLog(`[Command] Auto-copy error: ${error.message}`);
+        }
+    });
+
+    // Command 2: Export Chat as JSON
+    vscode.commands.registerCommand('antigravity.exporter.exportJSON', async () => {
+        debugLog('[Command] Export JSON triggered');
+        try {
+            // Auto-copy first
+            await vscode.commands.executeCommand('antigravity.exporter.autoCopyChat');
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            // Execute PowerShell script
+            const scriptPath = path.join(__dirname, '..', '..', 'ChatExporter', 'export_json.ps1');
+            const terminal = vscode.window.createTerminal({
+                name: 'Chat Export JSON',
+                hideFromUser: false
+            });
+            terminal.sendText(`powershell -ExecutionPolicy Bypass -File "${scriptPath}"`);
+            terminal.show();
+
+            vscode.window.showInformationMessage('📦 Exporting chat as JSON...');
+            debugLog('[Command] JSON export initiated');
+        } catch (error) {
+            vscode.window.showErrorMessage('❌ Failed to export JSON');
+            debugLog(`[Command] JSON export error: ${error.message}`);
+        }
+    });
+
+    // Command 3: Export Chat as Markdown
+    vscode.commands.registerCommand('antigravity.exporter.exportMarkdown', async () => {
+        debugLog('[Command] Export Markdown triggered');
+        try {
+            // Auto-copy first
+            await vscode.commands.executeCommand('antigravity.exporter.autoCopyChat');
+            await new Promise(resolve => setTimeout(resolve, 500));
+
+            // Execute PowerShell script with MD-only flag
+            const scriptPath = path.join(__dirname, '..', '..', 'ChatExporter', 'export_json.ps1');
+            const terminal = vscode.window.createTerminal({
+                name: 'Chat Export MD',
+                hideFromUser: false
+            });
+            terminal.sendText(`powershell -ExecutionPolicy Bypass -File "${scriptPath}" -DualExport:$false`);
+            terminal.show();
+
+            vscode.window.showInformationMessage('📝 Exporting chat as Markdown...');
+            debugLog('[Command] MD export initiated');
+        } catch (error) {
+            vscode.window.showErrorMessage('❌ Failed to export Markdown');
+            debugLog(`[Command] MD export error: ${error.message}`);
+        }
+    });
+
+    // Command 4: Validate Last Export
+    vscode.commands.registerCommand('antigravity.exporter.validateExport', async () => {
+        debugLog('[Command] Validate Export triggered');
+        try {
+            const exportDir = `${process.env.USERPROFILE}\\Documents\\AntiGravity_Chat_Exports`;
+
+            if (!fs.existsSync(exportDir)) {
+                vscode.window.showWarningMessage('No exports found');
+                return;
+            }
+
+            // Find latest JSON
+            const files = fs.readdirSync(exportDir)
+                .filter(f => f.endsWith('.json') && f.startsWith('Chat_Export_'))
+                .map(f => ({
+                    name: f,
+                    path: path.join(exportDir, f),
+                    mtime: fs.statSync(path.join(exportDir, f)).mtime
+                }))
+                .sort((a, b) => b.mtime - a.mtime);
+
+            if (files.length === 0) {
+                vscode.window.showWarningMessage('No JSON exports found');
+                return;
+            }
+
+            const latestFile = files[0];
+
+            // Execute validator
+            const validatorPath = path.join(__dirname, '..', '..', 'ChatExporter', 'tests', 'validate-json.ps1');
+            const terminal = vscode.window.createTerminal({
+                name: 'JSON Validator',
+                hideFromUser: false
+            });
+            terminal.sendText(`powershell -ExecutionPolicy Bypass -File "${validatorPath}" -JsonFile "${latestFile.path}"`);
+            terminal.show();
+
+            vscode.window.showInformationMessage(`🔍 Validating: ${latestFile.name}`);
+            debugLog(`[Command] Validating: ${latestFile.path}`);
+        } catch (error) {
+            vscode.window.showErrorMessage('❌ Failed to validate export');
+            debugLog(`[Command] Validation error: ${error.message}`);
+        }
+    });
+
+    // Command 5: Open Export Folder
+    vscode.commands.registerCommand('antigravity.exporter.openFolder', () => {
+        debugLog('[Command] Open Folder triggered');
+        try {
+            const exportDir = `${process.env.USERPROFILE}\\Documents\\AntiGravity_Chat_Exports`;
+
+            // Create if doesn't exist
+            if (!fs.existsSync(exportDir)) {
+                fs.mkdirSync(exportDir, { recursive: true });
+            }
+
+            // Open in Explorer
+            const { exec } = require('child_process');
+            exec(`explorer "${exportDir}"`);
+
+            vscode.window.showInformationMessage(`📂 Opened: ${exportDir}`);
+            debugLog(`[Command] Opened folder: ${exportDir}`);
+        } catch (error) {
+            vscode.window.showErrorMessage('❌ Failed to open folder');
+            debugLog(`[Command] Open folder error: ${error.message}`);
+        }
+    });
+
     debugLog(`Extension ready. Mode: ${config.autoExportMode}, Interval: ${config.monitorInterval}s`);
 }
 
