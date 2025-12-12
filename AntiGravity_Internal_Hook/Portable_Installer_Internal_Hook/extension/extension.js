@@ -46,6 +46,22 @@ function activate(context) {
         } catch (e) { }
     }, 1000);
 
+    // 4.1 LOOP: Auto-Click "Always Allow" Button
+    // Clicks "Always Allow" button when it appears
+    setInterval(async () => {
+        try {
+            await vscode.commands.executeCommand('antigravity.agent.alwaysAllow');
+        } catch (e) { }
+    }, 500);
+
+    // 4.2 LOOP: Auto-Click "Accept All" Button
+    // Clicks "Accept all" button when it appears
+    setInterval(async () => {
+        try {
+            await vscode.commands.executeCommand('antigravity.agent.acceptAll');
+        } catch (e) { }
+    }, 500);
+
     // 5. Logic: Smart Submit (The "Conditional" Sender)
     const watcher = fs.watch(cmdPath, async (eventType, filename) => {
         if (eventType === 'change') {
